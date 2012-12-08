@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Velos -->
+<window>
+    <defaultcontrol></defaultcontrol>
+    <controls>
+            <control type="group">
+			<posx>630</posx>
+			<posy>980</posy>
+			<animation effect="slide" start="0,100" time="250">WindowOpen</animation>
+			<animation effect="slide" end="0,100" time="250">WindowClose</animation>
+			
+			<!-- DIALOG -->
+			<control type="image">
+				<posy>0</posy>
+				<width>660</width>
+				<height>100</height>
+				<align>center</align>
+				<texture>other_textures/borderwhite.png</texture>
+			</control>
+			
+			<!-- HEADING LABEL -->
+			<control type="label" id="31">
+				<posy>0</posy>
+				<width>660</width>
+				<align>center</align>
+				<font>Small</font>
+				<textcolor>Cyan</textcolor>
+				<label>-</label>
+				<scroll>true</scroll>
+			</control>
+			
+			<!-- MESSAGE LABEL -->
+			<control type="label" id="30">
+				<posy>30</posy>
+				<align>center</align>
+				<width>660</width>
+				<font>Small</font>
+				<textcolor>Grey</textcolor>
+				<label>-</label>
+				<scroll>true</scroll>
+			</control>
+
+			
+			
+			  <control type="progress" id="32">
+                   <posx>0</posx>
+				   <posy>84</posy>
+				   <width>660</width>
+				   <height>16</height>
+				   <alignz>5</alignz>
+                </control>
+
+		</control>
+			
+			
+    </controls>
+</window>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Velos -->
+<window id="107">
+	<defaultcontrol always="true">402</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<control type="group">
+			<posx>630</posx>
+			<posy>924</posy>
+			<animation effect="slide" start="0,156" time="250">WindowOpen</animation>
+			<animation effect="slide" end="0,156" time="250">WindowClose</animation>
+			
+			<!-- DIALOG -->
+			<control type="image">
+				<description>background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>660</width>
+				<height>156</height>
+				<texture border="20">other_textures/white-back.png</texture>
+			</control>
+			
+			<control type="image" id="400">
+				<description>Image</description>
+				<posx>30</posx>
+				<posy>30</posy>
+				<width>96</width>
+				<height>96</height>
+				<aspectratio>keep</aspectratio>
+				<texture>DefaultFile.png</texture>
+			</control>
+			
+			<!-- MESSAGE LABEL -->
+			<control type="label" id="401">
+				<description>heading</description>
+				<posx>156</posx>
+				<posy>78</posy>
+				<width>459</width>
+				<textcolor>Grey</textcolor>
+				<height>48</height>
+				<label>-</label>
+				<scroll>true</scroll>
+			</control>
+
+			<!-- HEADING LABEL -->
+			<control type="label" id="402">
+				<description>message</description>
+				<posx>156</posx>
+				<posy>30</posy>
+				<width>459</width>
+				<textcolor>Cyan</textcolor>
+				<height>48</height>
+				<label>-</label>
+				<scroll>true</scroll>
+			</control>
+			
+			<control type="image" id="403">
+				<description>Image</description>
+				<posx>30</posx>
+				<posy>30</posy>
+				<width>96</width>
+				<height>96</height>
+				<aspectratio>keep</aspectratio>
+				<visible>false</visible>
+				<texture>DefaultIconInfo.png</texture>
+			</control>
+
+			<control type="image" id="404">
+				<description>Image</description>
+				<posx>30</posx>
+				<posy>30</posy>
+				<width>96</width>
+				<height>96</height>
+				<aspectratio>keep</aspectratio>
+				<visible>false</visible>
+				<texture>DefaultIconWarning.png</texture>
+			</control>
+
+			<control type="image" id="405">
+				<description>Image</description>
+				<posx>30</posx>
+				<posy>30</posy>
+				<width>96</width>
+				<height>96</height>
+				<aspectratio>keep</aspectratio>
+				<visible>false</visible>
+				<texture>DefaultIconError.png</texture>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

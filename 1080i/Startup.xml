@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Velos -->
+<window>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	
+	<controls>
+
+		<include>Splash</include>
+		
+		<control type="button" id="10">
+			<onfocus>ReplaceWindow(Home)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<animation effect="fade" start="100" end="0" time="4000">Focus</animation>
+		</control>
+		
+	</controls>
+</window>
