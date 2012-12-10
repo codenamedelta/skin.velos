@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
+<!-- Velos -->
 <window id="12">
 	<defaultcontrol always="true">3</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
@@ -7,7 +7,8 @@
 	<controls>
 
 		<include>GlobalBackground</include>
-
+		<include>TimeDate</include>
+		
 		<control type="grouplist" id="3">
 			<description>Button Area</description>
 			<posx>15</posx>
@@ -34,6 +35,8 @@
 			<onup>5</onup>
 			<ondown>5</ondown>
 			<orientation>vertical</orientation>
+			
+			
 		</control>
 
 		<control type="button" id="7">

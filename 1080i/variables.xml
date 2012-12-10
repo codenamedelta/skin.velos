@@ -105,8 +105,14 @@
         <value condition="substring(ListItem.AudioCodec,ac3,left) + Stringcompare(ListItem.AudioChannels,2)">dolbypro</value>
         <value>$INFO[ListItem.AudioCodec]</value>
     </variable>
+	<variable name="BannerVar">
+        <value condition="!IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
+        <value condition="!IsEmpty(ListItem.Art(tvshow.banner))">$INFO[ListItem.Art(tvshow.banner)]</value>
+    </variable>
 	<variable name="SplashScreen">
-		<!--<value condition="Window.IsActive(MyWeather.xml)">splash/splash_weather.png</value>-->
-		<value condition="Window.IsActive(Startup.xml)">other_textures/splashscreen/startup.png</value>
+		<!-- CHRISTMAS SPLASHSCREEN -->
+		<value condition="Window.IsActive(Startup.xml) + System.Date(12-24,12-26)">other_textures/splashscreen/startup_christmas.png</value>
+		<!-- LOGO SPLASHSCREEN -->
+		<value condition="Window.IsActive(Startup.xml) + !System.Date(12-24,12-26)">other_textures/splashscreen/startup.png</value>
 	</variable>
 </includes>

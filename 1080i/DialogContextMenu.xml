@@ -40,8 +40,6 @@
 				<itemgap>3</itemgap>
 				
 				<control type="button" id="1000">
-					<focusedcolor>Cyan</focusedcolor>
-					<texturefocus>other_textures/buttonFo.png</texturefocus>
 					<description>Buttons</description>
 					<width>375</width>
 					<align>left</align>

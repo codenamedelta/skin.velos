@@ -151,8 +151,9 @@
 			<font>Small</font>
 			<textcolor>Cyan</textcolor>
 			<align>left</align>
-			<label>[UPPERCASE]$INFO[ListItem.Year]$INFO[ListItem.Genre, / ][/UPPERCASE]</label>
+			<label>[UPPERCASE]$INFO[ListItem.Year]$INFO[ListItem.Rating, / ]$INFO[ListItem.Genre, / ][/UPPERCASE]</label>
 			<visible>[Container.Content(tvshows) | [Container.Content(episodes)] | [Container.Content(movies)]]</visible>
+			
 		</control>
 		
 		<!-- TVSHOW/EPISODE/MOVIE YEAR/GENRE LABEL -->
@@ -266,7 +267,7 @@
 			<visible>!IsEmpty(ListItem.Art(season.fanart)) + [Container.Content(seasons)]</visible>
 		</control>		
 		
-		<!-- TVSHOW/MOVIE RATING LABEL -->
+		<!-- TVSHOW/MOVIE RATING LABEL 
 		<control type="label">
 			<posx>50</posx>
 			<posy>655</posy>
@@ -276,7 +277,7 @@
 			<align>center</align>
 			<label>[UPPERCASE]$INFO[ListItem.Rating][/UPPERCASE]</label>
 			<visible>[Container.Content(tvshows) | [Container.Content(movies)]]</visible>
-		</control>
+		</control>-->
 		
 		<!-- TVSHOW EPISODE CONTAINER SEASON LABEL -->
 		<control type="label">
@@ -340,51 +341,61 @@
 		
 		<!-- FLAGS (video type, resolution, aspect ratio, audio type, studio, FCC rating (tv), MPAA rating (movies), etc...) -->
 		<control type="group">
-                    <visible>Control.IsVisible(9900)</visible>
-                    <control type="image">
-                        <posx>1275</posx>
-                        <posy>987</posy>
-                        <include>OSDFlagVars</include>
-                        <visible>!IsEmpty(ListItem.Thumb)</visible>
-                        <texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
-                        <visible>Container.Content(tvshows) | [Container.Content(seasons) + ListItem.IsFolder]</visible>
-                    </control>
-                    <control type="image">
-                        <posx>1425</posx>
-                        <posy>987</posy>
-                        <include>OSDFlagVars</include>
-                        <texture>$VAR[SourceFlagVar,flags/source/,.png]</texture>
-                        <visible>!ListItem.IsFolder</visible>
-                    </control>
-                    <control type="image">
-                        <posx>1275</posx>
-                        <posy>987</posy>
-                        <include>OSDFlagVars</include>
-                        <texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
-                        <visible>!ListItem.IsFolder</visible>
-                    </control>
-                    <control type="image">
-                        <posx>1575</posx>
-                        <posy>987</posy>
-                        <include>OSDFlagVars</include>
-                        <texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
-                        <visible>!ListItem.IsFolder</visible>
-                    </control>
-                    <control type="image">
-                        <posx>1725</posx>
-                        <posy>987</posy>
-                        <include>OSDFlagVars</include>
-                        <texture>$VAR[AudioFlagVar,flags/audio/,.png]</texture>
-                        <visible>!ListItem.IsFolder</visible>
-                    </control>
-                    <control type="image">
-                        <posx>1770</posx>
-                        <posy>987</posy>
-                        <include>OSDFlagVars</include>
-                        <texture>$VAR[RatingFlagVar,flags/rating/,.png]</texture>
-                        <visible>Container.Content(tvshows) | [Container.Content(seasons) + !IsEmpty(ListItem.TVShowTitle)]</visible>
-                    </control>
-                </control>
+        	<visible>Control.IsVisible(9900)</visible>
+            <control type="image">
+            	<posx>1275</posx>
+                <posy>987</posy>
+                <include>OSDFlagVars</include>
+                <visible>!IsEmpty(ListItem.Thumb)</visible>
+                <texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+                <visible>Container.Content(tvshows) | [Container.Content(seasons) + ListItem.IsFolder]</visible>
+            </control>
+            <control type="image">
+            	<posx>1425</posx>
+                <posy>987</posy>
+                <include>OSDFlagVars</include>
+                <texture>$VAR[SourceFlagVar,flags/source/,.png]</texture>
+                <visible>!ListItem.IsFolder</visible>
+            </control>
+            <control type="image">
+            	<posx>1275</posx>
+                <posy>987</posy>
+                <include>OSDFlagVars</include>
+                <texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
+                <visible>!ListItem.IsFolder</visible>
+            </control>
+            <control type="image">
+            	<posx>1575</posx>
+                <posy>987</posy>
+                <include>OSDFlagVars</include>
+                <texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
+                <visible>!ListItem.IsFolder</visible>
+            </control>
+            <control type="image">
+            	<posx>1725</posx>
+                <posy>987</posy>
+                <include>OSDFlagVars</include>
+                <texture>$VAR[AudioFlagVar,flags/audio/,.png]</texture>
+                <visible>!ListItem.IsFolder</visible>
+            </control>
+            <control type="image">
+            	<posx>1770</posx>
+                <posy>987</posy>
+                <include>OSDFlagVars</include>
+                <texture>$VAR[RatingFlagVar,flags/rating/,.png]</texture>
+                <visible>Container.Content(tvshows) | [Container.Content(seasons) + !IsEmpty(ListItem.TVShowTitle)]</visible>
+            </control>
+			<!--<control type="image">
+            	<posx>1425</posx>
+                <posy>987</posy>
+                <width>330</width>
+                <height>90</height>
+                <aspectratio scalediffuse="true">keep</aspectratio>
+                <fadetime>400</fadetime>
+                <texture diffuse="thumbs/banner_mask.png" background="true">$VAR[BannerVar]</texture>
+                <visible>Container.Content(tvshows) | [Container.Content(seasons)</visible>
+            </control>-->
+		</control>
 
 	</include>
 

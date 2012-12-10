@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
+<!-- Velos -->
 <window id="0">
 	<defaultcontrol always="true">300</defaultcontrol>
+	<animation effect="fade" time="200">WindowOpen</animation>
+    <animation effect="fade" time="200">WindowClose</animation>6
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>

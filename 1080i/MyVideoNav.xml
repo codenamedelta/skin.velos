@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Velos -->
 <window>
-	<onload condition="System.HasAddon(script.tvtunes) + IsEmpty(Window(Home).Property(DontRunTVShowScripts))">RunScript(script.tvtunes,backend=True&repeat=False)</onload>
+	<onload condition="System.HasAddon(script.tvtunes)">RunScript(script.tvtunes,backend=True)</onload>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<views>50</views>
@@ -14,7 +14,7 @@
 			<include>HiddenButton</include>
 		</control>
 		<control type="button" id="9900"><!-- no info-->
-            <include>HiddenObject</include>
+            <include>HiddenButton</include>
             <visible>!Container.Content()</visible>
             <visible>!SubString(ListItem.Path,videodb://1/7/,left)</visible>
             <visible>!SubString(Container.FolderPath,library://,left)</visible>
@@ -59,16 +59,12 @@
 				<description>View</description>
 				<width>375</width>
 				<align>left</align>
-				<focusedcolor>Cyan</focusedcolor>
-				<texturefocus>other_textures/buttonFo.png</texturefocus>
 			</control>
 
 			<control type="button" id="3">
 				<description>Sort</description>
 				<width>375</width>
 				<align>left</align>
-				<focusedcolor>Cyan</focusedcolor>
-				<texturefocus>other_textures/buttonFo.png</texturefocus>
 			</control>
 
 			<control type="togglebutton" id="4">
@@ -77,8 +73,6 @@
 				<align>left</align>
 				<label>584</label>
 				<altlabel>585</altlabel>
-				<focusedcolor>Cyan</focusedcolor>
-				<texturefocus>other_textures/buttonFo.png</texturefocus>
 			</control>
 
 			<control type="button" id="5">
@@ -87,8 +81,6 @@
 				<align>left</align>
 				<label>31001</label>
 				<onclick>SetFocus(50)</onclick>
-				<focusedcolor>Cyan</focusedcolor>
-				<texturefocus>other_textures/buttonFo.png</texturefocus>
 			</control>
 
 			<control type="radiobutton" id="7">
@@ -97,8 +89,6 @@
 				<align>left</align>
 				<label>14000</label>
 				<altlabel>14001</altlabel>
-				<focusedcolor>Cyan</focusedcolor>
-				<texturefocus>other_textures/buttonFo.png</texturefocus>
 			</control>
 
 			<control type="button" id="8">
@@ -106,8 +96,6 @@
 				<width>375</width>
 				<align>left</align>
 				<label>137</label>
-				<focusedcolor>Cyan</focusedcolor>
-				<texturefocus>other_textures/buttonFo.png</texturefocus>
 			</control>
 			
 			<control type="button" id="10">
@@ -115,8 +103,6 @@
 				<width>375</width>
 				<align>left</align>
 				<label>137</label>
-				<focusedcolor>Cyan</focusedcolor>
-				<texturefocus>other_textures/buttonFo.png</texturefocus>
 			</control>
 
 			<control type="radiobutton" id="11">
@@ -127,8 +113,6 @@
 				<onclick>xbmc.mastermode</onclick>
 				<selected>system.ismaster</selected>
 				<visible>system.haslocks</visible>
-				<focusedcolor>Cyan</focusedcolor>
-				<texturefocus>other_textures/buttonFo.png</texturefocus>
 			</control>
 
 			<control type="radiobutton" id="16">
@@ -136,8 +120,6 @@
 				<width>375</width>
 				<align>left</align>
 				<label>589</label>
-				<focusedcolor>Cyan</focusedcolor>
-				<texturefocus>other_textures/buttonFo.png</texturefocus>
 			</control>
 
 			<control type="radiobutton" id="17">
@@ -145,10 +127,8 @@
 				<width>375</width>
 				<align>left</align>
 				<label>20411</label>
-				<focusedcolor>Cyan</focusedcolor>
-				<texturefocus>other_textures/buttonFo.png</texturefocus>
 			</control>
-
+			
 			<control type="button" id="21">
 				<description>Activate Filter</description>
 				<width>375</width>
@@ -157,8 +137,6 @@
 				<onclick>SendClick(videolibrary,19)</onclick>
 				<onclick>SetFocus(22)</onclick>
 				<visible>IsEmpty(Window.Property(filter))</visible>
-				<focusedcolor>Cyan</focusedcolor>
-				<texturefocus>other_textures/buttonFo.png</texturefocus>
 			</control>
 
 			<control type="button" id="22">
@@ -169,8 +147,6 @@
 				<onclick>SendClick(videolibrary,19)</onclick>
 				<onclick>SetFocus(21)</onclick>
 				<visible>!IsEmpty(Window.Property(filter))</visible>
-				<focusedcolor>Cyan</focusedcolor>
-				<texturefocus>other_textures/buttonFo.png</texturefocus>
 			</control>
 
 			<control type="button" id="98">
@@ -180,9 +156,16 @@
 				<label>31015</label>
 				<onclick>ActivateWindow(playercontrols)</onclick>
 				<visible>Player.HasMedia</visible>
-				<focusedcolor>Cyan</focusedcolor>
-				<texturefocus>other_textures/buttonFo.png</texturefocus>
 			</control>
+			
+			<!-- CONTEXT MENU FUTURE
+			
+			<control type="button" id="99">
+				<width>375</width>
+				<align>left</align>
+				<label>31015</label>
+				<onclick>ReplaceWindow(contextmenu,Container(id).ListItem)</onclick>
+			</control>-->
 
 		</control>
 

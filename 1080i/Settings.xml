@@ -7,6 +7,7 @@
 	<controls>
 
 		<include>GlobalBackground</include>
+		<include>TimeDate</include>
 
 		<control type="list" id="9000">
 			<posx>780</posx>
@@ -19,11 +20,11 @@
 			<scrolltime>200</scrolltime>
 			<itemlayout width="360" height="69">
 
-				<!--<control type="image">
+				<control type="image">
 					<width>360</width>
 					<height>66</height>
 					<texture border="2">other_textures/ButtonNF.png</texture>
-				</control>-->
+				</control>
 
 				<control type="label">
 					<posx>180</posx>
@@ -31,25 +32,26 @@
 					<textcolor>Grey</textcolor>
 					<font>Medium</font>
 					<align>center</align>
-					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+					<label>$INFO[ListItem.Label]</label>
 				</control>
 
 			</itemlayout>
 
 			<focusedlayout width="360" height="69">
 
-				<!--<control type="image">
+				<control type="image">
 					<width>360</width>
 					<height>66</height>
 					<texture border="5">other_textures/ButtonFo.png</texture>
-				</control>-->
+				</control>
 
 				<control type="label">
 					<posx>180</posx>
 					<width>300</width>
+					<textcolor>White</textcolor>
 					<font>Medium</font>
 					<align>center</align>
-					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+					<label>$INFO[ListItem.Label]</label>
 				</control>
 
 			</focusedlayout>

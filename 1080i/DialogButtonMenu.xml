@@ -27,7 +27,6 @@
 			</control>
 
 			<control type="grouplist" id="3110">
-				<posx>15</posx>
 				<posy>60</posy>
 				<width>375</width>
 				<itemgap>3</itemgap>
@@ -43,8 +42,6 @@
 					<width>375</width>
 					<label>13012</label>
 					<align>left</align>
-					<focusedcolor>Cyan</focusedcolor>
-					<texturefocus>other_textures/buttonFo.png</texturefocus>
 					<onclick>Quit()</onclick>
 					<visible>System.ShowExitButton</visible>
 				</control>
@@ -55,8 +52,6 @@
 					<label>20046</label>
 					<altlabel>20045</altlabel>
 					<align>left</align>
-					<focusedcolor>Cyan</focusedcolor>
-					<texturefocus>other_textures/buttonFo.png</texturefocus>
 					<onclick>xbmc.mastermode</onclick>
 					<visible>System.HasLocks</visible>
 				</control>
@@ -67,8 +62,6 @@
 					<include>SettingsLabel</include>
 					<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
 					<align>left</align>
-					<focusedcolor>Cyan</focusedcolor>
-					<texturefocus>other_textures/buttonFo.png</texturefocus>
 					<onclick>dialog.close(all,true)</onclick>
 					<onclick>System.LogOff</onclick>
 					<visible>System.Loggedon + System.HasLoginScreen</visible>
@@ -79,8 +72,6 @@
 					<width>375</width>
 					<label>20151</label>
 					<align>left</align>
-					<focusedcolor>Cyan</focusedcolor>
-					<texturefocus>other_textures/buttonFo.png</texturefocus>
 					<onclick>XBMC.CancelAlarm(shutdowntimer)</onclick>
 					<visible>System.HasAlarm(shutdowntimer)</visible>
 				</control>
@@ -90,8 +81,6 @@
 					<width>375</width>
 					<label>20150</label>
 					<align>left</align>
-					<focusedcolor>Cyan</focusedcolor>
-					<texturefocus>other_textures/buttonFo.png</texturefocus>
 					<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.Shutdown())</onclick>
 					<visible>!System.HasAlarm(shutdowntimer)</visible>
 				</control>
@@ -101,8 +90,6 @@
 					<width>375</width>
 					<label>13005</label>
 					<align>left</align>
-					<focusedcolor>Cyan</focusedcolor>
-					<texturefocus>other_textures/buttonFo.png</texturefocus>
 					<onclick>ShutDown()</onclick>
 				</control>
 
@@ -111,8 +98,6 @@
 					<width>375</width>
 					<label>13011</label>
 					<align>left</align>
-					<focusedcolor>Cyan</focusedcolor>
-					<texturefocus>other_textures/buttonFo.png</texturefocus>
 					<onclick>XBMC.Suspend()</onclick>
 				</control>
 
@@ -121,8 +106,6 @@
 					<width>375</width>
 					<label>13013</label>
 					<align>left</align>
-					<focusedcolor>Cyan</focusedcolor>
-					<texturefocus>other_textures/buttonFo.png</texturefocus>
 					<onclick>XBMC.Reset()</onclick>
 				</control>
 
@@ -131,8 +114,6 @@
 					<width>375</width>
 					<align>left</align>
 					<label>$LOCALIZE[20145] [B]$INFO[System.Alarmpos][/B]</label>
-					<focusedcolor>Cyan</focusedcolor>
-					<texturefocus>other_textures/buttonFo.png</texturefocus>
 					<visible>System.HasAlarm(shutdowntimer)</visible>
 				</control>
 
@@ -141,8 +122,6 @@
 					<width>375</width>
 					<label>31015</label>
 					<align>left</align>
-					<focusedcolor>Cyan</focusedcolor>
-					<texturefocus>other_textures/buttonFo.png</texturefocus>
 					<onclick>ActivateWindow(playercontrols)</onclick>
 					<visible>Player.HasMedia</visible>
 				</control>

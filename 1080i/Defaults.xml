@@ -10,9 +10,9 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<font>Small</font>
-		<textcolor>White</textcolor>
-		<focusedcolor>White</focusedcolor>
-		<selectedcolor>White</selectedcolor>
+		<textcolor>Grey</textcolor>
+		<focusedcolor>Grey</focusedcolor>
+		<selectedcolor>Grey</selectedcolor>
 		<disabledcolor>Red</disabledcolor>
 	</default>
 
@@ -52,10 +52,12 @@
 		<font>Small</font>
 		<label>-</label>
 		<textoffsetx>30</textoffsetx>
-		<textcolor>Grey</textcolor>
+		<textcolor>Cyan</textcolor>
 		<focusedcolor>White</focusedcolor>
 		<disabledcolor>Red</disabledcolor>
 		<pulseonselect>false</pulseonselect>
+		<texturefocus border="5">other_textures/ButtonFo.png</texturefocus>
+		<texturenofocus border="5">other_textures/ButtonNF.png</texturenofocus>
 	</default>
 
 	<default type="togglebutton">
@@ -66,12 +68,14 @@
 		<label>-</label>
 		<textoffsetx>30</textoffsetx>
 		<font>Small</font>
-		<textcolor>Grey</textcolor>
+		<textcolor>Cyan</textcolor>
 		<focusedcolor>White</focusedcolor>
 		<disabledcolor>Red</disabledcolor>
 		<align>center</align>
 		<aligny>center</aligny>
 		<pulseonselect>false</pulseonselect>
+		<texturefocus border="5">other_textures/ButtonFo.png</texturefocus>
+		<texturenofocus border="5">other_textures/ButtonNF.png</texturenofocus>
 	</default>
 
 	<default type="radiobutton">
@@ -83,8 +87,10 @@
 		<aligny>center</aligny>
 		<font>Small</font>
 		<label>-</label>
-		<textcolor>Grey</textcolor>
+		<textcolor>Cyan</textcolor>
 		<focusedcolor>White</focusedcolor>
+		<texturefocus border="5">other_textures/ButtonFo.png</texturefocus>
+		<texturenofocus border="5">other_textures/ButtonNF.png</texturenofocus>
 		<disabledcolor>Red</disabledcolor>
 		<radiowidth>45</radiowidth>
 		<radioheight>45</radioheight>
@@ -107,8 +113,10 @@
 		<texturedown>other_textures/ArrowDownNF.png</texturedown>
 		<textureupfocus>other_textures/ArrowUpFo.png</textureupfocus>
 		<texturedownfocus>other_textures/ArrowDownFo.png</texturedownfocus>
-		<textcolor>Grey</textcolor>
+		<textcolor>Cyan</textcolor>
 		<focusedcolor>White</focusedcolor>
+		<texturefocus border="5">other_textures/ButtonFo.png</texturefocus>
+		<texturenofocus border="5">other_textures/ButtonNF.png</texturenofocus>
 		<disabledcolor>Red</disabledcolor>
 		<textoffsetx>30</textoffsetx>
 		<align>left</align>

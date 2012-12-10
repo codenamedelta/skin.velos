@@ -182,5 +182,12 @@
 			</control>
 		</control>
 	</include>
+	
+	 <include name="OSDFlagVars">
+        <width>120</width>
+        <height>80</height>
+        <aspectratio>keep</aspectratio>
+        
+    </include>
 
 </includes>

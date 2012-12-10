@@ -72,7 +72,6 @@
 						<width>870</width>
 						<height>66</height>
 						<texture border="5">other_textures/ButtonFO.png</texture>
-						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(2)">Conditional</animation>
 					</control>
 
 					<control type="label">
