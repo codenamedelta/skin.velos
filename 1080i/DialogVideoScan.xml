@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
+<!-- Velos -->
 <window id="133">
 	<defaultcontrol always="true">401</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
@@ -9,6 +9,9 @@
 		<control type="group">
 			<posx>1290</posx>
 			<posy>30</posy>
+			<animation effect="slide" start="0,186" time="250">WindowOpen</animation>
+			<animation effect="slide" end="0,186" time="250">WindowClose</animation>
+			<visible>!Window.IsActive(startup)</visible>
 
 			<control type="image">
 				<description>background image</description>

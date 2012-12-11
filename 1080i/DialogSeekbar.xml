@@ -3,32 +3,35 @@
 <window id="115">
 	<defaultcontrol always="true">901</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<visible>[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding] + ![VideoPlayer.Content(livetv) | Window.IsVisible(videoosd) | Window.IsVisible(fullscreeninfo)] + Window.IsVisible(fullscreenvideo)</visible>
+	<visible>[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsVisible(videoosd)] + ![VideoPlayer.Content(livetv) | Window.IsVisible(fullscreeninfo)] + Window.IsVisible(fullscreenvideo)</visible>
 
 	<controls>
 
 		<control type="group">
 			<posx>105</posx>
 			<posy>930</posy>
+			<animation effect="slide" start="0,100" time="250">WindowOpen</animation>
+			<animation effect="slide" end="0,100" time="250">WindowClose</animation>
 
 			<control type="image">
 				<posx>-105</posx>
-				<posy>45</posy>
+				<posy>55</posy>
 				<width>1920</width>
-				<height>180</height>
-				<texture border="22">other_textures/ContentPanel.png</texture>
+				<height>100</height>
+				<texture border="22">other_textures/white-back.png</texture>
 			</control>
 
 			<control type="label">
-				<posx>15</posx>
-				<posy>84</posy>
+				<posx>1695</posx>
+				<posy>100</posy>
 				<width>1680</width>
-				<label>$INFO[Player.Time]</label>
+				<align>right</align>
+				<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
 			</control>
 
 			<control type="label">
-				<posx>15</posx>
-				<posy>84</posy>
+				<posx>15</posx> 
+				<posy>100</posy>
 				<width>1680</width>
 				<align>center</align>
 				<label>$LOCALIZE[31000] $INFO[Player.FinishTime]</label>
@@ -37,16 +40,17 @@
 
 			<control type="label">
 				<posx>15</posx>
-				<posy>84</posy>
+				<posy>100</posy>
 				<width>1680</width>
+				<textcolor>Cyan</textcolor>
 				<align>center</align>
-				<label>112</label>
+				<label>[UPPERCASE]$LOCALIZE[112][/UPPERCASE]</label>
 				<visible>player.paused</visible>
 			</control>
 
 			<control type="label">
 				<posx>15</posx>
-				<posy>84</posy>
+				<posy>100</posy>
 				<width>1680</width>
 				<align>center</align>
 				<label>FFx2</label>
@@ -55,7 +59,7 @@
 
 			<control type="label">
 				<posx>15</posx>
-				<posy>84</posy>
+				<posy>100</posy>
 				<width>1680</width>
 				<align>center</align>
 				<label>FFx4</label>
@@ -64,7 +68,7 @@
 
 			<control type="label">
 				<posx>15</posx>
-				<posy>84</posy>
+				<posy>100</posy>
 				<width>1680</width>
 				<align>center</align>
 				<label>FFx8</label>
@@ -73,7 +77,7 @@
 
 			<control type="label">
 				<posx>15</posx>
-				<posy>84</posy>
+				<posy>100</posy>
 				<width>1680</width>
 				<align>center</align>
 				<label>FFx16</label>
@@ -82,7 +86,7 @@
 
 			<control type="label">
 				<posx>15</posx>
-				<posy>84</posy>
+				<posy>100</posy>
 				<width>1680</width>
 				<align>center</align>
 				<label>FFx32</label>
@@ -91,7 +95,7 @@
 
 			<control type="label">
 				<posx>15</posx>
-				<posy>84</posy>
+				<posy>100</posy>
 				<width>1680</width>
 				<align>center</align>
 				<label>RWx2</label>
@@ -100,7 +104,7 @@
 
 			<control type="label">
 				<posx>15</posx>
-				<posy>84</posy>
+				<posy>100</posy>
 				<width>1680</width>
 				<align>center</align>
 				<label>RWx7</label>
@@ -109,7 +113,7 @@
 
 			<control type="label">
 				<posx>15</posx>
-				<posy>84</posy>
+				<posy>100</posy>
 				<width>1680</width>
 				<align>center</align>
 				<label>RWx8</label>
@@ -118,7 +122,7 @@
 
 			<control type="label">
 				<posx>15</posx>
-				<posy>84</posy>
+				<posy>100</posy>
 				<width>1680</width>
 				<align>center</align>
 				<label>RWx16</label>
@@ -127,25 +131,35 @@
 
 			<control type="label">
 				<posx>15</posx>
-				<posy>84</posy>
+				<posy>100</posy>
 				<width>1680</width>
 				<align>center</align>
 				<label>RWx32</label>
 				<visible>player.rewinding32x</visible>
 			</control>
-
+			
 			<control type="label">
 				<posx>1695</posx>
-				<posy>84</posy>
+				<posy>50</posy>
 				<width>1680</width>
 				<align>right</align>
-				<label>$INFO[Player.Duration]</label>
+				<font>Large</font>
+				<label>[UPPERCASE]$INFO[Player.Title][/UPPERCASE]</label>
 			</control>
+			
+			<control type="label">
+				<posx>15</posx>
+				<posy>50</posy>
+				<width>1680</width>
+				<align>left</align>
+				<font>Large</font>
+				<label>[UPPERCASE]$INFO[VideoPlayer.TVShowTitle][/UPPERCASE]</label>
+			</control>			
 
 			<control type="progress" id="23">
 				<description>Progress Bar</description>
 				<posx>15</posx>
-				<posy>72</posy>
+				<posy>100</posy>
 				<width>1680</width>
 				<info>Player.Progress</info>
 				<texturebg border="1">other_textures/OSD/ProgressBack.png</texturebg>
@@ -156,7 +170,7 @@
 			<control type="slider" id="401">
 				<description>Seekbar</description>
 				<posx>15</posx>
-				<posy>72</posy>
+				<posy>100</posy>
 				<width>1680</width>
 				<visible>Player.Seeking</visible>
 			</control>
