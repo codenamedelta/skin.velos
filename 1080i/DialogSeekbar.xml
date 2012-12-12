@@ -176,6 +176,46 @@
 			</control>
 
 		</control>
+		
+		<control type="group">
+			<posx>0</posx>
+			<posy>0</posy>
+			<animation effect="slide" start="0,-100" time="250">WindowOpen</animation>
+			<animation effect="slide" end="0,-100" time="250">WindowClose</animation>
+
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>100</height>
+				<texture border="22">other_textures/white-back.png</texture>
+			</control>
+			
+			 <!--<control type="image">
+                <posx>22</posx>
+                <posy>746</posy>
+                <width>345</width>
+                <height>234</height>
+                <texture background="true">$VAR[PlayerArtworkVar]</texture>
+                <aspectratio aligny="bottom">keep</aspectratio>
+            </control>-->
+			
+			<!-- TVSHOW POSTER -->
+			<control type="image">
+            	<posx>1615</posx>
+                <posy>25</posy>
+                <width>255</width>
+				<height>350</height>
+                <texture background="true">$VAR[PlayerPosterVar]</texture>
+                <aspectratio aligny="bottom">stretch</aspectratio>
+				<bordertexture>other_textures/borderwhite.png</bordertexture>
+				<bordersize>10</bordersize>
+                <visible>VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)</visible>
+				<animation effect="slide" start="500,0" time="500">WindowOpen</animation>
+				<animation effect="slide" end="0,-500" time="500">WindowClose</animation>
+                </control>			
+			
+		</control>
 
 	</controls>
 

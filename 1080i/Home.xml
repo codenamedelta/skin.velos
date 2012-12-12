@@ -3,7 +3,7 @@
 <window id="0">
 	<defaultcontrol always="true">300</defaultcontrol>
 	<animation effect="fade" time="200">WindowOpen</animation>
-    <animation effect="fade" time="200">WindowClose</animation>6
+    <animation effect="fade" time="200">WindowClose</animation>
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>

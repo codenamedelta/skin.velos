@@ -45,8 +45,8 @@
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>1920</width>
-					<height>160</height>
+					<width>500</width>
+					<height>100</height>
 					<texture border="22">other_textures/white-back.png</texture>
 				</control>
 

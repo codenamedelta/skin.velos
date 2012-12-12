@@ -109,6 +109,16 @@
         <value condition="!IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
         <value condition="!IsEmpty(ListItem.Art(tvshow.banner))">$INFO[ListItem.Art(tvshow.banner)]</value>
     </variable>
+	 <variable name="PlayerArtworkVar">
+        <value condition="VideoPlayer.Content(episodes) + !IsEmpty(Player.Art(tvshow.clearart))">$INFO[Player.Art(tvshow.clearart)]</value>
+        <value condition="VideoPlayer.Content(episodes)">$INFO[Player.Art(tvshow.clearlogo)]</value>
+        <value condition="!IsEmpty(Player.Art(clearart))">$INFO[Player.Art(clearart)]</value>
+        <value>$INFO[Player.Art(clearlogo)]</value>
+    </variable>	
+	<variable name="PlayerPosterVar">
+        <value condition="VideoPlayer.Content(episodes)">$INFO[Player.Art(tvshow.poster)]</value>
+        <value>$INFO[VideoPlayer.Cover]</value>
+    </variable>
 	<variable name="SplashScreen">
 		<!-- CHRISTMAS SPLASHSCREEN -->
 		<value condition="Window.IsActive(Startup.xml) + System.Date(12-24,12-26)">other_textures/splashscreen/startup_christmas.png</value>
