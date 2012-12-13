@@ -6,183 +6,15 @@
 	<visible>[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsVisible(videoosd)] + ![VideoPlayer.Content(livetv) | Window.IsVisible(fullscreeninfo)] + Window.IsVisible(fullscreenvideo)</visible>
 
 	<controls>
-
-		<control type="group">
-			<posx>105</posx>
-			<posy>930</posy>
-			<animation effect="slide" start="0,100" time="250">WindowOpen</animation>
-			<animation effect="slide" end="0,100" time="250">WindowClose</animation>
-
-			<control type="image">
-				<posx>-105</posx>
-				<posy>55</posy>
-				<width>1920</width>
-				<height>100</height>
-				<texture border="22">other_textures/white-back.png</texture>
-			</control>
-
-			<control type="label">
-				<posx>1695</posx>
-				<posy>100</posy>
-				<width>1680</width>
-				<align>right</align>
-				<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
-			</control>
-
-			<control type="label">
-				<posx>15</posx> 
-				<posy>100</posy>
-				<width>1680</width>
-				<align>center</align>
-				<label>$LOCALIZE[31000] $INFO[Player.FinishTime]</label>
-				<visible>!Player.Forwarding + !Player.Rewinding + !Player.Paused</visible>
-			</control>
-
-			<control type="label">
-				<posx>15</posx>
-				<posy>100</posy>
-				<width>1680</width>
-				<textcolor>Cyan</textcolor>
-				<align>center</align>
-				<label>[UPPERCASE]$LOCALIZE[112][/UPPERCASE]</label>
-				<visible>player.paused</visible>
-			</control>
-
-			<control type="label">
-				<posx>15</posx>
-				<posy>100</posy>
-				<width>1680</width>
-				<align>center</align>
-				<label>FFx2</label>
-				<visible>player.forwarding2x</visible>
-			</control>
-
-			<control type="label">
-				<posx>15</posx>
-				<posy>100</posy>
-				<width>1680</width>
-				<align>center</align>
-				<label>FFx4</label>
-				<visible>player.forwarding4x</visible>
-			</control>
-
-			<control type="label">
-				<posx>15</posx>
-				<posy>100</posy>
-				<width>1680</width>
-				<align>center</align>
-				<label>FFx8</label>
-				<visible>player.forwarding8x</visible>
-			</control>
-
-			<control type="label">
-				<posx>15</posx>
-				<posy>100</posy>
-				<width>1680</width>
-				<align>center</align>
-				<label>FFx16</label>
-				<visible>player.forwarding16x</visible>
-			</control>
-
-			<control type="label">
-				<posx>15</posx>
-				<posy>100</posy>
-				<width>1680</width>
-				<align>center</align>
-				<label>FFx32</label>
-				<visible>player.forwarding32x</visible>
-			</control>
-
-			<control type="label">
-				<posx>15</posx>
-				<posy>100</posy>
-				<width>1680</width>
-				<align>center</align>
-				<label>RWx2</label>
-				<visible>player.rewinding2x</visible>
-			</control>
-
-			<control type="label">
-				<posx>15</posx>
-				<posy>100</posy>
-				<width>1680</width>
-				<align>center</align>
-				<label>RWx7</label>
-				<visible>player.rewinding4x</visible>
-			</control>
-
-			<control type="label">
-				<posx>15</posx>
-				<posy>100</posy>
-				<width>1680</width>
-				<align>center</align>
-				<label>RWx8</label>
-				<visible>player.rewinding8x</visible>
-			</control>
-
-			<control type="label">
-				<posx>15</posx>
-				<posy>100</posy>
-				<width>1680</width>
-				<align>center</align>
-				<label>RWx16</label>
-				<visible>player.rewinding16x</visible>
-			</control>
-
-			<control type="label">
-				<posx>15</posx>
-				<posy>100</posy>
-				<width>1680</width>
-				<align>center</align>
-				<label>RWx32</label>
-				<visible>player.rewinding32x</visible>
-			</control>
-			
-			<control type="label">
-				<posx>1695</posx>
-				<posy>50</posy>
-				<width>1680</width>
-				<align>right</align>
-				<font>Large</font>
-				<label>[UPPERCASE]$INFO[Player.Title][/UPPERCASE]</label>
-			</control>
-			
-			<control type="label">
-				<posx>15</posx>
-				<posy>50</posy>
-				<width>1680</width>
-				<align>left</align>
-				<font>Large</font>
-				<label>[UPPERCASE]$INFO[VideoPlayer.TVShowTitle][/UPPERCASE]</label>
-			</control>			
-
-			<control type="progress" id="23">
-				<description>Progress Bar</description>
-				<posx>15</posx>
-				<posy>100</posy>
-				<width>1680</width>
-				<info>Player.Progress</info>
-				<texturebg border="1">other_textures/OSD/ProgressBack.png</texturebg>
-				<midtexture border="1">other_textures/OSD/ProgressMid.png</midtexture>
-				<visible>true</visible>
-			</control>
-
-			<control type="slider" id="401">
-				<description>Seekbar</description>
-				<posx>15</posx>
-				<posy>100</posy>
-				<width>1680</width>
-				<visible>Player.Seeking</visible>
-			</control>
-
-		</control>
-		
+	
+		<!-- TOP BAR -->
 		<control type="group">
 			<posx>0</posx>
 			<posy>0</posy>
-			<animation effect="slide" start="0,-100" time="250">WindowOpen</animation>
-			<animation effect="slide" end="0,-100" time="250">WindowClose</animation>
+			<animation effect="slide" start="0,-100" time="500">WindowOpen</animation>
+			<animation effect="slide" end="0,-100" time="500">WindowClose</animation>
 
+			<!-- BAR BACKGROUND COLOR -->
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -211,11 +43,186 @@
 				<bordertexture>other_textures/borderwhite.png</bordertexture>
 				<bordersize>10</bordersize>
                 <visible>VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)</visible>
-				<animation effect="slide" start="500,0" time="500">WindowOpen</animation>
-				<animation effect="slide" end="0,-500" time="500">WindowClose</animation>
-                </control>			
+				<animation effect="slide" start="500,0" time="750">WindowOpen</animation>
+				<animation effect="slide" end="0,-500" time="750">WindowClose</animation>
+            </control>		
+			
+			<!-- TIME AND DATE DISPLAY -->
+			<include>TimeDate</include>	
 			
 		</control>
+
+		<!-- BOTTOM BAR -->
+		<control type="group">
+			<posx>0</posx>
+			<posy>930</posy>
+			<animation effect="slide" start="0,100" time="500">WindowOpen</animation>
+			<animation effect="slide" end="0,100" time="500">WindowClose</animation>
+			
+			<!-- BAR BACKGROUND COLOR -->
+			<control type="image">
+				<posx>0</posx>
+				<posy>55</posy>
+				<width>1920</width>
+				<height>100</height>
+				<texture border="22">other_textures/white-back.png</texture>
+			</control>
+			
+			<control type="label">
+				<posx>1905</posx>
+				<posy>100</posy>
+				<width>1920</width>
+				<align>right</align>
+				<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+			</control>
+
+			<control type="label">
+				<posx>0</posx> 
+				<posy>100</posy>
+				<width>1920</width>
+				<align>center</align>
+				<label>$LOCALIZE[31000] $INFO[Player.FinishTime]</label>
+				<visible>!Player.Forwarding + !Player.Rewinding + !Player.Paused</visible>
+			</control>
+
+			<control type="label">
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1920</width>
+				<textcolor>Cyan</textcolor>
+				<align>center</align>
+				<label>[UPPERCASE]$LOCALIZE[112][/UPPERCASE]</label>
+				<visible>player.paused</visible>
+			</control>
+
+			<control type="label">
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1920</width>
+				<align>center</align>
+				<label>FFx2</label>
+				<visible>player.forwarding2x</visible>
+			</control>
+
+			<control type="label">
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1920</width>
+				<align>center</align>
+				<label>FFx4</label>
+				<visible>player.forwarding4x</visible>
+			</control>
+
+			<control type="label">
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1920</width>
+				<align>center</align>
+				<label>FFx8</label>
+				<visible>player.forwarding8x</visible>
+			</control>
+
+			<control type="label">
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1920</width>
+				<align>center</align>
+				<label>FFx16</label>
+				<visible>player.forwarding16x</visible>
+			</control>
+
+			<control type="label">
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1920</width>
+				<align>center</align>
+				<label>FFx32</label>
+				<visible>player.forwarding32x</visible>
+			</control>
+
+			<control type="label">
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1920</width>
+				<align>center</align>
+				<label>RWx2</label>
+				<visible>player.rewinding2x</visible>
+			</control>
+
+			<control type="label">
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1920</width>
+				<align>center</align>
+				<label>RWx7</label>
+				<visible>player.rewinding4x</visible>
+			</control>
+
+			<control type="label">
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1920</width>
+				<align>center</align>
+				<label>RWx8</label>
+				<visible>player.rewinding8x</visible>
+			</control>
+
+			<control type="label">
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1920</width>
+				<align>center</align>
+				<label>RWx16</label>
+				<visible>player.rewinding16x</visible>
+			</control>
+
+			<control type="label">
+				<posx>0</posx>
+				<posy>1920</posy>
+				<width>1680</width>
+				<align>center</align>
+				<label>RWx32</label>
+				<visible>player.rewinding32x</visible>
+			</control>
+			
+			<control type="label">
+				<posx>1905</posx>
+				<posy>50</posy>
+				<width>1920</width>
+				<align>right</align>
+				<font>Large</font>
+				<label>[UPPERCASE]$INFO[Player.Title][/UPPERCASE]</label>
+			</control>
+			
+			<control type="label">
+				<posx>15</posx>
+				<posy>50</posy>
+				<width>1680</width>
+				<align>left</align>
+				<font>Large</font>
+				<label>[UPPERCASE]$INFO[VideoPlayer.TVShowTitle][/UPPERCASE]</label>
+			</control>			
+
+			<control type="progress" id="23">
+				<description>Progress Bar</description>
+				<posx>15</posx>
+				<posy>100</posy>
+				<width>1890</width>
+				<info>Player.Progress</info>
+				<texturebg border="1">other_textures/OSD/ProgressBack.png</texturebg>
+				<midtexture border="1">other_textures/OSD/ProgressMid.png</midtexture>
+				<visible>true</visible>
+			</control>
+
+			<control type="slider" id="401">
+				<description>Seekbar</description>
+				<posx>15</posx>
+				<posy>100</posy>
+				<width>1680</width>
+				<visible>Player.Seeking</visible>
+			</control>
+
+		</control>	
 
 	</controls>
 

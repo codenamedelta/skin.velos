@@ -2,15 +2,16 @@
 <!-- Velos -->
 <window id="2901">
 	<defaultcontrol always="true">14</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
 
 	<controls>
 
 		<control type="group">
 			<posx>0</posx>
 			<posy>0</posy>
-			<animation effect="slide" start="0,-180" time="250">WindowOpen</animation>
-			<animation effect="slide" end="0,-180" time="250">WindowClose</animation>
+			<animation effect="slide" start="0,-180" time="500">WindowOpen</animation>
+			<animation effect="slide" end="0,-180" time="500">WindowClose</animation>
 
 			<control type="image">
 				<posx>0</posx>
@@ -35,19 +36,11 @@
 
 				<control type="label">
 					<description>Current Control</description>
-					<posx>505</posx>
-					<posy>120</posy>
-					<width>510</width>
-					<align>left</align>
+					<posx>660</posx>
+					<posy>50</posy>
+					<width>600</width>
+					<align>center</align>
 					<label>$INFO[System.CurrentControl]</label>
-				</control>
-
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>500</width>
-					<height>100</height>
-					<texture border="22">other_textures/white-back.png</texture>
 				</control>
 
 				<control type="grouplist" id="100">
