@@ -111,24 +111,35 @@
 
 		</control>
 				
-		<!-- TVSHOW TITLE LABEL -->
+		<!-- NUMBER OF TV -->
+		<include>ItemCounts</include>
+		
+		<control type="image">
+			<posx>0</posx>
+			<posy>90</posy>
+			<width>1260</width>
+			<height>70</height>
+			<texture>other_textures/white-back.png</texture>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies)] + [!IsEmpty(ListItem.TVShowTitle) | [!IsEmpty(ListItem.Title)]]</visible>
+		</control>
+		
 		<control type="label">
-			<posx>50</posx>
-			<posy>80</posy>
+			<posx>20</posx>
+			<posy>90</posy>
 			<width>1253</width>
 			<font>XLarge</font>
-			<textcolor>White</textcolor>
+			<textcolor>Grey</textcolor>
 			<label>[UPPERCASE]$INFO[ListItem.TVShowTitle][/UPPERCASE]</label>
 			<visible>[Container.Content(tvshows)] | [Container.Content(seasons)] | [Container.Content(episodes)]</visible>
 		</control>
-		
+				
 		<!-- MOVIE TITLE LABEL -->
 		<control type="label">
-			<posx>50</posx>
-			<posy>80</posy>
+			<posx>20</posx>
+			<posy>90</posy>
 			<width>1253</width>
 			<font>XLarge</font>
-			<textcolor>White</textcolor>
+			<textcolor>Grey</textcolor>
 			<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
 			<visible>[Container.Content(movies)]</visible>
 		</control>
@@ -153,7 +164,7 @@
 			<font>small</font>
 			<textcolor>White</textcolor>
 			<label>[UPPERCASE]$LOCALIZE[31045][/UPPERCASE]</label>
-			<visible>[Container.Content(tvshows)]</visible>
+			<visible>[Container.Content(tvshows) + !IsEmpty(ListItem.Property(TotalSeasons))]</visible>
 		</control>
 		
 		<!-- NUMBER OF SEASONS NUMBER -->
@@ -165,7 +176,7 @@
 			<textcolor>White</textcolor>
 			<align>center</align>
 			<label>$INFO[ListItem.Property(TotalSeasons)]</label>
-			<visible>[Container.Content(tvshows)]</visible>
+			<visible>[Container.Content(tvshows)] + [!IsEmpty(ListItem.Property(TotalSeasons))]</visible>
 		</control>
 				
 		<!-- NUMBER OF EPISODES LABEL -->
@@ -177,7 +188,7 @@
 			<textcolor>White</textcolor>
 			<align>center</align>
 			<label>[UPPERCASE]$LOCALIZE[31046][/UPPERCASE]</label>
-			<visible>[Container.Content(tvshows)] | [Container.Content(seasons)]]</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons)] + [!IsEmpty(ListItem.Property(TotalEpisodes))]</visible>
 		</control>
 		
 		<!-- NUMBER OF EPISODES NUMBER -->
@@ -189,7 +200,7 @@
 			<textcolor>White</textcolor>
 			<align>center</align>
 			<label>$INFO[ListItem.Property(TotalEpisodes)]</label>
-			<visible>[Container.Content(tvshows)] | [Container.Content(seasons)]]</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons)] + [!IsEmpty(ListItem.Property(TotalEpisodes))]</visible>
 		</control>
 		
 		<!-- NUMBER OF WATCHED EPISODES LABEL -->
@@ -201,7 +212,7 @@
 			<textcolor>White</textcolor>
 			<align>center</align>
 			<label>[UPPERCASE]$LOCALIZE[31044][/UPPERCASE]</label>
-			<visible>[Container.Content(tvshows)] | [Container.Content(seasons)]]</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons)]  + [!IsEmpty(ListItem.Property(WatchedEpisodes))]</visible>
 		</control>
 		
 		<!-- NUMBER OF WATCHED EPISODES NUMBER -->
@@ -213,7 +224,7 @@
 			<textcolor>White</textcolor>
 			<align>center</align>
 			<label>$INFO[ListItem.Property(WatchedEpisodes)]</label>
-			<visible>[Container.Content(tvshows)] | [Container.Content(seasons)]]</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons)]  + [!IsEmpty(ListItem.Property(WatchedEpisodes))]</visible>
 		</control>
 		
 		<!-- TVSHOW/EPISODE/MOVIE YEAR/GENRE LABEL -->
@@ -226,7 +237,6 @@
 			<align>left</align>
 			<label>[UPPERCASE]$INFO[ListItem.Year]$INFO[ListItem.Rating, / ]$INFO[ListItem.Genre, / ][/UPPERCASE]</label>
 			<visible>[Container.Content(tvshows) | [Container.Content(episodes)] | [Container.Content(movies)]]</visible>
-			
 		</control>
 		
 		<!-- TVSHOW/EPISODE/MOVIE YEAR/GENRE LABEL -->

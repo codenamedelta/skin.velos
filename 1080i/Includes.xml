@@ -142,7 +142,7 @@
     </include>
 	
 	<include name="TimeDate">
-	<control type="group">
+		<control type="group">
 			<posx>1900</posx>
 			<posy>3</posy>
 			<visible>!Player.HasVideo</visible>
@@ -182,7 +182,7 @@
 				<align>right</align>
 			</control>
 		</control>
-	<control type="group">
+		<control type="group">
 			<posx>15</posx>
 			<posy>-5</posy>
 			<visible>Player.HasVideo + Window.IsActive(seekbar)</visible>
@@ -228,7 +228,19 @@
         <width>120</width>
         <height>80</height>
         <aspectratio>keep</aspectratio>
-        
-    </include>
+     </include>
+	 
+	 <include name="ItemCounts">
+	 	<control type="label">
+			<posx>1253</posx>
+			<posy>40</posy>
+			<width>1253</width>
+			<font>Small</font>
+			<textcolor>Cyan</textcolor>
+			<align>right</align>
+			<label>[UPPERCASE]TV SHOWS: $INFO[Window(home).Property(TVShows.Count)]     EPISODES: $INFO[Window(home).Property(Episodes.Count)][/UPPERCASE]</label>
+			<visible>[Container.Content(tvshows)]</visible>
+		</control>
+     </include>
 
 </includes>
