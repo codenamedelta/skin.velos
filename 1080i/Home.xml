@@ -27,13 +27,13 @@
 			<itemlayout width="540" height="75">
 
 				<control type="label">
-					<posx>100</posx>
+					<posx>450</posx>
 					<height>75</height>
 					<width>425</width>
 					<font>Home</font>
 					<label>$INFO[ListItem.Label]</label>
 					<textcolor>Grey</textcolor>
-					<align>left</align>
+					<align>right</align>
 				</control>
 
 			</itemlayout>
@@ -41,13 +41,13 @@
 			<focusedlayout width="810" height="96">
 
 				<control type="label">
-					<posx>100</posx>
+					<posx>450</posx>
 					<width>810</width>
 					<height>96</height>
 					<label>$INFO[ListItem.Label]</label>
 					<font>Home</font>
 					<textcolor>White</textcolor>
-					<align>left</align>
+					<align>right</align>
 				</control>
 
 			</focusedlayout>

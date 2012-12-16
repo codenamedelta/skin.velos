@@ -238,7 +238,7 @@
 			<font>Small</font>
 			<textcolor>Cyan</textcolor>
 			<align>right</align>
-			<label>[UPPERCASE]TV SHOWS: $INFO[Window(home).Property(TVShows.Count)]     EPISODES: $INFO[Window(home).Property(Episodes.Count)][/UPPERCASE]</label>
+			<label>[UPPERCASE]TV SHOWS: $INFO[Container.NumItems]     EPISODES: $INFO[Window(home).Property(Episodes.Count)][/UPPERCASE]</label>
 			<visible>[Container.Content(tvshows)]</visible>
 		</control>
      </include>

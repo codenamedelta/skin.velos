@@ -45,7 +45,7 @@
                 <visible>VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)</visible>
 				<animation effect="slide" start="500,0" time="750">WindowOpen</animation>
 				<animation effect="slide" end="0,-500" time="750">WindowClose</animation>
-            </control>		
+            </control>
 			
 			<!-- TIME AND DATE DISPLAY -->
 			<include>TimeDate</include>	
@@ -56,8 +56,8 @@
 		<control type="group">
 			<posx>0</posx>
 			<posy>880</posy>
-			<animation effect="slide" start="0,100" time="500">WindowOpen</animation>
-			<animation effect="slide" end="0,100" time="500">WindowClose</animation>
+			<animation effect="slide" start="0,200" time="500">WindowOpen</animation>
+			<animation effect="slide" end="0,200" time="500">WindowClose</animation>
 			
 			<!-- BAR BACKGROUND COLOR -->
 			<control type="image">
@@ -231,7 +231,7 @@
 			<control type="progress" id="23">
 				<description>Progress Bar</description>
 				<posx>15</posx>
-				<posy>120</posy>
+				<posy>130</posy>
 				<width>1890</width>
 				<info>Player.Progress</info>
 				<texturebg border="1">other_textures/OSD/ProgressBack.png</texturebg>
@@ -246,6 +246,27 @@
 				<width>1680</width>
 				<visible>Player.Seeking</visible>
 			</control>
+			
+			<control type="image">
+            	<posx>1750</posx>
+                <posy>8</posy>
+				<width>170</width>
+				<height>30</height>
+                <texture>other_textures/white-back.png</texture>
+				<animation effect="slide" start="500,0" time="750">WindowOpen</animation>
+				<animation effect="slide" end="500,0" time="750" delay="200">WindowClose</animation>
+            </control>
+			
+			<control type="image">
+            	<posx>1750</posx>
+                <posy>8</posy>
+                <texture background="true">$INFO[Player.StarRating]</texture>
+				<animation effect="slide" start="500,0" time="750" delay="200">WindowOpen</animation>
+				<animation effect="slide" end="500,0" time="750">WindowClose</animation>
+            </control>	
+			
+			
+
 
 		</control>	
 
