@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Velos -->
+<includes>
+
+	<include name="View_52_Panel">
+	
+		<description>Panel View (id=52)</description>
+
+	<control type="panel" id="52">
+	<posx>190</posx>
+	<posy>100</posy>
+	<width>485</width>
+	<height>425</height>
+	<onleft>9000</onleft>
+	<onright>60</onright>
+	<onup>52</onup>
+	<ondown>52</ondown>
+	<scrolltime tween="sine" easing="out">200</scrolltime>
+	<viewtype label="536">icon</viewtype>
+	<pagecontrol>60</pagecontrol>
+	<include>contentpanelslide</include>
+	<itemlayout height="141" width="120">
+		<control type="image">
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>100</width>
+			<height>100</height>
+			<info>ListItem.Icon</info>
+		</control>
+		<control type="image">
+			<posx>80</posx>
+			<posy>75</posy>
+			<width>32</width>
+			<height>32</height>
+			<info>ListItem.Overlay</info>
+		</control>
+		<control type="label">
+			<posx>60</posx>
+			<posy>115</posy>
+			<width>110</width>
+			<height>22</height>
+			<font>font13</font>
+			<selectedcolor>green</selectedcolor>
+			<align>center</align>
+			<info>ListItem.Label</info>
+		</control>
+	</itemlayout>
+	<focusedlayout height="141" width="120">
+		<control type="image">
+			<width>110</width>
+			<height>110</height>
+			<posx>5</posx>
+			<posy>5</posy>
+			<texture>folder-focus.png</texture>
+			<animation effect="zoom" end="0,0,120,120" time="100">focus</animation>
+		</control>
+		<control type="image">
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>100</width>
+			<height>100</height>
+			<info>ListItem.Icon</info>
+			<animation effect="zoom" end="5,5,110,110" time="100">focus</animation>
+		</control>
+		<control type="image">
+			<posx>80</posx>
+			<posy>75</posy>
+			<width>32</width>
+			<height>32</height>
+			<info>ListItem.Overlay</info>
+			<animation effect="slide" end="5,5" time="100">focus</animation>
+		</control>
+		<control type="label">
+			<posx>60</posx>
+			<posy>120</posy>
+			<width>110</width>
+			<height>22</height>
+			<font>font13</font>
+			<selectedcolor>green</selectedcolor>
+			<align>center</align>
+			<info>ListItem.Label</info>
+		</control>
+	</focusedlayout>
+</control>
+
+	</include>
+
+</includes>

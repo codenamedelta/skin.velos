@@ -23,17 +23,12 @@
 				<effect type="zoom" center="1290,540" start="100" end="90" time="200" />
 			</animation>
 
-			<itemlayout width="580" height="69">
-
-				<control type="image">
-					<width>560</width>
-					<height>66</height>
-				</control>
+			<itemlayout width="600" height="69">
 
 				<!-- LABEL OUTSIDE OF EPISODE VIEW -->
 				<control type="label">
 					<posx>30</posx>
-					<width>560</width>
+					<width>600</width>
 					<font>medium</font>
 					<textcolor>Grey</textcolor>
 					<scrollsuffix> - </scrollsuffix>
@@ -41,22 +36,10 @@
 					<visible>![Container.Content(episodes)]</visible>
 				</control>
 				
-				<!-- WATCHED/UNWATCHED OVERLAY -->
-				<control type="image">
-					<posx>600</posx>
-					<posy>8</posy>
-					<width>50</width>
-					<height>50</height>
-					<aspectratio align="left" aligny="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Overlay]</texture>
-					<bordersize>10</bordersize>
-					<visible>[Container.Content(tvshows)] | [Container.Content(seasons)] | [Container.Content(episodes)] | [Container.Content(movies)]]</visible>
-				</control>
-				
 				<!-- EPISODE NUMBER AND TITLE FORMAT -->
 				<control type="label">
 					<posx>30</posx>
-					<width>560</width>
+					<width>600</width>
 					<font>medium</font>
 					<textcolor>Grey</textcolor>
 					<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
@@ -67,16 +50,10 @@
 
 			<focusedlayout width="580" height="69">
 
-				<control type="image">
-					<width>560</width>
-					<height>66</height>
-					<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(50)">Conditional</animation>
-				</control>
-
 				<!-- LABEL OUTSIDE OF EPISODE VIEW -->
 				<control type="label">
 					<posx>30</posx>
-					<width>560</width>
+					<width>600</width>
 					<font>medium</font>
 					<textcolor>White</textcolor>
 					<scrollsuffix>          </scrollsuffix>
@@ -84,22 +61,10 @@
 					<visible>![Container.Content(episodes)]</visible>
 				</control>
 				
-				<!-- WATCHED/UNWATCHED OVERLAY -->
-				<control type="image">
-					<posx>600</posx>
-					<posy>8</posy>
-					<width>50</width>
-					<height>50</height>
-					<aspectratio align="left" aligny="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Overlay]</texture>
-					<bordersize>10</bordersize>
-					<!--<visible>!IsEmpty(ListItem.Thumb + [Container.Content(episodes)]</visible>-->
-				</control>
-				
 				<!-- EPISODE NUMBER AND TITLE FORMAT -->
 				<control type="label">
 					<posx>30</posx>
-					<width>560</width>
+					<width>600</width>
 					<font>medium</font>
 					<textcolor>White</textcolor>
 					<scrollsuffix> - </scrollsuffix>
@@ -111,9 +76,10 @@
 
 		</control>
 				
-		<!-- NUMBER OF TV -->
+		<!-- NUMBER OF TVSHOW AND EPISODES -->
 		<include>ItemCounts</include>
 		
+		<!-- TVSHOW TITLE BACKGROUND -->
 		<control type="image">
 			<posx>0</posx>
 			<posy>90</posy>
@@ -123,11 +89,12 @@
 			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies)] + [!IsEmpty(ListItem.TVShowTitle) | [!IsEmpty(ListItem.Title)]]</visible>
 		</control>
 		
+		<!-- TVSHOW TITLE LABEL -->
 		<control type="label">
 			<posx>20</posx>
-			<posy>90</posy>
+			<posy>92.5</posy>
 			<width>1253</width>
-			<font>XLarge</font>
+			<font>LTitle</font>
 			<textcolor>Grey</textcolor>
 			<label>[UPPERCASE]$INFO[ListItem.TVShowTitle][/UPPERCASE]</label>
 			<visible>[Container.Content(tvshows)] | [Container.Content(seasons)] | [Container.Content(episodes)]</visible>
@@ -302,10 +269,10 @@
 			<height>500</height>
 			<fadetime>300</fadetime>
 			<aspectratio align="left" aligny="center">keep</aspectratio>
-			<texture>$INFO[ListItem.Art(fanart)]</texture>
+			<texture fallback="noart.png">$INFO[ListItem.Art(fanart)]</texture>
 			<bordertexture>other_textures/borderwhite.png</bordertexture>
 			<bordersize>10</bordersize> 
-			<visible>!IsEmpty(ListItem.Art(fanart)) + [Container.Content(tvshows)] | IsEmpty(ListItem.Art(season.fanart)) + [Container.Content(seasons)] | [Container.Content(episodes)] | [Container.Content(movies)]</visible>
+			<visible>[!IsEmpty(ListItem.Art(fanart)) | IsEmpty(ListItem.Art(fanart))]  + [Container.Content(tvshows)] | IsEmpty(ListItem.Art(season.fanart)) + [Container.Content(seasons)] | [Container.Content(episodes)] | [Container.Content(movies)]</visible>
 		</control>
 		
 		<!-- SEASON POSTER (IF AVAILABLE) -->
@@ -420,6 +387,17 @@
 			<onright>50</onright>
 			<visible allowhiddenfocus="true">Control.HasFocus(60) | Container.Scrolling</visible>
 			<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60) | Container.Scrolling">Conditional</animation>
+		</control>
+		
+		<control type="image">
+			<posx>1185</posx>
+			<posy>585</posy>
+			<width>85</width>
+			<height>70</height>
+			<fadetime>300</fadetime>
+			<texture>$INFO[ListItem.Overlay]</texture>
+			<bordersize>10</bordersize>
+			<visible>[Container.Content(tvshows)] | [Container.Content(seasons)] | [Container.Content(episodes)] | [Container.Content(movies)]]</visible>
 		</control>
 		
 		<!-- FLAGS (video type, resolution, aspect ratio, audio type, studio, FCC rating (tv), MPAA rating (movies), etc...) -->

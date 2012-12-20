@@ -15,7 +15,7 @@
 			<description>Home Wraplist</description>
 			<posx>0</posx>
 			<posy>108</posy>
-			<width>1920</width>
+			<width>450</width>
 			<height>846</height>
 			<onup>300</onup>
 			<ondown>300</ondown>
@@ -42,7 +42,7 @@
 
 				<control type="label">
 					<posx>450</posx>
-					<width>810</width>
+					<width>425</width>
 					<height>96</height>
 					<label>$INFO[ListItem.Label]</label>
 					<font>Home</font>
@@ -51,7 +51,7 @@
 				</control>
 
 			</focusedlayout>
-
+		
 			<content>
 
 				<item id="1">
@@ -137,6 +137,16 @@
 
 			</content>
 
+		</control>
+		
+		<!-- HOME ICONS -->
+		<control type="image">
+			<posx>800</posx>
+			<posy>300</posy>
+			<width>800</width>
+			<height>500</height>
+			<texture>$VAR[HomeMenuIcons]</texture>
+			<fadetime>200</fadetime>
 		</control>
 
 		<control type="rss">

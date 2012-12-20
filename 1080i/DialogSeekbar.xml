@@ -47,6 +47,25 @@
 				<animation effect="slide" end="0,-500" time="750">WindowClose</animation>
             </control>
 			
+			<control type="image">
+            	<posx>1615</posx>
+                <posy>375</posy>
+				<width>255</width>
+				<height>30</height>
+                <texture>other_textures/white-back.png</texture>
+				<animation effect="slide" start="500,0" time="750">WindowOpen</animation>
+				<animation effect="slide" end="0,-500" time="750">WindowClose</animation>
+            </control>
+			
+			<control type="image">
+            	<posx>1682</posx>
+                <posy>375</posy>
+				<align>center</align>
+                <texture background="true">$INFO[Player.StarRating]</texture>
+				<animation effect="slide" start="500,0" time="750">WindowOpen</animation>
+				<animation effect="slide" end="0,-500" time="750">WindowClose</animation>
+            </control>	
+			
 			<!-- TIME AND DATE DISPLAY -->
 			<include>TimeDate</include>	
 			
@@ -247,23 +266,7 @@
 				<visible>Player.Seeking</visible>
 			</control>
 			
-			<control type="image">
-            	<posx>1750</posx>
-                <posy>8</posy>
-				<width>170</width>
-				<height>30</height>
-                <texture>other_textures/white-back.png</texture>
-				<animation effect="slide" start="500,0" time="750">WindowOpen</animation>
-				<animation effect="slide" end="500,0" time="750" delay="200">WindowClose</animation>
-            </control>
 			
-			<control type="image">
-            	<posx>1750</posx>
-                <posy>8</posy>
-                <texture background="true">$INFO[Player.StarRating]</texture>
-				<animation effect="slide" start="500,0" time="750" delay="200">WindowOpen</animation>
-				<animation effect="slide" end="500,0" time="750">WindowClose</animation>
-            </control>	
 			
 			
 

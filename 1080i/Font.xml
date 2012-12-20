@@ -15,6 +15,11 @@
 			<size>72</size>
 		</font>
 
+		<font>
+			<name>LTitle</name>
+			<filename>NCS.ttf</filename>
+			<size>64</size>
+		</font>
 		
 		<font>
 			<name>XLarge</name>
