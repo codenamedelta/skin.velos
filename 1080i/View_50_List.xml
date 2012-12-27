@@ -389,11 +389,12 @@
 			<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60) | Container.Scrolling">Conditional</animation>
 		</control>
 		
+		<!-- WATCHED/UNWATCHED OVERLAY (Bottom Right of Fanart) -->
 		<control type="image">
 			<posx>1185</posx>
-			<posy>585</posy>
-			<width>85</width>
-			<height>70</height>
+			<posy>575</posy>
+			<width>75</width>
+			<height>75</height>
 			<fadetime>300</fadetime>
 			<texture>$INFO[ListItem.Overlay]</texture>
 			<bordersize>10</bordersize>

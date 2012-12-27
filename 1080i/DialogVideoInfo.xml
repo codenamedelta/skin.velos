@@ -7,26 +7,19 @@
 	<controls>
 
 		<include>GlobalOverlay</include>
+		<include>GlobalOverlay</include>
 
 		<control type="group">
 			<posx>300</posx>
 			<posy>120</posy>
 
-			<control type="image">
-				<posx>-30</posx>
-				<posy>-30</posy>
-				<width>1380</width>
-				<height>900</height>
-				<texture border="22">other_textures/ContentPanel.png</texture>
-			</control>
-
 			<control type="label">
 				<description>Header Label</description>
 				<posx>15</posx>
 				<width>1290</width>
-				<label>20159</label>
+				<label>[UPPERCASE]$LOCALIZE[20159][/UPPERCASE]</label>
 				<font>Medium</font>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>Cyan</textcolor>
 				<align>center</align>
 			</control>
 
@@ -38,7 +31,7 @@
 				<height>383</height>
 				<texture>-</texture>
 				<aspectratio align="center" aligny="top">keep</aspectratio>
-				<bordertexture border="5">other_textures/ButtonFO.png</bordertexture>
+				<bordertexture border="5">other_textures/borderwhite.png</bordertexture>
 				<bordersize>8</bordersize>
 				<visible>!Control.HasFocus(50)</visible>
 			</control>

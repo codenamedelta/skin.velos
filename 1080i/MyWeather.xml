@@ -2,6 +2,8 @@
 <!-- Foundation -->
 <window id="2600">
 	<defaultcontrol always="true">9000</defaultcontrol>
+	<animation effect="fade" time="200">WindowOpen</animation>
+    <animation effect="fade" time="200">WindowClose</animation>
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
@@ -36,7 +38,7 @@
 				<posy>69</posy>
 				<height>234</height>
 				<width>234</width>
-				<texture>$INFO[Window(Weather).Property(Day0.OutlookIcon)]</texture>
+				<texture>$INFO[Window.Property(Day0.FanartCode),weather_icons/,.png]</texture>
 			</control>
 
 			<control type="label">
@@ -79,7 +81,7 @@
 				<posy>69</posy>
 				<height>234</height>
 				<width>234</width>
-				<texture>$INFO[Window(Weather).Property(Day1.OutlookIcon)]</texture>
+				<texture>$INFO[Window.Property(Day1.FanartCode),weather_icons/,.png]</texture>
 			</control>
 
 			<control type="label">
@@ -122,7 +124,7 @@
 				<posy>69</posy>
 				<height>234</height>
 				<width>234</width>
-				<texture>$INFO[Window(Weather).Property(Day2.OutlookIcon)]</texture>
+				<texture>$INFO[Window.Property(Day2.FanartCode),weather_icons/,.png]</texture>
 			</control>
 
 			<control type="label">

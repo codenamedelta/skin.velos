@@ -8,7 +8,7 @@
 
 		<control type="group">
 			<posx>510</posx>
-			<posy>240</posy>
+			<posy>100</posy>
 			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
 
 			<control type="label" id="2">
