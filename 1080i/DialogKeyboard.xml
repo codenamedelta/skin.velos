@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
+<!-- Velos -->
 <window id="103">
 	<defaultcontrol always="true">300</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
@@ -34,6 +34,7 @@
 				<posx>15</posx>
 				<width>1050</width>
 				<font>Medium</font>
+				<textcolor>White</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>
 			</control>
@@ -54,6 +55,7 @@
 				<width>975</width>
 				<height>75</height>
 				<align>center</align>
+				<textcolor>Grey</textcolor>
 			</control>
 
 			<control type="group">
@@ -71,10 +73,11 @@
 					<onright>48</onright>
 					<onup>307</onup>
 					<ondown>302</ondown>
-					<texturenofocus border="25,25,5,5">other_textures/KeyboardCornerTopNF.png</texturenofocus>
-					<texturefocus border="25,25,5,5">other_textures/KeyboardCornerTop.png</texturefocus>
+					<texturenofocus border="25,25,5,5">other_textures/KeyboardKeyNF.png</texturenofocus>
+					<texturefocus border="25,25,5,5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="48">
@@ -90,7 +93,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="49">
@@ -106,7 +110,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="50">
@@ -122,7 +127,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="51">
@@ -138,7 +144,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="52">
@@ -154,7 +161,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="53">
@@ -170,7 +178,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="54">
@@ -186,7 +195,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="55">
@@ -202,7 +212,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="56">
@@ -218,7 +229,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="57">
@@ -231,10 +243,11 @@
 					<onright>300</onright>
 					<onup>306</onup>
 					<ondown>74</ondown>
-					<texturenofocus flipx="true" border="5,25,25,5">other_textures/KeyboardCornerTopNF.png</texturenofocus>
-					<texturefocus flipx="true" border="5,25,25,5">other_textures/KeyboardCornerTop.png</texturefocus>
+					<texturenofocus flipx="true" border="5,25,25,5">other_textures/KeyboardKeyNF.png</texturenofocus>
+					<texturefocus flipx="true" border="5,25,25,5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="radiobutton" id="302">
@@ -252,7 +265,8 @@
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<radioposy>12</radioposy>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="65">
@@ -268,7 +282,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="66">
@@ -284,7 +299,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="67">
@@ -300,7 +316,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="68">
@@ -316,7 +333,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="69">
@@ -332,7 +350,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="70">
@@ -348,7 +367,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="71">
@@ -364,7 +384,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="72">
@@ -380,7 +401,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="73">
@@ -396,7 +418,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="74">
@@ -412,7 +435,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="radiobutton" id="303">
@@ -430,7 +454,8 @@
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<radioposy>12</radioposy>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="75">
@@ -446,7 +471,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="76">
@@ -462,7 +488,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="77">
@@ -478,7 +505,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="78">
@@ -494,7 +522,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="79">
@@ -510,7 +539,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="80">
@@ -526,7 +556,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="81">
@@ -542,7 +573,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="82">
@@ -558,7 +590,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="83">
@@ -574,7 +607,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="84">
@@ -590,7 +624,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="radiobutton" id="304">
@@ -608,7 +643,8 @@
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<radioposy>12</radioposy>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="85">
@@ -624,7 +660,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="86">
@@ -640,7 +677,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="87">
@@ -656,7 +694,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="88">
@@ -672,7 +711,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="89">
@@ -688,7 +728,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="90">
@@ -704,7 +745,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="8">
@@ -721,7 +763,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="307">
@@ -730,15 +773,16 @@
 					<posy>300</posy>
 					<width>300</width>
 					<height>75</height>
-					<texturenofocus border="25,5,25,5">other_textures/KeyboardCornerBottomNF.png</texturenofocus>
-					<texturefocus border="25,5,25,5">other_textures/KeyboardCornerBottom.png</texturefocus>
+					<texturenofocus border="25,5,25,5">other_textures/KeyboardKeyNF.png</texturenofocus>
+					<texturefocus border="25,5,25,5">other_textures/KeyboardKey.png</texturefocus>
 					<label>1006</label>
 					<textoffsetx>0</textoffsetx>
 					<onleft>306</onleft>
 					<onright>32</onright>
 					<onup>304</onup>
 					<ondown>300</ondown>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 				</control>
 
 				<control type="button" id="32">
@@ -751,7 +795,8 @@
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
 					<textoffsetx>0</textoffsetx>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 					<onleft>307</onleft>
 					<onright>305</onright>
 					<onup>85</onup>
@@ -767,7 +812,8 @@
 					<label>&lt;</label>
 					<texturenofocus border="3">other_textures/KeyboardKeyNF.png</texturenofocus>
 					<texturefocus border="5">other_textures/KeyboardKey.png</texturefocus>
-					<focusedcolor>black</focusedcolor>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 					<onleft>32</onleft>
 					<onright>306</onright>
 					<onup>8</onup>
@@ -781,9 +827,10 @@
 					<width>150</width>
 					<height>75</height>
 					<label>&gt;</label>
-					<texturenofocus flipx="true" border="5,5,25,25">other_textures/KeyboardCornerBottomNF.png</texturenofocus>
-					<texturefocus flipx="true" border="5,5,25,25">other_textures/KeyboardCornerBottom.png</texturefocus>
-					<focusedcolor>black</focusedcolor>
+					<texturenofocus flipx="true" border="5,5,25,25">other_textures/KeyboardKeyNF.png</texturenofocus>
+					<texturefocus flipx="true" border="5,5,25,25">other_textures/KeyboardKey.png</texturefocus>
+					<focusedcolor>Cyan</focusedcolor>
+					<textcolor>White</textcolor>
 					<onleft>305</onleft>
 					<onright>307</onright>
 					<onup>8</onup>
