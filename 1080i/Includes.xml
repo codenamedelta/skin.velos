@@ -146,7 +146,7 @@
 		<control type="group">
 			<posx>1900</posx>
 			<posy>-5</posy>
-			<visible>!Player.HasVideo</visible>
+			<visible>!VideoPlayer.IsFullscreen + !Window.IsVisible(screencalibration)</visible>
 			<control type="group">
 				<control type="label">
 					<width>800</width>

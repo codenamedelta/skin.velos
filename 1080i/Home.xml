@@ -141,10 +141,10 @@
 		
 		<!-- HOME ICONS -->
 		<control type="image">
-			<posx>800</posx>
+			<posx>960</posx>
 			<posy>300</posy>
-			<width>800</width>
-			<height>500</height>
+			<width>512</width>
+			<height>512</height>
 			<texture>$VAR[HomeMenuIcons]</texture>
 			<fadetime>200</fadetime>
 		</control>
