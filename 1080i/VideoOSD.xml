@@ -4,7 +4,6 @@
 	<defaultcontrol always="true">14</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 
-
 	<controls>
 
 		<control type="group">
@@ -25,15 +24,7 @@
 
 			<control type="group">
 				<visible>!Window.IsVisible(sliderdialog)</visible>
-
-				<control type="image">
-					<posx>628</posx>
-					<posy>0</posy>
-					<width>613</width>
-					<height>57</height>
-					<texture border="22,0,22,22">other_textures/overlaydialogbackground.png</texture>
-				</control>
-
+				
 				<control type="label">
 					<description>Current Control</description>
 					<posx>660</posx>

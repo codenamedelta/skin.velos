@@ -8,19 +8,19 @@
 		<include>GlobalOverlay</include>
 
 		<control type="group">
-			<posx>912</posx>
-			<posy>486</posy>
+			<posx>802</posx>
+			<posy>372</posy>
 					
 			<!-- BUSY ANIMATION IMAGE -->
 			<control type="image">
 				<description>Busy animation</description>
 				<posx>30</posx>
 				<posy>30</posy>
-				<width>48</width>
-				<height>48</height>
+				<width>256</width>
+				<height>256</height>
 				<texture>other_textures/busy.png</texture>
 				<aspectratio>keep</aspectratio>
-				<animation effect="rotate" start="0" end="360" center="54,54" time="1200" loop="true" condition="true">conditional</animation>
+				<animation effect="rotate" start="360" end="0" center="158,158" time="3000" loop="true" condition="true">conditional</animation>
 			</control>
 
 		</control>

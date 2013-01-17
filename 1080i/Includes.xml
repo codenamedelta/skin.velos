@@ -236,7 +236,7 @@
 			<posx>20</posx>
 			<posy>35</posy>
 			<width>1253</width>
-			<font>Small</font>
+			<font>Medium</font>
 			<textcolor>Cyan</textcolor>
 			<align>left</align>
 			<label>[UPPERCASE]TV SHOWS: $INFO[Container.NumItems]     EPISODES: $INFO[Window(home).Property(Episodes.Count)]     WATCHED: $INFO[Window(home).Property(Episodes.Watched)][/UPPERCASE]</label>

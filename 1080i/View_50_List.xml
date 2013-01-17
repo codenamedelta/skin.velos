@@ -244,7 +244,7 @@
 			<texture>$INFO[ListItem.Thumb]</texture>
 			<bordertexture border="5">other_textures/borderwhite.png</bordertexture>
 			<bordersize>10</bordersize>
-			<visible>!IsEmpty(ListItem.Thumb + [Container.Content(episodes)]</visible>
+			<visible>!IsEmpty(ListItem.Thumb) + [Container.Content(episodes)]</visible>
 		</control>
 		
 		<!-- TVSHOW/MOVIE POSTER -->
@@ -286,7 +286,7 @@
 			<texture>$INFO[ListItem.Art(poster)]</texture>
 			<bordertexture border="10">other_textures/borderwhite.png</bordertexture>
 			<bordersize>10</bordersize>
-			<visible>!IsEmpty(ListItem.Art(poster) + [Container.Content(seasons)]</visible>
+			<visible>!IsEmpty(ListItem.Art(poster)) + [Container.Content(seasons)]</visible>
 		</control>		
 		
 		<!-- SEASON POSTER (FALLBACK) -->

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
+<!-- Velos -->
 <window id="123">
 	<defaultcontrol always="true">5</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
@@ -17,6 +17,7 @@
 				<posy>48</posy>
 				<width>870</width>
 				<font>Medium</font>
+				<textcolor>White</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>
 			</control>
