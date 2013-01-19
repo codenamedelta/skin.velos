@@ -3,10 +3,8 @@
 <includes>
 
 	<include file="Defaults.xml" />
-	<include file="CommonViews.xml" />
 	<include file="View_50_List.xml" />
 	<include file="View_52_Panel.xml" />
-	<include file="Custom_Time.xml" />
 	<include file="variables.xml" />
 	<include file="Includes_SplashScreen.xml" />
 
@@ -183,31 +181,32 @@
 				<align>right</align>
 			</control>
 		</control>
+		<!-- TIME/DATE DURING VIDEO PLAY -->
 		<control type="group">
 			<posx>15</posx>
 			<posy>-5</posy>
 			<visible>Player.HasVideo + Window.IsActive(seekbar)</visible>
 			<control type="group">
 				<control type="label">
-					<width>325</width>
+					<width>350</width>
 					<font>XLarge</font>
-					<textcolor>Grey</textcolor>
+					<textcolor>White</textcolor>
 					<label>[COLOR=Cyan][UPPERCASE]$INFO[Weather.Temperature][/UPPERCASE][/COLOR] $INFO[System.Time(hh:mm)] $LOCALIZE[40155]</label>
 					<align>left</align>
 					<visible>substring(system.time,AM,right)</visible>
 				</control>
 				<control type="label">
-					<width>325</width>
+					<width>350</width>
 					<font>XLarge</font>
-					<textcolor>Grey</textcolor>
+					<textcolor>White</textcolor>
 					<label>[COLOR=Cyan][UPPERCASE]$INFO[Weather.Temperature][/UPPERCASE][/COLOR] $INFO[System.Time(hh:mm)] $LOCALIZE[40156]</label>
 					<align>left</align>
 					<visible>substring(system.time,PM,right)</visible>
 				</control>
 				<control type="label">
-					<width>325</width>
+					<width>350</width>
 					<font>XLarge</font>
-					<textcolor>Grey</textcolor>
+					<textcolor>White</textcolor>
 					<label>$INFO[System.Time(hh:mm)] $INFO[Weather.Temperature]</label>
 					<align>left</align>
 					<visible>![substring(system.time,PM,right) | substring(system.time,AM,right)]</visible>
@@ -218,7 +217,7 @@
 				<posy>50</posy>
 				<width>300</width>
 				<font>XLarge</font>
-				<textcolor>Grey</textcolor>
+				<textcolor>White</textcolor>
 				<label>$INFO[System.Date(MM/DD/YY)]</label>
 				<align>center</align>
 			</control>

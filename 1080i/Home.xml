@@ -67,10 +67,16 @@
 				</item>
 				
 				<item id="14">
-					<description>Videos</description>
+					<description>PlayOn UPNP Server</description>
 					<label>PLAYON</label>
 					<onclick>ActivateWindow(10024, upnp://7e4cb587-4dbc-455a-8424-e29cf9563f6e/)</onclick>
-					<visible>System.HasAddon(plugin.video.amazon)</visible>
+				</item>
+				
+				<item id="15">
+					<description>PseudoTV</description>
+					<label>PSEUDOTV</label>
+					<onclick>RunScript(script.pseudotv)</onclick>
+					<visible>System.HasAddon(script.pseudotv)</visible>
 				</item>
 
 				<item id="3">
@@ -155,18 +161,37 @@
 			<texture>$VAR[HomeMenuIcons]</texture>
 			<fadetime>200</fadetime>
 		</control>
+		
+		<!-- RSS Background -->
+		<control type="image">
+			<posx>0</posx>
+			<posy>1036</posy>
+			<width>1920</width>
+			<height>31</height>
+			<texture>other_textures/white-back.png</texture>
+			<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+		</control>
+		
+		<!-- RSS Icon -->
+		<control type="image">
+			<posx>0</posx>
+			<posy>1036</posy>
+			<width>31</width>
+			<height>31</height>
+			<texture>home_textures/RSS.png</texture>
+			<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+		</control>
 
 		<control type="rss">
-			<description>RSS Feed</description>
-			<posx>0</posx>
+			<posx>35</posx>
 			<posy>1035</posy>
-			<width>1920</width>
+			<width>1885</width>
 			<height>21</height>
 			<font>Small</font>
 			<urlset>1</urlset>
-			<titlecolor>Red</titlecolor>
-			<headlinecolor>White</headlinecolor>
-			<textcolor>White</textcolor>
+			<titlecolor>Cyan</titlecolor>
+			<headlinecolor>DarkGrey</headlinecolor>
+			<textcolor>Cyan</textcolor>
 		</control>
 
 	</controls>

@@ -20,7 +20,7 @@
 				<posy>0</posy>
 				<width>1920</width>
 				<height>150</height>
-				<texture border="22">other_textures/white-back.png</texture>
+				<texture border="22">other_textures/black-back.png</texture>
 			</control>
 			
 			 <!--<control type="image">
@@ -84,12 +84,12 @@
 				<posy>55</posy>
 				<width>1920</width>
 				<height>150</height>
-				<texture border="22">other_textures/white-back.png</texture>
+				<texture border="22">other_textures/black-back.png</texture>
 			</control>
 			
 			<control type="label">
 				<posx>1905</posx>
-				<posy>150</posy>
+				<posy>140</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -99,7 +99,7 @@
 
 			<control type="label">
 				<posx>0</posx> 
-				<posy>150</posy>
+				<posy>140</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -110,7 +110,7 @@
 
 			<control type="label">
 				<posx>0</posx>
-				<posy>150</posy>
+				<posy>140</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -121,7 +121,7 @@
 
 			<control type="label">
 				<posx>0</posx>
-				<posy>150</posy>
+				<posy>140</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -132,7 +132,7 @@
 
 			<control type="label">
 				<posx>0</posx>
-				<posy>150</posy>
+				<posy>140</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -143,7 +143,7 @@
 
 			<control type="label">
 				<posx>0</posx>
-				<posy>150</posy>
+				<posy>140</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -154,7 +154,7 @@
 
 			<control type="label">
 				<posx>0</posx>
-				<posy>150</posy>
+				<posy>140</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -165,7 +165,7 @@
 
 			<control type="label">
 				<posx>0</posx>
-				<posy>150</posy>
+				<posy>140</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -176,7 +176,7 @@
 
 			<control type="label">
 				<posx>0</posx>
-				<posy>150</posy>
+				<posy>140</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -187,7 +187,7 @@
 
 			<control type="label">
 				<posx>0</posx>
-				<posy>150</posy>
+				<posy>140</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -198,7 +198,7 @@
 
 			<control type="label">
 				<posx>0</posx>
-				<posy>150</posy>
+				<posy>140</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -209,7 +209,7 @@
 
 			<control type="label">
 				<posx>0</posx>
-				<posy>150</posy>
+				<posy>140</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -220,8 +220,8 @@
 
 			<control type="label">
 				<posx>0</posx>
-				<posy>1920</posy>
-				<width>1680</width>
+				<posy>140</posy>
+				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
 				<align>center</align>
@@ -235,6 +235,7 @@
 				<width>1920</width>
 				<align>right</align>
 				<font>XXLarge</font>
+				<textcolor>White</textcolor>
 				<label>[UPPERCASE]$INFO[Player.Title][/UPPERCASE]</label>
 			</control>
 			
@@ -244,6 +245,7 @@
 				<width>1680</width>
 				<align>left</align>
 				<font>XXLarge</font>
+				<textcolor>White</textcolor>
 				<label>[UPPERCASE]$INFO[VideoPlayer.TVShowTitle][/UPPERCASE]</label>
 			</control>			
 
@@ -265,11 +267,6 @@
 				<width>1680</width>
 				<visible>Player.Seeking</visible>
 			</control>
-			
-			
-			
-			
-
 
 		</control>	
 

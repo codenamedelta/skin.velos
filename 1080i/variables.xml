@@ -152,5 +152,9 @@
 		<value condition="Window.IsActive(home.xml) + Container(300).HasFocus(12)">home_textures/shutdown.png</value>
 		<!-- PLAY DISC ICON -->
 		<value condition="Window.IsActive(home.xml) + Container(300).HasFocus(13)">home_textures/playdisc.png</value>
+		<!-- PLAYON ICON -->
+		<value condition="Window.IsActive(home.xml) + Container(300).HasFocus(14)">home_textures/playon.png</value>
+		<!-- PSEUDOTV ICON -->
+		<value condition="Window.IsActive(home.xml) + Container(300).HasFocus(15)">home_textures/pseudotv.png</value>
 	</variable>
 </includes>

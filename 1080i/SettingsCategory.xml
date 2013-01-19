@@ -34,8 +34,7 @@
 			<onright>3</onright>
 			<onup>5</onup>
 			<ondown>5</ondown>
-			<orientation>vertical</orientation>
-			
+			<orientation>vertical</orientation>	
 			
 		</control>
 
