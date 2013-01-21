@@ -184,7 +184,7 @@
 		<!-- TIME/DATE DURING VIDEO PLAY -->
 		<control type="group">
 			<posx>15</posx>
-			<posy>-5</posy>
+			<posy>0</posy>
 			<visible>Player.HasVideo + Window.IsActive(seekbar)</visible>
 			<control type="group">
 				<control type="label">
@@ -214,11 +214,11 @@
 			</control>
 			<control type="label">
 				<posx>0</posx>
-				<posy>50</posy>
+				<posy>75</posy>
 				<width>300</width>
 				<font>XLarge</font>
 				<textcolor>White</textcolor>
-				<label>$INFO[System.Date(MM/DD/YY)]</label>
+				<label>$INFO[System.Date(M/D/Y)]</label>
 				<align>center</align>
 			</control>
 		</control>

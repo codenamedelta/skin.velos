@@ -16,12 +16,12 @@
 
 				<control type="label">
 					<description>Now Playing Info</description>
-					<posx>32</posx>
-					<posy>975</posy>
+					<posx>48</posx>
+					<posy>970</posy>
 					<width>1000</width>
 					<font>Medium</font>
 					<textcolor>White</textcolor>
-					<label>[COLOR=Cyan]$LOCALIZE[31047][/COLOR] $INFO[VideoPlayer.TVShowTitle,, - ]$INFO[VideoPlayer.Title]</label>
+					<label>[COLOR=Cyan][B]$LOCALIZE[31047][/B][/COLOR] $INFO[VideoPlayer.TVShowTitle,, - ]$INFO[VideoPlayer.Title]</label>
 					<scroll>true</scroll>
 				</control>
 

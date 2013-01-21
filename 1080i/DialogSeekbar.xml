@@ -11,8 +11,8 @@
 		<control type="group">
 			<posx>0</posx>
 			<posy>0</posy>
-			<animation effect="slide" start="0,-150" time="500">WindowOpen</animation>
-			<animation effect="slide" end="0,-150" time="500">WindowClose</animation>
+			<animation effect="slide" start="0,-150" time="1000">WindowOpen</animation>
+			<animation effect="slide" end="0,-150" time="1000">WindowClose</animation>
 
 			<!-- BAR BACKGROUND COLOR -->
 			<control type="image">
@@ -20,7 +20,9 @@
 				<posy>0</posy>
 				<width>1920</width>
 				<height>150</height>
-				<texture border="22">other_textures/black-back.png</texture>
+				<texture>other_textures/black-back.png</texture>
+				<bordertexture>other_textures/borderwhite.png</bordertexture>
+				<bordersize>0,0,0,10</bordersize>
 			</control>
 			
 			 <!--<control type="image">
@@ -43,8 +45,8 @@
 				<bordertexture>other_textures/borderwhite.png</bordertexture>
 				<bordersize>10</bordersize>
                 <visible>VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)</visible>
-				<animation effect="slide" start="500,0" time="750">WindowOpen</animation>
-				<animation effect="slide" end="0,-500" time="750">WindowClose</animation>
+				<animation effect="slide" start="500,0" time="1250">WindowOpen</animation>
+				<animation effect="slide" end="0,-500" time="1250">WindowClose</animation>
             </control>
 			
 			<control type="image">
@@ -53,8 +55,8 @@
 				<width>255</width>
 				<height>30</height>
                 <texture>other_textures/white-back.png</texture>
-				<animation effect="slide" start="500,0" time="750">WindowOpen</animation>
-				<animation effect="slide" end="0,-500" time="750">WindowClose</animation>
+				<animation effect="slide" start="500,0" time="1250">WindowOpen</animation>
+				<animation effect="slide" end="0,-500" time="1250">WindowClose</animation>
             </control>
 			
 			<control type="image">
@@ -62,34 +64,76 @@
                 <posy>375</posy>
 				<align>center</align>
                 <texture background="true">$INFO[Player.StarRating]</texture>
-				<animation effect="slide" start="500,0" time="750">WindowOpen</animation>
-				<animation effect="slide" end="0,-500" time="750">WindowClose</animation>
+				<animation effect="slide" start="500,0" time="1250">WindowOpen</animation>
+				<animation effect="slide" end="0,-500" time="1250">WindowClose</animation>
             </control>	
 			
 			<!-- TIME AND DATE DISPLAY -->
 			<include>TimeDate</include>	
+			
+			<!-- FLAGS (video type, resolution, aspect ratio, audio type, studio, FCC rating (tv), MPAA rating (movies), etc...) -->
+			<control type="group">
+            	<posx>1000</posx>
+				<posy>65</posy>
+				<animation effect="slide" start="500,0" time="1250">WindowOpen</animation>
+				<animation effect="slide" end="0,-500" time="1250">WindowClose</animation>
+				
+				<control type="image">
+            		<posx>0</posx>
+                	<include>OSDFlagVars</include>
+                	<texture fallback="flags/studios/default-studio.png">$INFO[VideoPlayer.Studio,flags/studios/,.png]</texture>
+                    <visible>!VideoPlayer.Content(files)</visible>
+            	</control>
+            	
+				<control type="image">
+            		<posx>120</posx>
+                	<include>OSDFlagVars</include>
+                	<texture fallback="flags/aspectratio/defaultaspect.png">$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]</texture>
+            	</control>
+				
+				<control type="image">
+            		<posx>240</posx>
+                	<include>OSDFlagVars</include>
+                	<texture fallback="flags/resolution/defaultscreen.png">$INFO[VideoPlayer.VideoResolution,flags/resolution/,.png]</texture>
+            	</control>
+				
+				<control type="image">
+            		<posx>360</posx>
+                	<include>OSDFlagVars</include>
+                	<texture fallback="flags/source/defaultsource.png">$VAR[VideoSourceFlagVar,flags/source/,.png]</texture>
+            	</control>
+				
+            	<control type="image">
+            		<posx>480</posx>
+                	<include>OSDFlagVars</include>
+                	<texture fallback="flags/audio/defaultsound.png">$INFO[VideoPlayer.AudioCodec,flags/info/]$INFO[VideoPlayer.AudioChannels,,.png]</texture>
+            	</control>
+				
+			</control>
 			
 		</control>
 
 		<!-- BOTTOM BAR -->
 		<control type="group">
 			<posx>0</posx>
-			<posy>880</posy>
-			<animation effect="slide" start="0,200" time="500">WindowOpen</animation>
-			<animation effect="slide" end="0,200" time="500">WindowClose</animation>
+			<posy>930</posy>
+			<animation effect="slide" start="0,200" time="1000">WindowOpen</animation>
+			<animation effect="slide" end="0,200" time="1000">WindowClose</animation>
 			
 			<!-- BAR BACKGROUND COLOR -->
 			<control type="image">
 				<posx>0</posx>
-				<posy>55</posy>
+				<posy>0</posy>
 				<width>1920</width>
 				<height>150</height>
-				<texture border="22">other_textures/black-back.png</texture>
+				<texture>other_textures/black-back.png</texture>
+				<bordertexture>other_textures/borderwhite.png</bordertexture>
+				<bordersize>0,10,0,0</bordersize>
 			</control>
 			
 			<control type="label">
 				<posx>1905</posx>
-				<posy>140</posy>
+				<posy>90</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -99,7 +143,7 @@
 
 			<control type="label">
 				<posx>0</posx> 
-				<posy>140</posy>
+				<posy>90</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -110,7 +154,7 @@
 
 			<control type="label">
 				<posx>0</posx>
-				<posy>140</posy>
+				<posy>90</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -121,7 +165,7 @@
 
 			<control type="label">
 				<posx>0</posx>
-				<posy>140</posy>
+				<posy>90</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -132,7 +176,7 @@
 
 			<control type="label">
 				<posx>0</posx>
-				<posy>140</posy>
+				<posy>90</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -143,7 +187,7 @@
 
 			<control type="label">
 				<posx>0</posx>
-				<posy>140</posy>
+				<posy>90</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -154,7 +198,7 @@
 
 			<control type="label">
 				<posx>0</posx>
-				<posy>140</posy>
+				<posy>90</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -165,7 +209,7 @@
 
 			<control type="label">
 				<posx>0</posx>
-				<posy>140</posy>
+				<posy>90</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -176,7 +220,7 @@
 
 			<control type="label">
 				<posx>0</posx>
-				<posy>140</posy>
+				<posy>90</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -187,7 +231,7 @@
 
 			<control type="label">
 				<posx>0</posx>
-				<posy>140</posy>
+				<posy>90</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -198,7 +242,7 @@
 
 			<control type="label">
 				<posx>0</posx>
-				<posy>140</posy>
+				<posy>90</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -209,7 +253,7 @@
 
 			<control type="label">
 				<posx>0</posx>
-				<posy>140</posy>
+				<posy>90</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -220,7 +264,7 @@
 
 			<control type="label">
 				<posx>0</posx>
-				<posy>140</posy>
+				<posy>90</posy>
 				<width>1920</width>
 				<font>Large</font>
 				<textcolor>Cyan</textcolor>
@@ -231,7 +275,7 @@
 			
 			<control type="label">
 				<posx>1905</posx>
-				<posy>60</posy>
+				<posy>15</posy>
 				<width>1920</width>
 				<align>right</align>
 				<font>XXLarge</font>
@@ -241,7 +285,7 @@
 			
 			<control type="label">
 				<posx>15</posx>
-				<posy>60</posy>
+				<posy>15</posy>
 				<width>1680</width>
 				<align>left</align>
 				<font>XXLarge</font>
@@ -252,7 +296,7 @@
 			<control type="progress" id="23">
 				<description>Progress Bar</description>
 				<posx>15</posx>
-				<posy>130</posy>
+				<posy>80</posy>
 				<width>1890</width>
 				<info>Player.Progress</info>
 				<texturebg border="1">other_textures/OSD/ProgressBack.png</texturebg>
@@ -263,7 +307,7 @@
 			<control type="slider" id="401">
 				<description>Seekbar</description>
 				<posx>15</posx>
-				<posy>120</posy>
+				<posy>85</posy>
 				<width>1680</width>
 				<visible>Player.Seeking</visible>
 			</control>

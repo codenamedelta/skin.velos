@@ -239,12 +239,37 @@
 			<posy>640</posy>
 			<width>347</width>
 			<height>203</height>
+			<aspectratio align="left" aligny="center">stretch</aspectratio>
+			<texture>thumbnail_trans.png</texture>
+			<bordertexture border="5">other_textures/borderwhite.png</bordertexture>
+			<bordersize>10</bordersize>
+			<visible>!IsEmpty(ListItem.Thumb) + [Container.Content(episodes)]</visible>
+		</control>
+		
+		<!-- TVSHOW EPISODE THUMBNAIL -->
+		<control type="image">
+			<posx>50</posx>
+			<posy>640</posy>
+			<width>347</width>
+			<height>203</height>
 			<fadetime>300</fadetime>
 			<aspectratio align="left" aligny="center">stretch</aspectratio>
 			<texture>$INFO[ListItem.Thumb]</texture>
 			<bordertexture border="5">other_textures/borderwhite.png</bordertexture>
 			<bordersize>10</bordersize>
 			<visible>!IsEmpty(ListItem.Thumb) + [Container.Content(episodes)]</visible>
+		</control>
+		
+		<!-- TVSHOW/MOVIE POSTER BORDER -->
+		<control type="image">
+			<posx>50</posx>
+			<posy>150</posy>
+			<width>364</width>
+			<height>500</height>
+			<texture>poster_trans.png</texture>
+			<bordertexture>other_textures/borderwhite.png</bordertexture>
+			<bordersize>10</bordersize>
+			<visible>!IsEmpty(ListItem.Art(poster)) + [Container.Content(tvshows) | [Container.Content(movies)]]</visible>
 		</control>
 		
 		<!-- TVSHOW/MOVIE POSTER -->
@@ -256,9 +281,21 @@
 			<fadetime>300</fadetime>
 			<aspectratio align="left" aligny="center">keep</aspectratio>
 			<texture>$INFO[ListItem.Art(poster)]</texture>
-			<bordertexture>other_textures/borderwhite.png</bordertexture>
 			<bordersize>10</bordersize>
 			<visible>!IsEmpty(ListItem.Art(poster)) + [Container.Content(tvshows) | [Container.Content(movies)]]</visible>
+		</control>
+		
+		<!-- FANART BORDER --> 
+		<control type="image">
+			<posx>387</posx>
+			<posy>150</posy>
+			<width>889</width>
+			<height>500</height>
+			<texture>fanart_trans.png</texture>
+			<aspectratio align="left" aligny="center">keep</aspectratio>
+			<bordertexture>other_textures/borderwhite.png</bordertexture>
+			<bordersize>10</bordersize> 
+			<visible>[!IsEmpty(ListItem.Art(fanart)) | IsEmpty(ListItem.Art(fanart))]  + [Container.Content(tvshows)] | IsEmpty(ListItem.Art(season.fanart)) + [Container.Content(seasons)] | [Container.Content(episodes)] | [Container.Content(movies)]</visible>
 		</control>
 		
 		<!-- TVSHOW/MOVIE FANART -->
@@ -270,9 +307,20 @@
 			<fadetime>300</fadetime>
 			<aspectratio align="left" aligny="center">keep</aspectratio>
 			<texture fallback="noart.png">$INFO[ListItem.Art(fanart)]</texture>
-			<bordertexture>other_textures/borderwhite.png</bordertexture>
 			<bordersize>10</bordersize> 
 			<visible>[!IsEmpty(ListItem.Art(fanart)) | IsEmpty(ListItem.Art(fanart))]  + [Container.Content(tvshows)] | IsEmpty(ListItem.Art(season.fanart)) + [Container.Content(seasons)] | [Container.Content(episodes)] | [Container.Content(movies)]</visible>
+		</control>
+		
+		<!-- SEASON POSTER BORDER(IF AVAILABLE) -->
+		<control type="image">
+			<posx>50</posx>
+			<posy>150</posy>
+			<width>352</width>
+			<height>500</height>
+			<texture>poster_trans.png</texture>
+			<bordertexture>other_textures/borderwhite.png</bordertexture>
+			<bordersize>10</bordersize>
+			<visible>!IsEmpty(ListItem.Art(poster)) + [Container.Content(seasons)]</visible>
 		</control>
 		
 		<!-- SEASON POSTER (IF AVAILABLE) -->
@@ -284,12 +332,23 @@
 			<fadetime>300</fadetime>
 			<aspectratio align="left" aligny="center">keep</aspectratio>
 			<texture>$INFO[ListItem.Art(poster)]</texture>
-			<bordertexture border="10">other_textures/borderwhite.png</bordertexture>
 			<bordersize>10</bordersize>
 			<visible>!IsEmpty(ListItem.Art(poster)) + [Container.Content(seasons)]</visible>
 		</control>		
 		
-		<!-- SEASON POSTER (FALLBACK) -->
+		<!-- SEASON POSTER BORDER (FALLBACK) -->
+		<control type="image">
+			<posx>50</posx>
+			<posy>150</posy>
+			<width>348</width>
+			<height>500</height>
+			<bordertexture>other_textures/borderwhite.png</bordertexture>
+			<texture>poster_trans.png</texture>
+			<bordersize>10</bordersize>
+			<visible>IsEmpty(ListItem.Art(poster)) + [Container.Content(seasons)] | IsEmpty(ListItem.Art(poster)) + [Container.Content(episodes)]</visible>
+		</control> 
+		
+		<!-- SEASON POSTER (FALLBACK)-->
 		<control type="image">
 			<posx>50</posx>
 			<posy>150</posy>
@@ -298,10 +357,22 @@
 			<fadetime>300</fadetime>
 			<aspectratio align="left" aligny="center">keep</aspectratio>
 			<texture>$INFO[ListItem.Art(tvshow.poster)]</texture>
-			<bordertexture border="10">other_textures/borderwhite.png</bordertexture>
 			<bordersize>10</bordersize>
 			<visible>IsEmpty(ListItem.Art(poster)) + [Container.Content(seasons)] | IsEmpty(ListItem.Art(poster)) + [Container.Content(episodes)]</visible>
-		</control> 
+		</control>  
+		
+		<!-- SEASON FANART BORDER (IF AVAILABLE) -->
+		<control type="image">
+			<posx>387</posx>
+			<posy>150</posy>
+			<width>889</width>
+			<height>500</height>
+			<aspectratio align="left" aligny="center">keep</aspectratio>
+			<texture>fanart_trans.png</texture>
+			<bordertexture>other_textures/borderwhite.png</bordertexture>
+			<bordersize>10</bordersize> 
+			<visible>!IsEmpty(ListItem.Art(season.fanart)) + [Container.Content(seasons)]</visible>
+		</control>
 		
 		<!-- SEASON FANART (IF AVAILABLE) -->
 		<control type="image">
@@ -312,7 +383,6 @@
 			<fadetime>300</fadetime>
 			<aspectratio align="left" aligny="center">keep</aspectratio>
 			<texture>$INFO[ListItem.Art(season.fanart)]</texture>
-			<bordertexture>other_textures/borderwhite.png</bordertexture>
 			<bordersize>10</bordersize> 
 			<visible>!IsEmpty(ListItem.Art(season.fanart)) + [Container.Content(seasons)]</visible>
 		</control>		

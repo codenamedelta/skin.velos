@@ -165,9 +165,9 @@
 		<!-- RSS Background -->
 		<control type="image">
 			<posx>0</posx>
-			<posy>1036</posy>
+			<posy>1020</posy>
 			<width>1920</width>
-			<height>31</height>
+			<height>48</height>
 			<texture>other_textures/white-back.png</texture>
 			<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
 		</control>
@@ -175,19 +175,19 @@
 		<!-- RSS Icon -->
 		<control type="image">
 			<posx>0</posx>
-			<posy>1036</posy>
-			<width>31</width>
-			<height>31</height>
+			<posy>1020</posy>
+			<width>48</width>
+			<height>48</height>
 			<texture>home_textures/RSS.png</texture>
 			<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
 		</control>
 
 		<control type="rss">
-			<posx>35</posx>
-			<posy>1035</posy>
+			<posx>48</posx>
+			<posy>1025</posy>
 			<width>1885</width>
 			<height>21</height>
-			<font>Small</font>
+			<font>Medium</font>
 			<urlset>1</urlset>
 			<titlecolor>Cyan</titlecolor>
 			<headlinecolor>DarkGrey</headlinecolor>
