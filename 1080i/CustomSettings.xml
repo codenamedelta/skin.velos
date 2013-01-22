@@ -74,6 +74,12 @@
 					<label>31033</label>
 					<onclick>-</onclick>
 				</item>
+			
+				<item id="4">
+					<description>Debug</description>
+					<label>31048</label>
+					<onclick>-</onclick>
+				</item>
 
 			</content>
 
@@ -219,6 +225,38 @@
 					<label>31035</label>
 					<onclick>Skin.ToggleSetting(HideDebugInfo)</onclick>
 					<selected>Skin.HasSetting(HideDebugInfo)</selected>
+				</control>
+
+			</control>
+			
+			<control type="grouplist" id="600">
+				<description>Control Area</description>
+				<width>1230</width>
+				<height>720</height>
+				<itemgap>3</itemgap>
+				<onup>500</onup>
+				<ondown>500</ondown>
+				<onleft>100</onleft>
+				<onright>-</onright>
+				<orientation>vertical</orientation>
+				<visible>Container(100).Hasfocus(4)</visible>
+
+				<control type="radiobutton" id="601">
+					<description>Disable Skin Logo</description>
+					<width>1230</width>
+					<align>left</align>
+					<label>31049</label>
+					<onclick>Skin.ToggleSetting(DisableSkinLogo)</onclick>
+					<selected>Skin.HasSetting(DisableSkinLogo)</selected>
+				</control>
+				
+				<control type="radiobutton" id="602">
+					<description>Disable Icons</description>
+					<width>1230</width>
+					<align>left</align>
+					<label>31050</label>
+					<onclick>Skin.ToggleSetting(DisableIcons)</onclick>
+					<selected>Skin.HasSetting(DisableIcons)</selected>
 				</control>
 
 			</control>
