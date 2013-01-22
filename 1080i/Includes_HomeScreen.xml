@@ -1,0 +1,251 @@
+<!-- Velos -->
+<includes>
+	<include name="SubMenuValues">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>400</width>
+		<height>35</height>
+		<align>center</align>
+		<onup>9000</onup>
+		<ondown>9000</ondown>
+		<itemgap>0</itemgap>
+		<orientation>Horizontal</orientation>
+	</include>
+	
+	<include name="SubMenuButtonValues">
+		<height>35</height>
+		<width>400</width>
+		<textwidth>400</textwidth>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>Medium</font>
+		<textcolor>Grey</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<texturefocus>trans.png</texturefocus>
+		<texturenofocus>trans.png</texturenofocus>
+		<pulseonselect>false</pulseonselect>
+	</include>
+	
+	<!-- SUB MENU VIDEOS -->
+	<include name="SubMenuVideos">
+		<control type="button" id="90102">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[342][/UPPERCASE]</label>
+			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+			<visible>Library.HasContent(Movies) + Skin.HasSetting(HomeMenuNoMovieButton)</visible>
+		</control>
+		<control type="button" id="90103">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[20343][/UPPERCASE]</label>
+			<onclick>ActivateWindow(Videos,TvShowTitles,return)</onclick>
+			<visible>Library.HasContent(TVShows) + Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
+		</control>
+		<control type="button" id="90104">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[20389][/UPPERCASE]</label>
+			<onclick>ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
+			<visible>Library.HasContent(MusicVideos)</visible>
+		</control>
+		<control type="button" id="90105">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[744][/UPPERCASE]</label>
+			<onclick>ActivateWindow(Videos,Files,return)</onclick>
+		</control>
+		<control type="button" id="90106">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[14022][/UPPERCASE]</label>
+			<onclick>ActivateWindow(Videos,Root)</onclick>
+			<visible>Library.HasContent(Video)</visible>
+		</control>
+		<control type="button" id="90107">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[24001][/UPPERCASE]</label>
+			<onclick>ActivateWindow(Videos,Addons,return)</onclick>
+		</control>
+	</include>
+	
+	<!-- SUB MENU MOVIES -->
+	<include name="SubMenuMovies">
+		<control type="button" id="90162">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[31328][/UPPERCASE]</label>
+			<onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
+		</control>
+		<control type="button" id="90163">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[20434][/UPPERCASE]</label>
+			<onclick>ActivateWindow(Videos,MovieSets,return)</onclick>
+			<visible>Library.HasContent(MovieSets)</visible>
+		</control>
+		<control type="button" id="90164">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[369][/UPPERCASE]</label>
+			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+		</control>
+		<control type="button" id="90165">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[135][/UPPERCASE]</label>
+			<onclick>ActivateWindow(Videos,MovieGenres,return)</onclick>
+		</control>
+		<control type="button" id="90166">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[652][/UPPERCASE]</label>
+			<onclick>ActivateWindow(Videos,MovieYears,return)</onclick>
+		</control>
+		<control type="button" id="90167">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[344][/UPPERCASE]</label>
+			<onclick>ActivateWindow(Videos,MovieActors,return)</onclick>
+		</control>
+	</include>
+	
+	<!-- SUB MENU TV -->
+	<include name="SubMenuTV">
+		<control type="button" id="90172">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[31328][/UPPERCASE]</label>
+			<onclick>ActivateWindow(Videos,RecentlyAddedEpisodes,return)</onclick>
+		</control>
+		<control type="button" id="90173">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[369][/UPPERCASE]</label>
+			<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
+		</control>
+		<control type="button" id="90174">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[135][/UPPERCASE]</label>
+			<onclick>ActivateWindow(Videos,TVShowGenres,return)</onclick>
+		</control>
+		<control type="button" id="90175">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[652][/UPPERCASE]</label>
+			<onclick>ActivateWindow(Videos,TVShowYears,return)</onclick>
+		</control>
+		<control type="button" id="90176">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[344][/UPPERCASE]</label>
+			<onclick>ActivateWindow(Videos,TVShowActors,return)</onclick>
+		</control>
+	</include>
+	
+	<!-- SUB MENU MUSIC -->
+	<include name="SubMenuMusic">
+		<control type="button" id="90112">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[133][/UPPERCASE]</label>
+			<onclick>ActivateWindow(MusicLibrary,Artists,return)</onclick>
+			<visible>Library.HasContent(Music)</visible>
+		</control>
+		<control type="button" id="90113">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[132][/UPPERCASE]</label>
+			<onclick>ActivateWindow(MusicLibrary,Albums,return)</onclick>
+			<visible>Library.HasContent(Music)</visible>
+		</control>
+		<control type="button" id="90114">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[134][/UPPERCASE]</label>
+			<onclick>ActivateWindow(MusicLibrary,Songs,return)</onclick>
+			<visible>Library.HasContent(Music)</visible>
+		</control>
+		<control type="button" id="90115">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[744][/UPPERCASE]</label>
+			<onclick>ActivateWindow(MusicFiles)</onclick>
+		</control>
+		<control type="button" id="90116">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[14022][/UPPERCASE]</label>
+			<onclick>ActivateWindow(MusicLibrary,root)</onclick>
+			<visible>Library.HasContent(Music)</visible>
+		</control>
+		<control type="button" id="90117">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[24001][/UPPERCASE]</label>
+			<onclick>ActivateWindow(MusicLibrary,Addons,return)</onclick>
+			<visible>Library.HasContent(Music)</visible>
+		</control>
+		<control type="button" id="90118">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[24001][/UPPERCASE]</label>
+			<onclick>ActivateWindow(MusicFiles,Addons,return)</onclick>
+			<visible>!Library.HasContent(Music)</visible>
+		</control>
+	</include>
+	
+	<!-- SUB MENU SYSTEM -->
+	<include name="SubMenuSystem">
+		<control type="button" id="90122">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
+			<onclick>ActivateWindow(Settings)</onclick>
+		</control>
+		<control type="button" id="90123">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[7][/UPPERCASE]</label>
+			<onclick>ActivateWindow(FileManager)</onclick>
+		</control>
+		<control type="button" id="90124">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[13200][/UPPERCASE]</label>
+			<onclick>ActivateWindow(Profiles)</onclick>
+		</control>
+		<control type="button" id="90125">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[130][/UPPERCASE]</label>
+			<onclick>ActivateWindow(SystemInfo)</onclick>
+		</control>
+	</include>
+	
+	<!-- SUB MENU PLAY DISC -->
+	<include name="SubMenuPlayDisc">
+		<control type="button" id="90132">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[13391][/UPPERCASE]</label>
+			<onclick>SetFocus(9000)</onclick>
+			<onclick>EjectTray()</onclick>
+		</control>
+	</include>
+	
+	<!-- SUB MENU PICTURES -->
+	<include name="SubMenuPictures">
+		<control type="button" id="90148">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[24001][/UPPERCASE]</label>
+			<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
+		</control>
+	</include>
+	
+	<!-- SUB MENU LIVE TV -->
+	<include name="SubMenuLiveTV">
+		<control type="button" id="90142">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[19023][/UPPERCASE]</label>
+			<onclick>ActivateWindow(PVR)</onclick>
+			<onclick>Setfocus(32)</onclick>
+			<onclick>Setfocus(11)</onclick>
+		</control>
+		<control type="button" id="90143">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[19024][/UPPERCASE]</label>
+			<onclick>ActivateWindow(PVR)</onclick>
+			<onclick>Setfocus(33)</onclick>
+			<onclick>Setfocus(12)</onclick>
+		</control>
+		<control type="button" id="90144">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[19163][/UPPERCASE]</label>
+			<onclick>ActivateWindow(PVR)</onclick>
+			<onclick>Setfocus(34)</onclick>
+			<onclick>Setfocus(13)</onclick>
+		</control>
+		<control type="button" id="90145">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[19040][/UPPERCASE]</label>
+			<onclick>ActivateWindow(PVR)</onclick>
+			<onclick>Setfocus(35)</onclick>
+			<onclick>Setfocus(14)</onclick>
+		</control>
+	</include>
+
+</includes>

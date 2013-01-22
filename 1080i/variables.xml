@@ -127,34 +127,34 @@
 	</variable>
 	<variable name="HomeMenuIcons">		
 		<!-- PROGRAMS ICON -->
-		<value condition="Window.IsActive(home.xml) + Container(300).HasFocus(1)">home_textures/programs.png</value>
+		<value condition="Window.IsActive(home.xml) + Container(9000).HasFocus(1)">home_textures/programs.png</value>
 		<!-- VIDEOS ICON -->
-		<value condition="Window.IsActive(home.xml) + Container(300).HasFocus(2)">home_textures/videos.png</value>		
+		<value condition="Window.IsActive(home.xml) + Container(9000).HasFocus(2)">home_textures/videos.png</value>		
 		<!-- MUSIC ICON -->
-		<value condition="Window.IsActive(home.xml) + Container(300).HasFocus(3)">home_textures/music.png</value>
+		<value condition="Window.IsActive(home.xml) + Container(9000).HasFocus(3)">home_textures/music.png</value>
 		<!-- PICTURES ICON -->
-		<value condition="Window.IsActive(home.xml) + Container(300).HasFocus(4)">home_textures/pictures.png</value>
+		<value condition="Window.IsActive(home.xml) + Container(9000).HasFocus(4)">home_textures/pictures.png</value>
 		<!-- MOVIES ICON -->
-		<value condition="Window.IsActive(home.xml) + Container(300).HasFocus(5)">home_textures/movies.png</value>
+		<value condition="Window.IsActive(home.xml) + Container(9000).HasFocus(5)">home_textures/movies.png</value>
 		<!-- TVSHOWS ICON -->
-		<value condition="Window.IsActive(home.xml) + Container(300).HasFocus(6)">home_textures/tvshows.png</value>
+		<value condition="Window.IsActive(home.xml) + Container(9000).HasFocus(6)">home_textures/tvshows.png</value>
 		<!-- FAVOURITES ICON -->
-		<value condition="Window.IsActive(home.xml) + Container(300).HasFocus(7)">home_textures/favourites.png</value>
+		<value condition="Window.IsActive(home.xml) + Container(9000).HasFocus(7)">home_textures/favourites.png</value>
 		<!-- PROFILES ICON -->
-		<value condition="Window.IsActive(home.xml) + Container(300).HasFocus(8)">home_textures/profiles.png</value>
+		<value condition="Window.IsActive(home.xml) + Container(9000).HasFocus(8)">home_textures/profiles.png</value>
 		<!-- WEATHER ICON -->
-		<value condition="Window.IsActive(home.xml) + Container(300).HasFocus(9)">home_textures/weather.png</value>
+		<value condition="Window.IsActive(home.xml) + Container(9000).HasFocus(9)">home_textures/weather.png</value>
 		<!-- FILE MANAGER ICON -->
-		<value condition="Window.IsActive(home.xml) + Container(300).HasFocus(10)">home_textures/filemanager.png</value>
+		<value condition="Window.IsActive(home.xml) + Container(9000).HasFocus(10)">home_textures/filemanager.png</value>
 		<!-- SETTINGS ICON -->
-		<value condition="Window.IsActive(home.xml) + Container(300).HasFocus(11)">home_textures/settings.png</value>
+		<value condition="Window.IsActive(home.xml) + Container(9000).HasFocus(11)">home_textures/settings.png</value>
 		<!-- SHUTDOWN ICON -->
-		<value condition="Window.IsActive(home.xml) + Container(300).HasFocus(12)">home_textures/shutdown.png</value>
+		<value condition="Window.IsActive(home.xml) + Container(9000).HasFocus(12)">home_textures/shutdown.png</value>
 		<!-- PLAY DISC ICON -->
-		<value condition="Window.IsActive(home.xml) + Container(300).HasFocus(13)">home_textures/playdisc.png</value>
+		<value condition="Window.IsActive(home.xml) + Container(9000).HasFocus(13)">home_textures/playdisc.png</value>
 		<!-- PLAYON ICON -->
-		<value condition="Window.IsActive(home.xml) + Container(300).HasFocus(14)">home_textures/playon.png</value>
+		<value condition="Window.IsActive(home.xml) + Container(9000).HasFocus(14)">home_textures/playon.png</value>
 		<!-- PSEUDOTV ICON -->
-		<value condition="Window.IsActive(home.xml) + Container(300).HasFocus(15)">home_textures/pseudotv.png</value>
+		<value condition="Window.IsActive(home.xml) + Container(9000).HasFocus(15)">home_textures/pseudotv.png</value>
 	</variable>
 </includes>

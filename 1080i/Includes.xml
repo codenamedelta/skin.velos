@@ -7,6 +7,7 @@
 	<include file="View_52_Panel.xml" />
 	<include file="variables.xml" />
 	<include file="Includes_SplashScreen.xml" />
+	<include file="Includes_HomeScreen.xml" />
 
 	<include name="HiddenButton">
 		<posx>-20</posx>
