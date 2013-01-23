@@ -18,20 +18,23 @@
 			<height>100</height>
 			<texture>VelosLogo.png</texture>
 			<visible>!Skin.HasSetting(DisableSkinLogo)</visible>
+			<animation effect="slide" start="-500,0" time="500">WindowOpen</animation>
 		</control>
 		
 		<control type="group">
 		<posy>512</posy>
+		<animation effect="fade" start="0" end="100" delay="600" time="200">WindowOpen</animation>
 		
 			<control type="group" id="9001">
 				<posx>500</posx>
 				<posy>0</posy>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				
 				<control type="grouplist" id="9010">
 					<include>SubMenuValues</include>
-					<onleft>9010</onleft>
-					<onright>9010</onright>
+					<onup>9010</onup>
+					<ondown>9010</ondown>
 					<visible>Container(9000).HasFocus(2)</visible>
 					<include>SubMenuVideos</include>
 				</control>
@@ -47,6 +50,7 @@
 					<onleft>9017</onleft>
 					<onright>9017</onright>
 					<visible>Container(9000).HasFocus(6)</visible>
+					
 					<include>SubMenuTV</include>
 				</control>
 				<control type="grouplist" id="9011">
@@ -95,11 +99,12 @@
 			<height>846</height>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
-			<onleft>300</onleft>
+			<onleft>9000</onleft>
 			<onright>9001</onright>
 			<focusposition>5</focusposition>
 			<scrolltime>200</scrolltime>
-
+			<animation effect="slide" start="-500,0" time="500">WindowOpen</animation>
+			
 			<itemlayout width="540" height="75">
 
 				<control type="label">
@@ -132,94 +137,82 @@
 
 				<item id="1">
 					<description>Programs</description>
-					<label>31002</label>
-					<onclick>ActivateWindow(Programs,Addons)</onclick>
+					<label>[UPPERCASE]$LOCALIZE[31002][/UPPERCASE]</label>
+					<onclick>ActivateWindow(Programs,Addons,return)</onclick>
 				</item>
 
 				<item id="2">
 					<description>Videos</description>
-					<label>31003</label>
-					<onclick>ActivateWindow(Video,Files)</onclick>
+					<label>[UPPERCASE]$LOCALIZE[31003][/UPPERCASE]</label>
+					<onclick>ActivateWindow(Video,Files,return)</onclick>
 				</item>
 				
 				<item id="14">
 					<description>PlayOn UPNP Server</description>
-					<label>PLAYON</label>
+					<label>[UPPERCASE]$LOCALIZE[31051][/UPPERCASE]</label>
 					<onclick>ActivateWindow(10024, upnp://7e4cb587-4dbc-455a-8424-e29cf9563f6e/)</onclick>
 				</item>
 				
 				<item id="15">
 					<description>PseudoTV</description>
-					<label>PSEUDOTV</label>
+					<label>[UPPERCASE]$LOCALIZE[31052][/UPPERCASE]</label>
 					<onclick>RunScript(script.pseudotv)</onclick>
 					<visible>System.HasAddon(script.pseudotv)</visible>
 				</item>
 
 				<item id="3">
 					<description>Music</description>
-					<label>31004</label>
+					<label>[UPPERCASE]$LOCALIZE[31004][/UPPERCASE]</label>
 					<onclick>ActivateWindow(Music,return)</onclick>
 				</item>
 
 				<item id="4">
 					<description>Pictures</description>
-					<label>31005</label>
+					<label>[UPPERCASE]$LOCALIZE[31005][/UPPERCASE]</label>
 					<onclick>ActivateWindow(Pictures,return)</onclick>
 				</item>
 
 				<item id="5">
 					<description>Movies</description>
-					<label>31006</label>
+					<label>[UPPERCASE]$LOCALIZE[31006][/UPPERCASE]</label>
 					<onclick>ActivateWindow(Video,movietitles,return)</onclick>
 					<visible>Library.HasContent(Movies)</visible>
 				</item>
 
 				<item id="6">
 					<description>TV Shows</description>
-					<label>31007</label>
+					<label>[UPPERCASE]$LOCALIZE[31007][/UPPERCASE]</label>
 					<onclick>ActivateWindow(Video,tvshowtitles,return)</onclick>
 					<visible>Library.HasContent(TVShows)</visible>
 				</item>
 
 				<item id="7">
 					<description>Favourites</description>
-					<label>31008</label>
+					<label>[UPPERCASE]$LOCALIZE[31008][/UPPERCASE]</label>
 					<onclick>ActivateWindow(Favourites)</onclick>
-				</item>
-
-				<item id="8">
-					<description>Profiles</description>
-					<label>31009</label>
-					<onclick>ActivateWindow(Profiles)</onclick>
 				</item>
 
 				<item id="9">
 					<description>Weather</description>
-					<label>31010</label>
+					<label>[UPPERCASE]$LOCALIZE[31010][/UPPERCASE]</label>
 					<onclick>ActivateWindow(weather)</onclick>
 				</item>
 
-				<item id="10">
-					<description>File manager</description>
-					<label>31011</label>
-					<onclick>ActivateWindow(filemanager)</onclick>
-				</item>
-
 				<item id="11">
-					<description>Settings</description>
-					<label>31012</label>
+					<description>System</description>
+					<label>[UPPERCASE]$LOCALIZE[31012][/UPPERCASE]</label>
 					<onclick>ActivateWindow(settings)</onclick>
 				</item>
 
 				<item id="12">
 					<description>Shutdown</description>
-					<label>31013</label>
+					<label>[UPPERCASE]$LOCALIZE[31013][/UPPERCASE]</label>
 					<onclick>ActivateWindow(shutdownmenu)</onclick>
 				</item>
 
 				<item id="13">
 					<description>Play Disc</description>
-					<label>31014</label>
+					<label>[UPPERCASE]$LOCALIZE[31014][/UPPERCASE]</label>
 					<onclick>PlayDVD</onclick>
 					<visible>System.HasMediadvd</visible>
 				</item>
@@ -237,40 +230,45 @@
 			<texture>$VAR[HomeMenuIcons]</texture>
 			<fadetime>200</fadetime>
 			<visible>!Skin.HasSetting(DisableIcons)</visible>
+			<animation effect="fade" start="0" end="100" delay="600" time="200">WindowOpen</animation>
 		</control>
 		
-		<!-- RSS Background -->
-		<control type="image">
-			<posx>0</posx>
-			<posy>1020</posy>
-			<width>1920</width>
-			<height>48</height>
-			<texture>other_textures/white-back.png</texture>
-			<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
-		</control>
 		
-		<!-- RSS Icon -->
-		<control type="image">
-			<posx>0</posx>
-			<posy>1020</posy>
-			<width>48</width>
-			<height>48</height>
-			<texture>home_textures/RSS.png</texture>
-			<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
-		</control>
+		<control type="group">
+		<animation effect="slide" start="0,150" end="0,0" time="500">WindowOpen</animation>
+		
+			<!-- RSS Background -->
+			<control type="image">
+				<posx>0</posx>
+				<posy>1020</posy>
+				<width>1920</width>
+				<height>48</height>
+				<texture>other_textures/white-back.png</texture>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
+		
+			<!-- RSS Icon -->
+			<control type="image">
+				<posx>0</posx>
+				<posy>1020</posy>
+				<width>48</width>
+				<height>48</height>
+				<texture>home_textures/RSS.png</texture>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
 
-		<control type="rss">
-			<posx>48</posx>
-			<posy>1025</posy>
-			<width>1885</width>
-			<height>21</height>
-			<font>Medium</font>
-			<urlset>1</urlset>
-			<titlecolor>Cyan</titlecolor>
-			<headlinecolor>DarkGrey</headlinecolor>
-			<textcolor>Cyan</textcolor>
+			<control type="rss">
+				<posx>48</posx>
+				<posy>1025</posy>
+				<width>1885</width>
+				<height>21</height>
+				<font>Medium</font>
+				<urlset>1</urlset>
+				<titlecolor>Cyan</titlecolor>
+				<headlinecolor>DarkGrey</headlinecolor>
+				<textcolor>Cyan</textcolor>
+			</control>
 		</control>
-
 	</controls>
 
 </window>

@@ -56,8 +56,8 @@
 		<focusedcolor>White</focusedcolor>
 		<disabledcolor>Red</disabledcolor>
 		<pulseonselect>false</pulseonselect>
-		<texturefocus border="5">other_textures/ButtonFo.png</texturefocus>
-		<texturenofocus border="5">other_textures/ButtonNF.png</texturenofocus>
+		<texturefocus>other_textures/ButtonFo.png</texturefocus>
+		<texturenofocus>other_textures/ButtonNF.png</texturenofocus>
 	</default>
 
 	<default type="togglebutton">

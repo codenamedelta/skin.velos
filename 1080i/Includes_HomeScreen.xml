@@ -6,10 +6,10 @@
 		<width>400</width>
 		<height>35</height>
 		<align>center</align>
-		<onup>9000</onup>
-		<ondown>9000</ondown>
+		<onleft>9000</onleft>
+		<onright>9000</onright>
 		<itemgap>0</itemgap>
-		<orientation>Horizontal</orientation>
+		<orientation>Vertical</orientation>
 	</include>
 	
 	<include name="SubMenuButtonValues">
