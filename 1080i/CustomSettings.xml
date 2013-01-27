@@ -76,7 +76,7 @@
 				</item>
 			
 				<item id="4">
-					<description>Debug</description>
+					<description>Home Screen</description>
 					<label>31048</label>
 					<onclick>-</onclick>
 				</item>
@@ -242,22 +242,41 @@
 				<visible>Container(100).Hasfocus(4)</visible>
 
 				<control type="radiobutton" id="601">
-					<description>Disable Skin Logo</description>
+					<description>Hide Skin Logo</description>
 					<width>1230</width>
 					<align>left</align>
 					<label>31049</label>
-					<onclick>Skin.ToggleSetting(DisableSkinLogo)</onclick>
-					<selected>Skin.HasSetting(DisableSkinLogo)</selected>
+					<onclick>Skin.ToggleSetting(HideSkinLogo)</onclick>
+					<selected>Skin.HasSetting(HideSkinLogo)</selected>
 				</control>
 				
+				<!-- HIDE HOME SCREEN ICONS -->
 				<control type="radiobutton" id="602">
-					<description>Disable Icons</description>
 					<width>1230</width>
 					<align>left</align>
 					<label>31050</label>
-					<onclick>Skin.ToggleSetting(DisableIcons)</onclick>
-					<selected>Skin.HasSetting(DisableIcons)</selected>
+					<onclick>Skin.ToggleSetting(HideIcons)</onclick>
+					<selected>Skin.HasSetting(HideIcons)</selected>
 				</control>
+				
+				<!-- HIDE TV SHOWS BUTTON -->
+				<control type="radiobutton" id="603">
+					<width>1230</width>
+					<align>left</align>
+					<label>31053</label>
+					<onclick>Skin.ToggleSetting(HideTVShowsButton)</onclick>
+					<selected>Skin.HasSetting(HideTVShowsButton)</selected>
+				</control>
+				
+				<!-- HIDE MOVIES BUTTON -->
+				<control type="radiobutton" id="604">
+					<width>1230</width>
+					<align>left</align>
+					<label>31054</label>
+					<onclick>Skin.ToggleSetting(HideMoviesButton)</onclick>
+					<selected>Skin.HasSetting(HideMoviesButton)</selected>
+				</control>
+				
 
 			</control>
 

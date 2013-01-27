@@ -1,15 +1,167 @@
 <!-- Velos -->
 <includes>
+	<include name="HomeScreenLogo">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>450</width>
+			<height>100</height>
+			<texture>VelosLogo.png</texture>
+			<visible>!Skin.HasSetting(HideSkinLogo)</visible>
+			<animation effect="slide" start="-500,0" time="500">WindowOpen</animation>
+		</control>
+	</include>
+	
+	<include name="MainMenu">
+		<control type="wraplist" id="9000">
+			<description>Home Wraplist</description>
+			<posx>0</posx>
+			<posy>105</posy>
+			<width>450</width>
+			<height>900</height>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<onleft>-</onleft>
+			<onright>9998</onright>
+			<focusposition>5</focusposition>
+			<scrolltime>200</scrolltime>
+			<animation effect="slide" start="-500,0" time="500">WindowOpen</animation>
+			
+			<itemlayout width="540" height="75">
+
+				<control type="label">
+					<posx>450</posx>
+					<height>75</height>
+					<width>425</width>
+					<font>Home</font>
+					<label>$INFO[ListItem.Label]</label>
+					<textcolor>Grey</textcolor>
+					<align>right</align>
+				</control>
+
+			</itemlayout>
+
+			<focusedlayout width="540" height="75">
+
+				<control type="label">
+					<posx>450</posx>
+					<width>425</width>
+					<height>75</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Home</font>
+					<textcolor>White</textcolor>
+					<align>right</align>
+				</control>
+
+			</focusedlayout>
+		
+			<content>
+
+				<item id="1">
+					<description>Programs</description>
+					<label>[UPPERCASE]$LOCALIZE[31002][/UPPERCASE]</label>
+					<onclick>ActivateWindow(Programs,Addons,return)</onclick>
+				</item>
+
+				<item id="2">
+					<description>Videos</description>
+					<label>[UPPERCASE]$LOCALIZE[31003][/UPPERCASE]</label>
+					<onclick>ActivateWindow(Video,Files,return)</onclick>
+				</item>
+				
+				<item id="14">
+					<description>PlayOn UPNP Server</description>
+					<label>[UPPERCASE]$LOCALIZE[31051][/UPPERCASE]</label>
+					<onclick>ActivateWindow(10024, upnp://7e4cb587-4dbc-455a-8424-e29cf9563f6e/)</onclick>
+				</item>
+				
+				<item id="15">
+					<description>PseudoTV</description>
+					<label>[UPPERCASE]$LOCALIZE[31052][/UPPERCASE]</label>
+					<onclick>RunScript(script.pseudotv)</onclick>
+					<visible>System.HasAddon(script.pseudotv)</visible>
+				</item>
+
+				<item id="3">
+					<description>Music</description>
+					<label>[UPPERCASE]$LOCALIZE[31004][/UPPERCASE]</label>
+					<onclick>ActivateWindow(Music,return)</onclick>
+				</item>
+
+				<item id="4">
+					<description>Pictures</description>
+					<label>[UPPERCASE]$LOCALIZE[31005][/UPPERCASE]</label>
+					<onclick>ActivateWindow(Pictures,return)</onclick>
+				</item>
+
+				<item id="5">
+					<description>Movies</description>
+					<label>[UPPERCASE]$LOCALIZE[31006][/UPPERCASE]</label>
+					<onclick>ActivateWindow(Video,movietitles,return)</onclick>
+					<visible>Library.HasContent(Movies) + !Skin.HasSetting(HideMoviesButton)</visible>
+				</item>
+
+				<item id="6">
+					<description>TV Shows</description>
+					<label>[UPPERCASE]$LOCALIZE[31007][/UPPERCASE]</label>
+					<onclick>ActivateWindow(Video,tvshowtitles,return)</onclick>
+					<visible>Library.HasContent(TVShows) + !Skin.HasSetting(HideTVShowsButton)</visible>
+				</item>
+
+				<item id="7">
+					<description>Favourites</description>
+					<label>[UPPERCASE]$LOCALIZE[31008][/UPPERCASE]</label>
+					<onclick>ActivateWindow(Favourites)</onclick>
+				</item>
+
+				<item id="9">
+					<description>Weather</description>
+					<label>[UPPERCASE]$LOCALIZE[31010][/UPPERCASE]</label>
+					<onclick>ActivateWindow(weather)</onclick>
+				</item>
+
+				<item id="11">
+					<description>System</description>
+					<label>[UPPERCASE]$LOCALIZE[31012][/UPPERCASE]</label>
+					<onclick>ActivateWindow(settings)</onclick>
+				</item>
+
+				<item id="12">
+					<description>Shutdown</description>
+					<label>[UPPERCASE]$LOCALIZE[31013][/UPPERCASE]</label>
+					<onclick>ActivateWindow(shutdownmenu)</onclick>
+				</item>
+
+				<item id="13">
+					<description>Play Disc</description>
+					<label>[UPPERCASE]$LOCALIZE[31014][/UPPERCASE]</label>
+					<onclick>PlayDVD</onclick>
+					<visible>System.HasMediadvd</visible>
+				</item>
+
+			</content>
+
+		</control>
+	</include>
+	
 	<include name="SubMenuValues">
 		<posx>0</posx>
 		<posy>0</posy>
 		<width>400</width>
 		<height>35</height>
 		<align>center</align>
-		<onleft>9000</onleft>
-		<onright>9000</onright>
+		<onleft>9999</onleft>
+		<onright>-</onright>
 		<itemgap>0</itemgap>
 		<orientation>Vertical</orientation>
+		<animation type="Focus">
+			<effect type="slide" start="-100,0" time="500"/>
+			<effect type="fade" start="0" end="100" time="500"/>
+		</animation>
+		<animation type="Hidden">
+			<effect type="slide" end="-100,0" time="500"/>
+			<effect type="fade" start="100" end="0" time="500"/>
+		</animation>
 	</include>
 	
 	<include name="SubMenuButtonValues">
@@ -26,19 +178,122 @@
 		<pulseonselect>false</pulseonselect>
 	</include>
 	
+	<!-- MAIN SUB MENUS -->
+	<include name="SubMenus">
+		<control type="group">
+			<posy>500</posy>
+			<animation effect="fade" start="0" end="100" delay="600" time="200">WindowOpen</animation>
+			
+			<control type="group" id="9001">
+					<posx>500</posx>
+					<posy>0</posy>
+					
+					<control type="grouplist" id="9010">
+						<include>SubMenuValues</include>
+						<visible allowhiddenfocus="true">ControlGroup(9010).HasFocus()</visible>
+						<include>SubMenuVideos</include>
+					</control>
+					<control type="grouplist" id="9016">
+						<include>SubMenuValues</include>
+						<visible allowhiddenfocus="true">ControlGroup(9016).HasFocus()</visible>
+						<include>SubMenuMovies</include>
+					</control>
+					<control type="grouplist" id="9017">
+						<include>SubMenuValues</include>
+						<visible allowhiddenfocus="true">ControlGroup(9017).HasFocus()</visible>
+						<include>SubMenuTV</include>
+					</control>
+					<control type="grouplist" id="9011">
+						<include>SubMenuValues</include>
+						<visible allowhiddenfocus="true">ControlGroup(9011).HasFocus()</visible>
+						<include>SubMenuMusic</include>
+					</control>
+					<control type="grouplist" id="9012">
+						<include>SubMenuValues</include>
+						<visible allowhiddenfocus="true">ControlGroup(9012).HasFocus()</visible>
+						<include>SubMenuSystem</include>
+					</control>
+					<control type="grouplist" id="9013">
+						<include>SubMenuValues</include>
+						<visible allowhiddenfocus="true">ControlGroup(9013).HasFocus()</visible>
+						<include>SubMenuPlayDisc</include> 
+					</control>
+					<control type="grouplist" id="9015">
+						<include>SubMenuValues</include>
+						<visible allowhiddenfocus="true">ControlGroup(9015).HasFocus()</visible>
+						<include>SubMenuPictures</include>
+					</control>
+					
+			</control>
+		</control>
+	</include>
+	
+	<include name="SubMenuDirectionalArrows">
+		<control type="image">
+			<posx>450</posx>
+			<posy>501</posy>
+			<width>32</width>
+			<height>32</height>
+			<texture>home_textures/right.png</texture>
+			<visible>[Container(9000).HasFocus(2) + !ControlGroup(9010).HasFocus()] | [Container(9000).HasFocus(3) + !ControlGroup(9011).HasFocus()] | [Container(9000).HasFocus(11) + !ControlGroup(9012).HasFocus()] | [Container(9000).HasFocus(13) + !ControlGroup(9013).HasFocus()] | [Container(9000).HasFocus(4) + !ControlGroup(9015).HasFocus()] | [Container(9000).HasFocus(5) + !ControlGroup(9016).HasFocus()] | [Container(9000).HasFocus(6) + !ControlGroup(9017).HasFocus()]</visible>
+			<animation effect="slide" start="-500,0" time="500">WindowOpen</animation>
+			<animation type="Visible" condition="[Container(9000).HasFocus(2) + !ControlGroup(9010).HasFocus()] | [Container(9000).HasFocus(3) + !ControlGroup(9011).HasFocus()] | [Container(9000).HasFocus(11) + !ControlGroup(9012).HasFocus()] | [Container(9000).HasFocus(13) + !ControlGroup(9013).HasFocus()] | [Container(9000).HasFocus(4) + !ControlGroup(9015).HasFocus()] | [Container(9000).HasFocus(5) + !ControlGroup(9016).HasFocus()] | [Container(9000).HasFocus(6) + !ControlGroup(9017).HasFocus()]">
+			<effect type="fade" start="0" end="100" time="500"/>
+			</animation>
+			<animation type="Hidden" condition="[Container(9000).HasFocus(2) + ControlGroup(9010).HasFocus()] | [Container(9000).HasFocus(3) + ControlGroup(9011).HasFocus()] | [Container(9000).HasFocus(11) + ControlGroup(9012).HasFocus()] | [Container(9000).HasFocus(13) + ControlGroup(9013).HasFocus()] | [Container(9000).HasFocus(4) + ControlGroup(9015).HasFocus()] | [Container(9000).HasFocus(5) + ControlGroup(9016).HasFocus()] | [Container(9000).HasFocus(6) + ControlGroup(9017).HasFocus()]">
+			<effect type="fade" start="100" end="0" time="500"/>
+			</animation>
+		</control>
+		
+		<control type="group">
+			<visible>[Container(9000).HasFocus(2) + ControlGroup(9010).HasFocus()] | [Container(9000).HasFocus(3) + ControlGroup(9011).HasFocus()] | [Container(9000).HasFocus(11) + ControlGroup(9012).HasFocus()] | [Container(9000).HasFocus(13) + ControlGroup(9013).HasFocus()] | [Container(9000).HasFocus(4) + ControlGroup(9015).HasFocus()] | [Container(9000).HasFocus(5) + ControlGroup(9016).HasFocus()] | [Container(9000).HasFocus(6) + ControlGroup(9017).HasFocus()]</visible>
+			<animation type="Visible" condition="[Container(9000).HasFocus(2) + ControlGroup(9010).HasFocus()] | [Container(9000).HasFocus(3) + ControlGroup(9011).HasFocus()] | [Container(9000).HasFocus(11) + ControlGroup(9012).HasFocus()] | [Container(9000).HasFocus(13) + ControlGroup(9013).HasFocus()] | [Container(9000).HasFocus(4) + ControlGroup(9015).HasFocus()] | [Container(9000).HasFocus(5) + ControlGroup(9016).HasFocus()] | [Container(9000).HasFocus(6) + ControlGroup(9017).HasFocus()]">
+			<effect type="fade" start="0" end="100" time="500"/>
+			</animation>
+			<animation type="Hidden" condition="[Container(9000).HasFocus(2) + !ControlGroup(9010).HasFocus()] | [Container(9000).HasFocus(3) + !ControlGroup(9011).HasFocus()] | [Container(9000).HasFocus(11) + !ControlGroup(9012).HasFocus()] | [Container(9000).HasFocus(13) + !ControlGroup(9013).HasFocus()] | [Container(9000).HasFocus(4) + !ControlGroup(9015).HasFocus()] | [Container(9000).HasFocus(5) + !ControlGroup(9016).HasFocus()] | [Container(9000).HasFocus(6) + !ControlGroup(9017).HasFocus()]">
+			<effect type="fade" start="100" end="0" time="500"/>
+			</animation>
+		
+			<control type="image">
+				<posx>450</posx>
+				<posy>501</posy>
+				<width>32</width>
+				<height>32</height>
+				<texture>home_textures/left.png</texture>
+			</control>
+		
+			<control type="image">
+				<posx>684</posx>
+				<posy>468</posy>
+				<width>32</width>
+				<height>32</height>
+				<texture>home_textures/up.png</texture>
+			</control>
+		
+			<control type="image">
+				<posx>684</posx>
+				<posy>532</posy>
+				<width>32</width>
+				<height>32</height>
+				<texture>home_textures/down.png</texture>
+			</control>
+		
+		</control>
+	</include>
+	
 	<!-- SUB MENU VIDEOS -->
 	<include name="SubMenuVideos">
 		<control type="button" id="90102">
 			<include>SubMenuButtonValues</include>
 			<label>[UPPERCASE]$LOCALIZE[342][/UPPERCASE]</label>
 			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
-			<visible>Library.HasContent(Movies) + Skin.HasSetting(HomeMenuNoMovieButton)</visible>
+			<visible>Library.HasContent(Movies) + Skin.HasSetting(HideMoviesButton)</visible>
 		</control>
 		<control type="button" id="90103">
 			<include>SubMenuButtonValues</include>
 			<label>[UPPERCASE]$LOCALIZE[20343][/UPPERCASE]</label>
 			<onclick>ActivateWindow(Videos,TvShowTitles,return)</onclick>
-			<visible>Library.HasContent(TVShows) + Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
+			<visible>Library.HasContent(TVShows) + Skin.HasSetting(HideTVShowsButton)</visible>
 		</control>
 		<control type="button" id="90104">
 			<include>SubMenuButtonValues</include>
@@ -247,5 +502,108 @@
 			<onclick>Setfocus(14)</onclick>
 		</control>
 	</include>
-
+	
+	<!-- SUB MENU HIDDEN TRIGGER BUTTONS -->
+	<include name="SubMenuHiddenTriggerButtons">
+		<control type="button" id="9999">
+			<posx>-1000</posx>
+			<onfocus>SetFocus(9000)</onfocus>
+		</control>
+		
+		<control type="button" id="9998">
+			<posx>-1000</posx>
+			<onfocus>SetFocus(9010)</onfocus>
+			<visible>Container(9000).HasFocus(2)</visible>
+		</control>
+		
+		<control type="button" id="9998">
+			<posx>-1000</posx>
+			<onfocus>SetFocus(9011)</onfocus>
+			<visible>Container(9000).HasFocus(3)</visible>
+		</control>
+		
+		<control type="button" id="9998">
+			<posx>-1000</posx>
+			<onfocus>SetFocus(9012)</onfocus>
+			<visible>Container(9000).HasFocus(11)</visible>
+		</control>
+		
+		<control type="button" id="9998">
+			<posx>-1000</posx>
+			<onfocus>SetFocus(9013)</onfocus>
+			<visible>Container(9000).HasFocus(13)</visible>
+		</control>
+		
+		<control type="button" id="9998">
+			<posx>-1000</posx>
+			<onfocus>SetFocus(9015)</onfocus>
+			<visible>Container(9000).HasFocus(4)</visible>
+		</control>
+		
+		<control type="button" id="9998">
+			<posx>-1000</posx>
+			<onfocus>SetFocus(9016)</onfocus>
+			<visible>Container(9000).HasFocus(5)</visible>
+		</control>
+		
+		<control type="button" id="9998">
+			<posx>-1000</posx>
+			<onfocus>SetFocus(9017)</onfocus>
+			<visible>Container(9000).HasFocus(6)</visible>
+		</control>
+	</include>
+	
+	<!-- HOME SCREEN ICONS -->
+	<include name="HomeScreenIcons">
+		
+		<control type="image">
+			<posx>960</posx>
+			<posy>300</posy>
+			<width>512</width>
+			<height>512</height>
+			<texture>$VAR[HomeMenuIcons]</texture>
+			<fadetime>200</fadetime>
+			<visible>!Skin.HasSetting(HideIcons)</visible>
+			<animation effect="fade" start="0" end="100" delay="600" time="200">WindowOpen</animation>
+		</control>
+	</include>
+	
+	<!--HOME SCREEN RSS -->
+	<include name="HomeScreenRSS">
+		<control type="group">
+			<animation effect="slide" start="0,150" end="0,0" time="500">WindowOpen</animation>
+		
+				<!-- RSS Background -->
+				<control type="image">
+					<posx>0</posx>
+					<posy>1020</posy>
+					<width>1920</width>
+					<height>48</height>
+					<texture>other_textures/white-back.png</texture>
+					<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+				</control>
+			
+				<!-- RSS Icon -->
+				<control type="image">
+					<posx>0</posx>
+					<posy>1020</posy>
+					<width>48</width>
+					<height>48</height>
+					<texture>home_textures/RSS.png</texture>
+					<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+				</control>
+	
+				<control type="rss">
+					<posx>48</posx>
+					<posy>1025</posy>
+					<width>1885</width>
+					<height>21</height>
+					<font>Medium</font>
+					<urlset>1</urlset>
+					<titlecolor>Cyan</titlecolor>
+					<headlinecolor>DarkGrey</headlinecolor>
+					<textcolor>Cyan</textcolor>
+				</control>
+		</control>
+	</include>
 </includes>

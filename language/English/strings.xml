@@ -50,10 +50,12 @@
   <string id="31046">Episodes</string>
   <string id="31047">PLAYING:</string>
   <string id="31048">Home Screen</string>
-  <string id="31049">Disable Skin Logo</string>
-  <string id="31050">Disable Icons</string>
+  <string id="31049">Hide Skin Logo</string>
+  <string id="31050">Hide Icons</string>
   <string id="31051">PlayOn</string>
   <string id="31052">PseudoTV</string>
+  <string id="31053">Hide TV Shows Button</string>
+  <string id="31054">Hide Movies Button</string>
   <string id="31328">Recently Added</string>
   <string id="31478">Setup</string>
   <string id="40155">AM</string>
