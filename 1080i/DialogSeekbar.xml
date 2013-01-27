@@ -11,6 +11,7 @@
 		<control type="group">
 			<posx>0</posx>
 			<posy>0</posy>
+			<visible>![Skin.HasSetting(CleanOSD)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)]</visible>
 			<animation effect="slide" start="0,-150" time="1000">WindowOpen</animation>
 			<animation effect="slide" end="0,-150" time="1000">WindowClose</animation>
 
@@ -25,14 +26,7 @@
 				<bordersize>0,0,0,10</bordersize>
 			</control>
 			
-			 <!--<control type="image">
-                <posx>22</posx>
-                <posy>746</posy>
-                <width>345</width>
-                <height>234</height>
-                <texture background="true">$VAR[PlayerArtworkVar]</texture>
-                <aspectratio aligny="bottom">keep</aspectratio>
-            </control>-->
+		
 			
 			<!-- TVSHOW POSTER -->
 			<control type="image">
@@ -44,7 +38,6 @@
                 <aspectratio aligny="bottom">stretch</aspectratio>
 				<bordertexture>other_textures/borderwhite.png</bordertexture>
 				<bordersize>10</bordersize>
-                <visible>VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)</visible>
 				<animation effect="slide" start="500,0" time="1250">WindowOpen</animation>
 				<animation effect="slide" end="0,-500" time="1250">WindowClose</animation>
             </control>
@@ -75,6 +68,7 @@
 			<control type="group">
             	<posx>1000</posx>
 				<posy>65</posy>
+				<visible>![Skin.HasSetting(CleanOSD)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)]</visible>
 				<animation effect="slide" start="500,0" time="1250">WindowOpen</animation>
 				<animation effect="slide" end="0,-500" time="1250">WindowClose</animation>
 				
@@ -117,8 +111,20 @@
 		<control type="group">
 			<posx>0</posx>
 			<posy>930</posy>
-			<animation effect="slide" start="0,200" time="1000">WindowOpen</animation>
-			<animation effect="slide" end="0,200" time="1000">WindowClose</animation>
+			<animation effect="slide" start="0,150" time="1000">WindowOpen</animation>
+			<animation effect="slide" end="0,150" time="1000">WindowClose</animation>
+			
+			<control type="image">
+                <posx>15</posx>
+				<posy>-234</posy>
+                <width>345</width>
+                <height>234</height>
+                <texture background="true">$VAR[PlayerArtworkVar]</texture>
+                <aspectratio aligny="bottom">keep</aspectratio>
+				<animation effect="slide" start="0,500" time="1250">WindowOpen</animation>
+				<animation effect="slide" end="0,500" time="1250">WindowClose</animation>
+				<visible>![Skin.HasSetting(CleanOSD)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)]</visible>
+            </control>
 			
 			<!-- BAR BACKGROUND COLOR -->
 			<control type="image">

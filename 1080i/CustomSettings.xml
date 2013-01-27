@@ -56,28 +56,14 @@
 			</focusedlayout>
 
 			<content>
-
+				<!-- HOME SCREEN OPTIONS -->
 				<item id="1">
-					<description>Background Visuals</description>
-					<label>31016</label>
-					<onclick>-</onclick>
-				</item>
-
-				<item id="2">
-					<description>Lyrics/Subtitles</description>
-					<label>31017</label>
-					<onclick>-</onclick>
-				</item>
-
-				<item id="3">
-					<description>Debug</description>
-					<label>31033</label>
-					<onclick>-</onclick>
-				</item>
-			
-				<item id="4">
-					<description>Home Screen</description>
 					<label>31048</label>
+					<onclick>-</onclick>
+				</item>
+				<!-- FULLSCREEN VIDEO OPTIONS -->
+				<item id="2">
+					<label>31023</label>
 					<onclick>-</onclick>
 				</item>
 
@@ -88,7 +74,7 @@
 		<control type="group" id="99">
 			<posx>510</posx>
 			<posy>210</posy>
-
+			
 			<control type="grouplist" id="200">
 				<description>Control Area</description>
 				<width>1230</width>
@@ -101,153 +87,71 @@
 				<orientation>vertical</orientation>
 				<visible>Container(100).Hasfocus(1)</visible>
 
+				<!-- HIDE HOME SCREEN SKIN LOGO -->
 				<control type="radiobutton" id="201">
-					<description>Background Visualiser</description>
-					<width>1230</width>
-					<align>left</align>
-					<label>31023</label>
-					<onclick>Skin.ToggleSetting(NoBackgroundVisualiser)</onclick>
-					<selected>Skin.HasSetting(NoBackgroundVisualiser)</selected>
-				</control>
-
-				<control type="radiobutton" id="202">
-					<description>Background Video</description>
-					<width>1230</width>
-					<align>left</align>
-					<label>31024</label>
-					<onclick>Skin.ToggleSetting(NoBackgroundVideo)</onclick>
-					<selected>Skin.HasSetting(NoBackgroundVideo)</selected>
-				</control>
-
-			</control>
-
-			<control type="grouplist" id="300">
-				<description>Control Area</description>
-				<width>1230</width>
-				<height>720</height>
-				<itemgap>3</itemgap>
-				<onup>200</onup>
-				<ondown>200</ondown>
-				<onleft>100</onleft>
-				<onright>-</onright>
-				<orientation>vertical</orientation>
-				<visible>Container(100).Hasfocus(2)</visible>
-
-				<control type="button" id="301">
-					<description>Default Button</description>
-					<width>1230</width>
-					<align>left</align>
-					<label>31025</label>
-					<onclick>Skin.SetAddon(LyricPath,xbmc.python.lyrics)</onclick>
-				</control>
-
-				<control type="button" id="302">
-					<description>Default Button</description>
-					<width>1230</width>
-					<align>left</align>
-					<label>31026</label>
-					<onclick>Skin.SetAddon(SubtitlePath,xbmc.python.subtitles)</onclick>
-				</control>
-
-			</control>
-
-			<control type="grouplist" id="400">
-				<description>Control Area</description>
-				<width>1230</width>
-				<height>720</height>
-				<itemgap>3</itemgap>
-				<onup>200</onup>
-				<ondown>200</ondown>
-				<onleft>100</onleft>
-				<onright>-</onright>
-				<orientation>vertical</orientation>
-				<visible>Container(100).Hasfocus(2)</visible>
-
-				<control type="label" id="401">
-					<description>Default Button</description>
-					<width>1200</width>
-					<align>right</align>
-					<label>$INFO[Skin.String(LyricPath)]</label>
-					<visible>!IsEmpty(Skin.String(LyricPath))</visible>
-				</control>
-
-				<control type="label" id="402">
-					<description>Default Button</description>
-					<width>1200</width>
-					<align>right</align>
-					<label>CU Lyrics</label>
-					<visible>IsEmpty(Skin.String(LyricPath))</visible>
-				</control>
-
-				<control type="label" id="403">
-					<description>Default Button</description>
-					<width>1200</width>
-					<align>right</align>
-					<label>$INFO[Skin.String(SubtitlesPath)]</label>
-					<visible>!IsEmpty(Skin.String(SubtitlesPath))</visible>
-				</control>
-
-				<control type="label" id="404">
-					<description>Default Button</description>
-					<width>1200</width>
-					<align>right</align>
-					<label>XBMC Subtitles</label>
-					<visible>IsEmpty(Skin.String(SubtitlesPath))</visible>
-				</control>
-
-			</control>
-
-			<control type="grouplist" id="500">
-				<description>Control Area</description>
-				<width>1230</width>
-				<height>720</height>
-				<itemgap>3</itemgap>
-				<onup>500</onup>
-				<ondown>500</ondown>
-				<onleft>100</onleft>
-				<onright>-</onright>
-				<orientation>vertical</orientation>
-				<visible>Container(100).Hasfocus(3)</visible>
-
-				<control type="radiobutton" id="501">
-					<description>Enable Debug Grid</description>
-					<width>1230</width>
-					<align>left</align>
-					<label>31034</label>
-					<onclick>Skin.ToggleSetting(DebugGrid)</onclick>
-					<selected>Skin.HasSetting(DebugGrid)</selected>
-				</control>
-
-				<control type="radiobutton" id="502">
-					<description>Disable Debug Info</description>
-					<width>1230</width>
-					<align>left</align>
-					<label>31035</label>
-					<onclick>Skin.ToggleSetting(HideDebugInfo)</onclick>
-					<selected>Skin.HasSetting(HideDebugInfo)</selected>
-				</control>
-
-			</control>
-			
-			<control type="grouplist" id="600">
-				<description>Control Area</description>
-				<width>1230</width>
-				<height>720</height>
-				<itemgap>3</itemgap>
-				<onup>500</onup>
-				<ondown>500</ondown>
-				<onleft>100</onleft>
-				<onright>-</onright>
-				<orientation>vertical</orientation>
-				<visible>Container(100).Hasfocus(4)</visible>
-
-				<control type="radiobutton" id="601">
-					<description>Hide Skin Logo</description>
 					<width>1230</width>
 					<align>left</align>
 					<label>31049</label>
 					<onclick>Skin.ToggleSetting(HideSkinLogo)</onclick>
 					<selected>Skin.HasSetting(HideSkinLogo)</selected>
+				</control>
+				
+				<!-- HIDE HOME SCREEN ICONS -->
+				<control type="radiobutton" id="202">
+					<width>1230</width>
+					<align>left</align>
+					<label>31050</label>
+					<onclick>Skin.ToggleSetting(HideIcons)</onclick>
+					<selected>Skin.HasSetting(HideIcons)</selected>
+				</control>
+				
+				<!-- HIDE DATE -->
+				<control type="radiobutton" id="203">
+					<width>1230</width>
+					<align>left</align>
+					<label>31024</label>
+					<onclick>Skin.ToggleSetting(HideHomeScreenDate)</onclick>
+					<selected>Skin.HasSetting(HideHomeScreenDate)</selected>
+				</control>
+				
+				<!-- HIDE TV SHOWS BUTTON -->
+				<control type="radiobutton" id="204">
+					<width>1230</width>
+					<align>left</align>
+					<label>31053</label>
+					<onclick>Skin.ToggleSetting(HideTVShowsButton)</onclick>
+					<selected>Skin.HasSetting(HideTVShowsButton)</selected>
+				</control>
+				
+				<!-- HIDE MOVIES BUTTON -->
+				<control type="radiobutton" id="205">
+					<width>1230</width>
+					<align>left</align>
+					<label>31054</label>
+					<onclick>Skin.ToggleSetting(HideMoviesButton)</onclick>
+					<selected>Skin.HasSetting(HideMoviesButton)</selected>
+				</control>
+				
+			</control>
+			
+			<control type="grouplist" id="300">
+				<description>Control Area</description>
+				<width>1230</width>
+				<height>720</height>
+				<itemgap>3</itemgap>
+				<onup>300</onup>
+				<ondown>300</ondown>
+				<onleft>100</onleft>
+				<onright>-</onright>
+				<orientation>vertical</orientation>
+				<visible>Container(100).Hasfocus(2)</visible>
+
+				<control type="radiobutton" id="301">
+					<width>1230</width>
+					<align>left</align>
+					<label>31055</label>
+					<onclick>Skin.ToggleSetting(CleanOSD)</onclick>
+					<selected>Skin.HasSetting(CleanOSD)</selected>
 				</control>
 				
 				<!-- HIDE HOME SCREEN ICONS -->
@@ -277,7 +181,6 @@
 					<selected>Skin.HasSetting(HideMoviesButton)</selected>
 				</control>
 				
-
 			</control>
 
 		</control>

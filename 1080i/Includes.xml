@@ -180,6 +180,7 @@
 				<textcolor>White</textcolor>
 				<label>[UPPERCASE]$INFO[System.Date(DDD)]$COMMA $INFO[System.Date(MMM d)]$COMMA $INFO[System.Date(YYYY)][/UPPERCASE]</label>
 				<align>right</align>
+				<visible>!Skin.HasSetting(HideHomeScreenDate)</visible>
 			</control>
 		</control>
 		<!-- TIME/DATE DURING VIDEO PLAY -->
@@ -241,6 +242,16 @@
 			<align>left</align>
 			<label>[UPPERCASE]TV SHOWS: $INFO[Container.NumItems]     EPISODES: $INFO[Window(home).Property(Episodes.Count)]     WATCHED: $INFO[Window(home).Property(Episodes.Watched)][/UPPERCASE]</label>
 			<visible>[Container.Content(tvshows) + [!IsEmpty(ListItem.TVShowTitle)]]</visible>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<posy>35</posy>
+			<width>1253</width>
+			<font>Medium</font>
+			<textcolor>Cyan</textcolor>
+			<align>left</align>
+			<label>[UPPERCASE]MOVIES: $INFO[Container.NumItems]     WATCHED: $INFO[Window(home).Property(Movies.Watched)][/UPPERCASE]</label>
+			<visible>[Container.Content(movies) + [!IsEmpty(ListItem.Title)]]</visible>
 		</control>
      </include>
 

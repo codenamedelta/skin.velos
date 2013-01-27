@@ -240,7 +240,7 @@
 			<animation type="Visible" condition="[Container(9000).HasFocus(2) + !ControlGroup(9010).HasFocus()] | [Container(9000).HasFocus(3) + !ControlGroup(9011).HasFocus()] | [Container(9000).HasFocus(11) + !ControlGroup(9012).HasFocus()] | [Container(9000).HasFocus(13) + !ControlGroup(9013).HasFocus()] | [Container(9000).HasFocus(4) + !ControlGroup(9015).HasFocus()] | [Container(9000).HasFocus(5) + !ControlGroup(9016).HasFocus()] | [Container(9000).HasFocus(6) + !ControlGroup(9017).HasFocus()]">
 			<effect type="fade" start="0" end="100" time="500"/>
 			</animation>
-			<animation type="Hidden" condition="[Container(9000).HasFocus(2) + ControlGroup(9010).HasFocus()] | [Container(9000).HasFocus(3) + ControlGroup(9011).HasFocus()] | [Container(9000).HasFocus(11) + ControlGroup(9012).HasFocus()] | [Container(9000).HasFocus(13) + ControlGroup(9013).HasFocus()] | [Container(9000).HasFocus(4) + ControlGroup(9015).HasFocus()] | [Container(9000).HasFocus(5) + ControlGroup(9016).HasFocus()] | [Container(9000).HasFocus(6) + ControlGroup(9017).HasFocus()]">
+			<animation type="Hidden">
 			<effect type="fade" start="100" end="0" time="500"/>
 			</animation>
 		</control>
@@ -250,7 +250,7 @@
 			<animation type="Visible" condition="[Container(9000).HasFocus(2) + ControlGroup(9010).HasFocus()] | [Container(9000).HasFocus(3) + ControlGroup(9011).HasFocus()] | [Container(9000).HasFocus(11) + ControlGroup(9012).HasFocus()] | [Container(9000).HasFocus(13) + ControlGroup(9013).HasFocus()] | [Container(9000).HasFocus(4) + ControlGroup(9015).HasFocus()] | [Container(9000).HasFocus(5) + ControlGroup(9016).HasFocus()] | [Container(9000).HasFocus(6) + ControlGroup(9017).HasFocus()]">
 			<effect type="fade" start="0" end="100" time="500"/>
 			</animation>
-			<animation type="Hidden" condition="[Container(9000).HasFocus(2) + !ControlGroup(9010).HasFocus()] | [Container(9000).HasFocus(3) + !ControlGroup(9011).HasFocus()] | [Container(9000).HasFocus(11) + !ControlGroup(9012).HasFocus()] | [Container(9000).HasFocus(13) + !ControlGroup(9013).HasFocus()] | [Container(9000).HasFocus(4) + !ControlGroup(9015).HasFocus()] | [Container(9000).HasFocus(5) + !ControlGroup(9016).HasFocus()] | [Container(9000).HasFocus(6) + !ControlGroup(9017).HasFocus()]">
+			<animation type="Hidden">
 			<effect type="fade" start="100" end="0" time="500"/>
 			</animation>
 		

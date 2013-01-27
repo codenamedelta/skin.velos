@@ -12,16 +12,17 @@
 
 			<control type="group">
 
-				<visible>!VideoPlayer.IsFullscreen + !Window.IsVisible(screencalibration)</visible>
+				<visible>!VideoPlayer.IsFullscreen + !Window.IsVisible(screencalibration) + !Window.IsVisible(settings) + !Window.IsVisible(appearancesettings)+ !Window.IsVisible(56)</visible>
 
 				<control type="label">
 					<description>Now Playing Info</description>
-					<posx>48</posx>
-					<posy>970</posy>
+					<posx>25</posx>
+					<posy>135</posy>
 					<width>1000</width>
 					<font>Medium</font>
 					<textcolor>White</textcolor>
 					<label>[COLOR=Cyan][B]$LOCALIZE[31047][/B][/COLOR] $INFO[VideoPlayer.TVShowTitle,, - ]$INFO[VideoPlayer.Title]</label>
+					<angle>270</angle>
 					<scroll>true</scroll>
 				</control>
 

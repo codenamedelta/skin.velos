@@ -24,8 +24,8 @@
   <string id="31020">Save playlist</string>
   <string id="31021">Close playlist</string>
   <string id="31022">System music files</string>
-  <string id="31023">Disable Background Visualiser</string>
-  <string id="31024">Disable Background Video</string>
+  <string id="31023">Fullscreen Video Options</string>
+  <string id="31024">Hide Date</string>
   <string id="31025">Click to change default Lyrics script</string>
   <string id="31026">Click to change default Subtitles script</string>
   <string id="31027">Items</string>
@@ -56,6 +56,7 @@
   <string id="31052">PseudoTV</string>
   <string id="31053">Hide TV Shows Button</string>
   <string id="31054">Hide Movies Button</string>
+  <string id="31055">Use Clean OSD</string>
   <string id="31328">Recently Added</string>
   <string id="31478">Setup</string>
   <string id="40155">AM</string>
