@@ -23,7 +23,7 @@
 				<effect type="zoom" center="1290,540" start="100" end="90" time="200" />
 			</animation>
 
-			<itemlayout width="600" height="69">
+			<itemlayout width="600" height="72">
 
 				<!-- LABEL OUTSIDE OF EPISODE VIEW -->
 				<control type="label">
@@ -48,7 +48,7 @@
 
 			</itemlayout>
 
-			<focusedlayout width="580" height="69">
+			<focusedlayout width="600" height="72">
 
 				<!-- LABEL OUTSIDE OF EPISODE VIEW -->
 				<control type="label">
@@ -70,7 +70,19 @@
 					<scrollsuffix> - </scrollsuffix>
 					<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
 					<visible>[Container.Content(episodes)]</visible>
-				</control>				
+				</control>	
+				
+				<!-- TVSHOW/EPISODE/MOVIE RATING/YEAR LABEL -->
+				<control type="label">
+					<posx>30</posx>
+					<posy>35</posy>
+					<width>600</width>
+					<font>Small</font>
+					<textcolor>Cyan</textcolor>
+					<align>left</align>
+					<label>[UPPERCASE]$INFO[ListItem.Year]$INFO[ListItem.Rating, / ][/UPPERCASE]</label>
+					<visible>[Container.Content(tvshows) | [Container.Content(episodes)] | [Container.Content(movies)]]</visible>
+				</control>			
 
 			</focusedlayout>
 
@@ -194,19 +206,7 @@
 			<visible>[Container.Content(tvshows) | Container.Content(seasons)]  + [!IsEmpty(ListItem.Property(WatchedEpisodes))]</visible>
 		</control>
 		
-		<!-- TVSHOW/EPISODE/MOVIE YEAR/GENRE LABEL -->
-		<control type="label">
-			<posx>405</posx>
-			<posy>645</posy>
-			<width>850</width>
-			<font>Small</font>
-			<textcolor>Cyan</textcolor>
-			<align>left</align>
-			<label>[UPPERCASE]$INFO[ListItem.Year]$INFO[ListItem.Rating, / ]$INFO[ListItem.Genre, / ][/UPPERCASE]</label>
-			<visible>[Container.Content(tvshows) | [Container.Content(episodes)] | [Container.Content(movies)]]</visible>
-		</control>
-		
-		<!-- TVSHOW/EPISODE/MOVIE YEAR/GENRE LABEL -->
+		<!-- TVSHOW/EPISODE/SEASON/MOVIE GENRE LABEL -->
 		<control type="label">
 			<posx>405</posx>
 			<posy>645</posy>
@@ -215,7 +215,7 @@
 			<textcolor>Cyan</textcolor>
 			<align>left</align>
 			<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
-			<visible>[Container.Content(seasons)]</visible>
+			<visible>[Container.Content(tvshows) | [Container.Content(episodes)] | [Container.Content(seasons)] | [Container.Content(movies)]]</visible>
 		</control>
 		
 		<!-- PLOT LABEL -->
@@ -461,13 +461,12 @@
 		
 		<!-- WATCHED/UNWATCHED OVERLAY (Bottom Right of Fanart) -->
 		<control type="image">
-			<posx>1185</posx>
-			<posy>575</posy>
-			<width>75</width>
-			<height>75</height>
+			<posx>1202</posx>
+			<posy>592</posy>
+			<width>48</width>
+			<height>48</height>
 			<fadetime>300</fadetime>
 			<texture>$INFO[ListItem.Overlay]</texture>
-			<bordersize>10</bordersize>
 			<visible>[Container.Content(tvshows)] | [Container.Content(seasons)] | [Container.Content(episodes)] | [Container.Content(movies)]]</visible>
 		</control>
 		
