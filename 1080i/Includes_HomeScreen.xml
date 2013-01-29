@@ -16,14 +16,14 @@
 		<control type="wraplist" id="9000">
 			<description>Home Wraplist</description>
 			<posx>0</posx>
-			<posy>105</posy>
+			<posy>202</posy>
 			<width>450</width>
-			<height>900</height>
+			<height>675</height>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
 			<onleft>-</onleft>
 			<onright>9998</onright>
-			<focusposition>5</focusposition>
+			<focusposition>4</focusposition>
 			<scrolltime>200</scrolltime>
 			<animation effect="slide" start="-500,0" time="500">WindowOpen</animation>
 			
@@ -74,13 +74,6 @@
 					<label>[UPPERCASE]$LOCALIZE[31051][/UPPERCASE]</label>
 					<onclick>ActivateWindow(10024, upnp://7e4cb587-4dbc-455a-8424-e29cf9563f6e/)</onclick>
 				</item>
-				
-				<item id="15">
-					<description>PseudoTV</description>
-					<label>[UPPERCASE]$LOCALIZE[31052][/UPPERCASE]</label>
-					<onclick>RunScript(script.pseudotv)</onclick>
-					<visible>System.HasAddon(script.pseudotv)</visible>
-				</item>
 
 				<item id="3">
 					<description>Music</description>
@@ -106,12 +99,6 @@
 					<label>[UPPERCASE]$LOCALIZE[31007][/UPPERCASE]</label>
 					<onclick>ActivateWindow(Video,tvshowtitles,return)</onclick>
 					<visible>Library.HasContent(TVShows) + !Skin.HasSetting(HideTVShowsButton)</visible>
-				</item>
-
-				<item id="7">
-					<description>Favourites</description>
-					<label>[UPPERCASE]$LOCALIZE[31008][/UPPERCASE]</label>
-					<onclick>ActivateWindow(Favourites)</onclick>
 				</item>
 
 				<item id="9">
@@ -181,7 +168,7 @@
 	<!-- MAIN SUB MENUS -->
 	<include name="SubMenus">
 		<control type="group">
-			<posy>500</posy>
+			<posy>524</posy>
 			<animation effect="fade" start="0" end="100" delay="600" time="200">WindowOpen</animation>
 			
 			<control type="group" id="9001">
@@ -223,6 +210,11 @@
 						<visible allowhiddenfocus="true">ControlGroup(9015).HasFocus()</visible>
 						<include>SubMenuPictures</include>
 					</control>
+					<control type="grouplist" id="9018">
+						<include>SubMenuValues</include>
+						<visible allowhiddenfocus="true">ControlGroup(9018).HasFocus()</visible>
+						<include>SubMenuPrograms</include>
+					</control>
 					
 			</control>
 		</control>
@@ -231,13 +223,13 @@
 	<include name="SubMenuDirectionalArrows">
 		<control type="image">
 			<posx>450</posx>
-			<posy>501</posy>
+			<posy>524</posy>
 			<width>32</width>
 			<height>32</height>
 			<texture>home_textures/right.png</texture>
-			<visible>[Container(9000).HasFocus(2) + !ControlGroup(9010).HasFocus()] | [Container(9000).HasFocus(3) + !ControlGroup(9011).HasFocus()] | [Container(9000).HasFocus(11) + !ControlGroup(9012).HasFocus()] | [Container(9000).HasFocus(13) + !ControlGroup(9013).HasFocus()] | [Container(9000).HasFocus(4) + !ControlGroup(9015).HasFocus()] | [Container(9000).HasFocus(5) + !ControlGroup(9016).HasFocus()] | [Container(9000).HasFocus(6) + !ControlGroup(9017).HasFocus()]</visible>
+			<visible>[Container(9000).HasFocus(2) + !ControlGroup(9010).HasFocus()] | [Container(9000).HasFocus(3) + !ControlGroup(9011).HasFocus()] | [Container(9000).HasFocus(11) + !ControlGroup(9012).HasFocus()] | [Container(9000).HasFocus(13) + !ControlGroup(9013).HasFocus()] | [Container(9000).HasFocus(4) + !ControlGroup(9015).HasFocus()] | [Container(9000).HasFocus(5) + !ControlGroup(9016).HasFocus()] | [Container(9000).HasFocus(6) + !ControlGroup(9017).HasFocus()] | [Container(9000).HasFocus(1) + !ControlGroup(9018).HasFocus()]</visible>
 			<animation effect="slide" start="-500,0" time="500">WindowOpen</animation>
-			<animation type="Visible" condition="[Container(9000).HasFocus(2) + !ControlGroup(9010).HasFocus()] | [Container(9000).HasFocus(3) + !ControlGroup(9011).HasFocus()] | [Container(9000).HasFocus(11) + !ControlGroup(9012).HasFocus()] | [Container(9000).HasFocus(13) + !ControlGroup(9013).HasFocus()] | [Container(9000).HasFocus(4) + !ControlGroup(9015).HasFocus()] | [Container(9000).HasFocus(5) + !ControlGroup(9016).HasFocus()] | [Container(9000).HasFocus(6) + !ControlGroup(9017).HasFocus()]">
+			<animation type="Visible" condition="[Container(9000).HasFocus(2) + !ControlGroup(9010).HasFocus()] | [Container(9000).HasFocus(3) + !ControlGroup(9011).HasFocus()] | [Container(9000).HasFocus(11) + !ControlGroup(9012).HasFocus()] | [Container(9000).HasFocus(13) + !ControlGroup(9013).HasFocus()] | [Container(9000).HasFocus(4) + !ControlGroup(9015).HasFocus()] | [Container(9000).HasFocus(5) + !ControlGroup(9016).HasFocus()] | [Container(9000).HasFocus(6) + !ControlGroup(9017).HasFocus()] | [Container(9000).HasFocus(1) + !ControlGroup(9018).HasFocus()]">
 			<effect type="fade" start="0" end="100" time="500"/>
 			</animation>
 			<animation type="Hidden">
@@ -246,8 +238,8 @@
 		</control>
 		
 		<control type="group">
-			<visible>[Container(9000).HasFocus(2) + ControlGroup(9010).HasFocus()] | [Container(9000).HasFocus(3) + ControlGroup(9011).HasFocus()] | [Container(9000).HasFocus(11) + ControlGroup(9012).HasFocus()] | [Container(9000).HasFocus(13) + ControlGroup(9013).HasFocus()] | [Container(9000).HasFocus(4) + ControlGroup(9015).HasFocus()] | [Container(9000).HasFocus(5) + ControlGroup(9016).HasFocus()] | [Container(9000).HasFocus(6) + ControlGroup(9017).HasFocus()]</visible>
-			<animation type="Visible" condition="[Container(9000).HasFocus(2) + ControlGroup(9010).HasFocus()] | [Container(9000).HasFocus(3) + ControlGroup(9011).HasFocus()] | [Container(9000).HasFocus(11) + ControlGroup(9012).HasFocus()] | [Container(9000).HasFocus(13) + ControlGroup(9013).HasFocus()] | [Container(9000).HasFocus(4) + ControlGroup(9015).HasFocus()] | [Container(9000).HasFocus(5) + ControlGroup(9016).HasFocus()] | [Container(9000).HasFocus(6) + ControlGroup(9017).HasFocus()]">
+			<visible>[Container(9000).HasFocus(2) + ControlGroup(9010).HasFocus()] | [Container(9000).HasFocus(3) + ControlGroup(9011).HasFocus()] | [Container(9000).HasFocus(11) + ControlGroup(9012).HasFocus()] | [Container(9000).HasFocus(13) + ControlGroup(9013).HasFocus()] | [Container(9000).HasFocus(4) + ControlGroup(9015).HasFocus()] | [Container(9000).HasFocus(5) + ControlGroup(9016).HasFocus()] | [Container(9000).HasFocus(6) + ControlGroup(9017).HasFocus()] | [Container(9000).HasFocus(1) + ControlGroup(9018).HasFocus()]</visible>
+			<animation type="Visible" condition="[Container(9000).HasFocus(2) + ControlGroup(9010).HasFocus()] | [Container(9000).HasFocus(3) + ControlGroup(9011).HasFocus()] | [Container(9000).HasFocus(11) + ControlGroup(9012).HasFocus()] | [Container(9000).HasFocus(13) + ControlGroup(9013).HasFocus()] | [Container(9000).HasFocus(4) + ControlGroup(9015).HasFocus()] | [Container(9000).HasFocus(5) + ControlGroup(9016).HasFocus()] | [Container(9000).HasFocus(6) + ControlGroup(9017).HasFocus()] | [Container(9000).HasFocus(1) + ControlGroup(9018).HasFocus()]">
 			<effect type="fade" start="0" end="100" time="500"/>
 			</animation>
 			<animation type="Hidden">
@@ -256,7 +248,7 @@
 		
 			<control type="image">
 				<posx>450</posx>
-				<posy>501</posy>
+				<posy>524</posy>
 				<width>32</width>
 				<height>32</height>
 				<texture>home_textures/left.png</texture>
@@ -264,7 +256,7 @@
 		
 			<control type="image">
 				<posx>684</posx>
-				<posy>468</posy>
+				<posy>492</posy>
 				<width>32</width>
 				<height>32</height>
 				<texture>home_textures/up.png</texture>
@@ -272,7 +264,7 @@
 		
 			<control type="image">
 				<posx>684</posx>
-				<posy>532</posy>
+				<posy>556</posy>
 				<width>32</width>
 				<height>32</height>
 				<texture>home_textures/down.png</texture>
@@ -380,6 +372,18 @@
 			<include>SubMenuButtonValues</include>
 			<label>[UPPERCASE]$LOCALIZE[344][/UPPERCASE]</label>
 			<onclick>ActivateWindow(Videos,TVShowActors,return)</onclick>
+		</control>
+		<control type="button" id="90177">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[31052][/UPPERCASE]</label>
+			<onclick>RunScript(script.pseudotv)</onclick>
+			<visible>System.HasAddon(script.pseudotv)</visible>
+		</control>
+		<control type="button" id="90178">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[31056][/UPPERCASE]</label>
+			<onclick>RunScript(script.tv.show.next.aired)</onclick>
+			<visible>System.HasAddon(script.tv.show.next.aired)</visible>
 		</control>
 	</include>
 	
@@ -503,6 +507,30 @@
 		</control>
 	</include>
 	
+	<!-- SUB MENU PROGRAMS -->
+	<include name="SubMenuPrograms">
+		<control type="button" id="90152">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[31008][/UPPERCASE]</label>
+			<onclick>ActivateWindow(Favourites)</onclick>
+		</control>
+		<control type="button" id="90153">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[7][/UPPERCASE]</label>
+			<onclick>ActivateWindow(FileManager)</onclick>
+		</control>
+		<control type="button" id="90154">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[13200][/UPPERCASE]</label>
+			<onclick>ActivateWindow(Profiles)</onclick>
+		</control>
+		<control type="button" id="90155">
+			<include>SubMenuButtonValues</include>
+			<label>[UPPERCASE]$LOCALIZE[130][/UPPERCASE]</label>
+			<onclick>ActivateWindow(SystemInfo)</onclick>
+		</control>
+	</include>
+	
 	<!-- SUB MENU HIDDEN TRIGGER BUTTONS -->
 	<include name="SubMenuHiddenTriggerButtons">
 		<control type="button" id="9999">
@@ -551,14 +579,18 @@
 			<onfocus>SetFocus(9017)</onfocus>
 			<visible>Container(9000).HasFocus(6)</visible>
 		</control>
+		<control type="button" id="9998">
+			<posx>-1000</posx>
+			<onfocus>SetFocus(9018)</onfocus>
+			<visible>Container(9000).HasFocus(1)</visible>
+		</control>
 	</include>
 	
 	<!-- HOME SCREEN ICONS -->
 	<include name="HomeScreenIcons">
-		
 		<control type="image">
 			<posx>960</posx>
-			<posy>300</posy>
+			<posy>284</posy>
 			<width>512</width>
 			<height>512</height>
 			<texture>$VAR[HomeMenuIcons]</texture>

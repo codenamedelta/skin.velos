@@ -13,7 +13,7 @@
   <string id="31009">Profiles</string>
   <string id="31010">Weather</string>
   <string id="31011">File Manager</string>
-  <string id="31012">Settings</string>
+  <string id="31012">System</string>
   <string id="31013">Shutdown</string>
   <string id="31014">Play Disc</string>
   <string id="31015">Player Controls</string>
@@ -57,6 +57,7 @@
   <string id="31053">Hide TV Shows Button</string>
   <string id="31054">Hide Movies Button</string>
   <string id="31055">Use Clean OSD</string>
+  <string id="31056">TV Show Next Aired</string>
   <string id="31328">Recently Added</string>
   <string id="31478">Setup</string>
   <string id="40155">AM</string>

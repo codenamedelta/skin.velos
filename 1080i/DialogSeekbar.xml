@@ -11,7 +11,7 @@
 		<control type="group">
 			<posx>0</posx>
 			<posy>0</posy>
-			<visible>![Skin.HasSetting(CleanOSD)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)]</visible>
+			<visible>![Skin.HasSetting(CleanOSD)  | Substring(Window(10000).Property(PseudoTVRunning),True)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)]</visible>
 			<animation effect="slide" start="0,-150" time="1000">WindowOpen</animation>
 			<animation effect="slide" end="0,-150" time="1000">WindowClose</animation>
 
@@ -68,7 +68,6 @@
 			<control type="group">
             	<posx>1000</posx>
 				<posy>65</posy>
-				<visible>![Skin.HasSetting(CleanOSD)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)]</visible>
 				<animation effect="slide" start="500,0" time="1250">WindowOpen</animation>
 				<animation effect="slide" end="0,-500" time="1250">WindowClose</animation>
 				
@@ -123,7 +122,7 @@
                 <aspectratio aligny="bottom">keep</aspectratio>
 				<animation effect="slide" start="0,500" time="1250">WindowOpen</animation>
 				<animation effect="slide" end="0,500" time="1250">WindowClose</animation>
-				<visible>![Skin.HasSetting(CleanOSD)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)]</visible>
+				<visible>![Skin.HasSetting(CleanOSD) | Substring(Window(10000).Property(PseudoTVRunning),True)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)]</visible>
             </control>
 			
 			<!-- BAR BACKGROUND COLOR -->
