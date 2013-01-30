@@ -114,8 +114,17 @@
 					<selected>Skin.HasSetting(HideHomeScreenDate)</selected>
 				</control>
 				
-				<!-- HIDE TV SHOWS BUTTON -->
+				<!-- HIDE SUB MENUS -->
 				<control type="radiobutton" id="204">
+					<width>1230</width>
+					<align>left</align>
+					<label>31057</label>
+					<onclick>Skin.ToggleSetting(HideSubMenus)</onclick>
+					<selected>Skin.HasSetting(HideSubMenus)</selected>
+				</control>
+				
+				<!-- HIDE TV SHOWS BUTTON -->
+				<control type="radiobutton" id="205">
 					<width>1230</width>
 					<align>left</align>
 					<label>31053</label>
@@ -124,7 +133,7 @@
 				</control>
 				
 				<!-- HIDE MOVIES BUTTON -->
-				<control type="radiobutton" id="205">
+				<control type="radiobutton" id="206">
 					<width>1230</width>
 					<align>left</align>
 					<label>31054</label>

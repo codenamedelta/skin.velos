@@ -1,4 +1,4 @@
-<window id="746">
+<window>
     <allowoverlay>no</allowoverlay>
 
     <coordinates>
@@ -18,29 +18,30 @@
     </animation>
 
     <controls>
+		 		
         <control type="image">
             <description>Info Background</description>
             <posx>0</posx>
             <posy>0</posy>
             <width>1920</width>
             <height>1080</height>
-            <texture>pseudotv/epgbackground.png</texture>
+            <texture>pstvBackground.png</texture>
         </control>
 
 		<control type="grouplist">
 			<posx>320</posx>
-			<posy>580</posy>
-			<width>835</width>
-			<height>40</height>
+			<posy>667</posy>
+			<width>1490</width>
+			<height>96</height>
 			<orientation>horizontal</orientation>
 			<itemgap>10</itemgap>
         
 			<control type="label" id="500">
 				<description>Show Name Label</description>
 				<width min="40" max="600">auto</width>
-				<height>40</height>
+				<height>96</height>
 				<label>Show Name</label>
-				<font>font12</font>
+				<font>medium</font>
 				<align>left</align>
 				<textcolor>FFFFFFFF</textcolor>
 			</control>
@@ -48,19 +49,19 @@
 			<control type="label">
 				<description>Show Name Label</description>
 				<width>10</width>
-				<height>40</height>
+				<height>96</height>
 				<label>•</label>
-				<font>font12</font>
+				<font>medium</font>
 				<align>left</align>
 				<textcolor>FFFFFFFF</textcolor>
 			</control>
 
 			<control type="label" id="501">
 				<description>Show Title Label</description>
-				<width min="40" max="300">auto</width>
-				<height>40</height>
+				<width min="40" max="1000">auto</width>
+				<height>96</height>
 				<label>Show Title</label>
-				<font>font12</font>
+				<font>medium</font>
 				<align>left</align>
 				<textcolor>FFFFFFFF</textcolor>
 			</control>
@@ -69,11 +70,11 @@
         <control type="label" id="502">
             <description>Show Description Label</description>
             <posx>320</posx>
-            <posy>610</posy>
+            <posy>753</posy>
             <width>835</width>
             <height>30</height>
             <label>Show Description</label>
-            <font>font12</font>
+            <font>medium</font>
             <align>left</align>
 			<aligny>top</aligny>
             <textcolor>FFFFFFFF</textcolor>
@@ -90,6 +91,13 @@
 			<aligny>top</aligny>
         </control>
 		
+		<control type="button" id="100">
+			<visible>false</visible>			
+			<label>0xFFFFFFFF</label><!--un-focused text color-->			
+			<label2>0xFF000000</label2><!--focused text color-->
+			<font>Medium</font>
+		</control>
+		
         <control type="label" id="101">
             <description>Time 1 Label</description>
             <posx>375</posx>
@@ -97,7 +105,7 @@
             <width>270</width>
             <height>26</height>
             <label>Time 1</label>
-            <font>font12</font>
+            <font>Medium</font>
             <align>left</align>
 			<aligny>center</aligny>
             <textcolor>FFFFFFFF</textcolor>
@@ -110,7 +118,7 @@
             <width>270</width>
             <height>26</height>
             <label>Time 2</label>
-            <font>font12</font>
+            <font>Medium</font>
             <align>left</align>
 			<aligny>center</aligny>
             <textcolor>FFFFFFFF</textcolor>
@@ -123,7 +131,7 @@
             <width>270</width>
             <height>26</height>
             <label>Time 2</label>
-            <font>font12</font>
+            <font>Medium</font>
             <align>left</align>
 			<aligny>center</aligny>
             <textcolor>FFFFFFFF</textcolor>
@@ -136,7 +144,7 @@
             <width>312</width>
             <height>26</height>
             <label>Current Date</label>
-            <font>font12</font>
+            <font>Medium</font>
             <align>left</align>
 			<aligny>center</aligny>
             <textcolor>FFFFFFFF</textcolor>
@@ -145,52 +153,52 @@
 		<!--SHOW LISTINGS-->
 		
         <control type="group" id="111">
-            <posx>360</posx>
-            <posy>204</posy>
-            <width>810</width>
-            <height>42</height>
+            <posx>415</posx>
+            <posy>110</posy>
+            <width>1485</width>
+            <height>86</height>
         </control>
 
         <control type="group" id="112">
-            <posx>360</posx>
-            <posy>254</posy>
-            <width>810</width>
-            <height>42</height>
+            <posx>415</posx>
+            <posy>201</posy>
+            <width>1485</width>
+            <height>86</height>
         </control>
 
         <control type="group" id="113">
-            <posx>360</posx>
-            <posy>304</posy>
-            <width>810</width>
-            <height>42</height>
+            <posx>415</posx>
+            <posy>292</posy>
+            <width>1485</width>
+            <height>86</height>
         </control>
 
         <control type="group" id="114">
-            <posx>360</posx>
-            <posy>354</posy>
-            <width>810</width>
-            <height>42</height>
+            <posx>415</posx>
+            <posy>383</posy>
+            <width>1485</width>
+            <height>86</height>
         </control>
 
         <control type="group" id="115">
-            <posx>360</posx>
-            <posy>404</posy>
-            <width>810</width>
-            <height>42</height>
+            <posx>415</posx>
+            <posy>474</posy>
+            <width>1485</width>
+            <height>86</height>
         </control>
         
         <control type="group" id="116">
-            <posx>360</posx>
-            <posy>454</posy>
-            <width>810</width>
-            <height>42</height>
+            <posx>415</posx>
+            <posy>565</posy>
+            <width>1485</width>
+            <height>87</height>
         </control>
 		
 		<control type="image" id="120">
-            <posx>360</posx>
-            <posy>180</posy>
+            <posx>415</posx>
+            <posy>80</posy>
             <width>20</width>
-            <height>330</height>
+            <height>632</height>
         </control>
 
 		<!--CHANNEL BUTTONS AND LABELS-->
@@ -198,11 +206,11 @@
         <control type="label" id="301">
             <description>Channel 1 Name</description>
             <posx>160</posx>
-            <posy>204</posy>
+            <posy>105</posy>
             <width>200</width>
-            <height>42</height>
+            <height>96</height>
             <label>Channel</label>
-            <font>font13</font>
+            <font>medium</font>
             <align>left</align>
             <aligny>center</aligny>
             <textcolor>FFFFFFFF</textcolor>
@@ -210,12 +218,12 @@
 
         <control type="label" id="311">
             <description>Channel 1 Number</description>
-            <posx>150</posx>
-            <posy>204</posy>
-            <width>30</width>
-            <height>42</height>
+            <posx>130</posx>
+            <posy>105</posy>
+            <width>50</width>
+            <height>96</height>
             <label>1</label>
-            <font>font13</font>
+            <font>medium</font>
             <align>right</align>
             <aligny>center</aligny>
             <textcolor>FFFFFFFF</textcolor>
@@ -234,11 +242,11 @@
         <control type="label" id="302">
             <description>Channel 2 Name</description>
             <posx>160</posx>
-            <posy>254</posy>
+            <posy>197</posy>
             <width>200</width>
-            <height>42</height>
+            <height>96</height>
             <label>Channel</label>
-            <font>font13</font>
+            <font>medium</font>
             <align>left</align>
             <aligny>center</aligny>
             <textcolor>FFFFFFFF</textcolor>
@@ -246,12 +254,12 @@
 
         <control type="label" id="312">
             <description>Channel 2 Number</description>
-            <posx>150</posx>
-            <posy>254</posy>
-            <width>30</width>
-            <height>42</height>
+            <posx>130</posx>
+            <posy>197</posy>
+            <width>50</width>
+            <height>96</height>
             <label>2</label>
-            <font>font13</font>
+            <font>medium</font>
             <align>right</align>
             <aligny>center</aligny>
             <textcolor>FFFFFFFF</textcolor>
@@ -270,11 +278,11 @@
         <control type="label" id="303">
             <description>Channel 3 Name</description>
             <posx>160</posx>
-            <posy>304</posy>
+            <posy>289</posy>
             <width>200</width>
-            <height>42</height>
+            <height>96</height>
             <label>Channel</label>
-            <font>font13</font>
+            <font>medium</font>
             <align>left</align>
             <aligny>center</aligny>
             <textcolor>FFFFFFFF</textcolor>
@@ -282,12 +290,12 @@
 
         <control type="label" id="313">
             <description>Channel 3 Number</description>
-            <posx>150</posx>
-            <posy>304</posy>
-            <width>30</width>
-            <height>42</height>
+            <posx>130</posx>
+            <posy>289</posy>
+            <width>50</width>
+            <height>96</height>
             <label>3</label>
-            <font>font13</font>
+            <font>medium</font>
             <align>right</align>
             <aligny>center</aligny>
             <textcolor>FFFFFFFF</textcolor>
@@ -306,11 +314,11 @@
         <control type="label" id="304">
             <description>Channel 4 Name</description>
             <posx>160</posx>
-            <posy>354</posy>
+            <posy>381</posy>
             <width>200</width>
-            <height>42</height>
+            <height>96</height>
             <label>Channel</label>
-            <font>font13</font>
+            <font>medium</font>
             <align>left</align>
             <aligny>center</aligny>
             <textcolor>FFFFFFFF</textcolor>
@@ -318,12 +326,12 @@
 
         <control type="label" id="314">
             <description>Channel 4 Number</description>
-            <posx>150</posx>
-            <posy>354</posy>
-            <width>30</width>
-            <height>42</height>
+            <posx>130</posx>
+            <posy>381</posy>
+            <width>50</width>
+            <height>96</height>
             <label>4</label>
-            <font>font13</font>
+            <font>medium</font>
             <align>right</align>
             <aligny>center</aligny>
             <textcolor>FFFFFFFF</textcolor>
@@ -342,11 +350,11 @@
         <control type="label" id="305">
             <description>Channel 5 Name</description>
 			<posx>160</posx>
-            <posy>404</posy>
+            <posy>473</posy>
             <width>200</width>
-            <height>42</height>
+            <height>96</height>
             <label>Channel</label>
-            <font>font13</font>
+            <font>medium</font>
             <align>left</align>
             <aligny>center</aligny>
             <textcolor>FFFFFFFF</textcolor>
@@ -354,12 +362,12 @@
 
         <control type="label" id="315">
             <description>Channel 5 Number</description>
-            <posx>150</posx>
-            <posy>404</posy>
-            <width>30</width>
-            <height>42</height>
+            <posx>130</posx>
+            <posy>473</posy>
+            <width>50</width>
+            <height>96</height>
             <label>5</label>
-            <font>font13</font>
+            <font>medium</font>
             <align>right</align>
             <aligny>center</aligny>
             <textcolor>FFFFFFFF</textcolor>
@@ -378,11 +386,11 @@
 		<control type="label" id="306">
             <description>Channel 6 Name</description>
             <posx>160</posx>
-            <posy>454</posy>
+            <posy>565</posy>
             <width>200</width>
-            <height>42</height>
+            <height>96</height>
             <label>Channel</label>
-            <font>font13</font>
+            <font>medium</font>
             <align>left</align>
             <aligny>center</aligny>
             <textcolor>FFFFFFFF</textcolor>
@@ -390,12 +398,12 @@
 
         <control type="label" id="316">
             <description>Channel 6 Number</description>
-            <posx>150</posx>
-            <posy>454</posy>
-            <width>30</width>
-            <height>42</height>
+            <posx>130</posx>
+            <posy>565</posy>
+            <width>50</width>
+            <height>96</height>
             <label>6</label>
-            <font>font13</font>
+            <font>medium</font>
             <align>right</align>
             <aligny>center</aligny>
             <textcolor>FFFFFFFF</textcolor>
