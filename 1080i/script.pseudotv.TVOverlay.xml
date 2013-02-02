@@ -74,7 +74,7 @@
     				<description>Show Name Label</description>
     				<width min="10" max="50">auto</width>
     				<height>30</height>
-    				<label>•</label>
+    				<label>â€¢</label>
     				<font>font12</font>
     				<align>left</align>
     				<textcolor>FFFFFFFF</textcolor>

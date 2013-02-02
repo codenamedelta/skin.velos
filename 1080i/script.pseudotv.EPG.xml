@@ -1,5 +1,5 @@
 <window>
-    <allowoverlay>no</allowoverlay>
+    <allowoverlay>yes</allowoverlay>
 
     <coordinates>
         <system>1</system>
@@ -72,7 +72,7 @@
             <posx>415</posx>
             <posy>753</posy>
             <width>1495</width>
-            <height>100</height>
+            <height>200</height>
             <label>Show Description</label>
             <font>small</font>
             <align>left</align>
@@ -105,7 +105,7 @@
         <control type="label" id="101">
             <description>Time 1 Label</description>
             <posx>415</posx>
-            <posy>77</posy>
+            <posy>68</posy>
             <width>498</width>
             <height>26</height>
             <label>Time 1</label>
@@ -118,7 +118,7 @@
         <control type="label" id="102">
             <description>Time 2 Label</description>
             <posx>913</posx>
-            <posy>77</posy>
+            <posy>68</posy>
             <width>498</width>
             <height>26</height>
             <label>Time 2</label>
@@ -131,7 +131,7 @@
         <control type="label" id="103">
             <description>Time 3 Label</description>
             <posx>1411</posx>
-			<posy>77</posy>
+			<posy>68</posy>
             <width>498</width>
             <height>26</height>
             <label>Time 2</label>
@@ -143,13 +143,13 @@
 		
 		<control type="label" id="104">
             <description>Date Label</description>
-            <posx>375</posx>
-            <posy>498</posy>
-            <width>312</width>
+            <posx>70</posx>
+            <posy>667</posy>
+            <width>400</width>
             <height>26</height>
             <label>Current Date</label>
             <font>Medium</font>
-            <align>left</align>
+            <align>center</align>
 			<aligny>center</aligny>
             <textcolor>FFFFFFFF</textcolor>
         </control>
@@ -200,9 +200,9 @@
 		
 		<control type="image" id="120">
             <posx>415</posx>
-            <posy>80</posy>
+            <posy>58</posy>
             <width>20</width>
-            <height>632</height>
+            <height>605</height>
         </control>
 
 		<!--CHANNEL BUTTONS AND LABELS-->
