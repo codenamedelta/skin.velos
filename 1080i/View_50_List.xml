@@ -136,10 +136,10 @@
 		
 		<!-- NUMBER OF SEASONS LABEL -->
 		<control type="label">
-			<posx>50</posx>
-			<posy>645</posy>
+			<posx>60</posx>
+			<posy>635</posy>
 			<width>364</width>
-			<align>center</align>
+			<angle>270</angle>
 			<font>small</font>
 			<textcolor>White</textcolor>
 			<label>[UPPERCASE]$LOCALIZE[31045][/UPPERCASE]</label>
@@ -148,60 +148,80 @@
 		
 		<!-- NUMBER OF SEASONS NUMBER -->
 		<control type="label">
-			<posx>50</posx>
-			<posy>690</posy>
+			<posx>90</posx>
+			<posy>655</posy>
 			<width>364</width>
 			<font>Large</font>
 			<textcolor>White</textcolor>
-			<align>center</align>
 			<label>$INFO[ListItem.Property(TotalSeasons)]</label>
 			<visible>[Container.Content(tvshows)] + [!IsEmpty(ListItem.Property(TotalSeasons))]</visible>
 		</control>
 				
 		<!-- NUMBER OF EPISODES LABEL -->
 		<control type="label">
-			<posx>50</posx>
-			<posy>735</posy>
+			<posx>215</posx>
+			<posy>635</posy>
 			<width>364</width>
+			<angle>270</angle>
 			<font>small</font>
 			<textcolor>White</textcolor>
-			<align>center</align>
 			<label>[UPPERCASE]$LOCALIZE[31046][/UPPERCASE]</label>
 			<visible>[Container.Content(tvshows) | Container.Content(seasons)] + [!IsEmpty(ListItem.Property(TotalEpisodes))]</visible>
 		</control>
 		
 		<!-- NUMBER OF EPISODES NUMBER -->
 		<control type="label">
-			<posx>50</posx>
-			<posy>780</posy>
+			<posx>245</posx>
+			<posy>655</posy>
 			<width>364</width>
 			<font>Large</font>
 			<textcolor>White</textcolor>
-			<align>center</align>
 			<label>$INFO[ListItem.Property(TotalEpisodes)]</label>
 			<visible>[Container.Content(tvshows) | Container.Content(seasons)] + [!IsEmpty(ListItem.Property(TotalEpisodes))]</visible>
 		</control>
 		
 		<!-- NUMBER OF WATCHED EPISODES LABEL -->
 		<control type="label">
-			<posx>50</posx>
-			<posy>825</posy>
+			<posx>60</posx>
+			<posy>800</posy>
 			<width>364</width>
+			<angle>270</angle>
 			<font>small</font>
 			<textcolor>White</textcolor>
-			<align>center</align>
-			<label>[UPPERCASE]$LOCALIZE[31044][/UPPERCASE]</label>
-			<visible>[Container.Content(tvshows) | Container.Content(seasons)]  + [!IsEmpty(ListItem.Property(WatchedEpisodes))]</visible>
+			<label>[UPPERCASE]$LOCALIZE[31058][/UPPERCASE]</label>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons)]  + [!IsEmpty(ListItem.Property(UnWatchedEpisodes))]</visible>
 		</control>
 		
 		<!-- NUMBER OF WATCHED EPISODES NUMBER -->
 		<control type="label">
-			<posx>50</posx>
-			<posy>870</posy>
+			<posx>90</posx>
+			<posy>820</posy>
 			<width>364</width>
 			<font>Large</font>
 			<textcolor>White</textcolor>
-			<align>center</align>
+			<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons)]  + [!IsEmpty(ListItem.Property(UnWatchedEpisodes))]</visible>
+		</control>
+		
+		<!-- NUMBER OF UNWATCHED EPISODES LABEL -->
+		<control type="label">
+			<posx>215</posx>
+			<posy>800</posy>
+			<width>364</width>
+			<angle>270</angle>
+			<font>small</font>
+			<textcolor>White</textcolor>
+			<label>[UPPERCASE]$LOCALIZE[31044][/UPPERCASE]</label>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons)]  + [!IsEmpty(ListItem.Property(WatchedEpisodes))]</visible>
+		</control>
+		
+		<!-- NUMBER OF UNWATCHED EPISODES NUMBER -->
+		<control type="label">
+			<posx>245</posx>
+			<posy>820</posy>
+			<width>364</width>
+			<font>Large</font>
+			<textcolor>White</textcolor>
 			<label>$INFO[ListItem.Property(WatchedEpisodes)]</label>
 			<visible>[Container.Content(tvshows) | Container.Content(seasons)]  + [!IsEmpty(ListItem.Property(WatchedEpisodes))]</visible>
 		</control>
@@ -211,7 +231,7 @@
 			<posx>405</posx>
 			<posy>645</posy>
 			<width>850</width>
-			<font>Small</font>
+			<font>MediumSmall</font>
 			<textcolor>Cyan</textcolor>
 			<align>left</align>
 			<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
@@ -226,7 +246,7 @@
 			<height>260</height>
 			<aligny>top</aligny>
 			<scroll>true</scroll>
-			<font>small</font>
+			<font>MediumSmall</font>
 			<textcolor>White</textcolor>
 			<label>$INFO[ListItem.Plot]</label>
 			<autoscroll delay="8000" time="5000" repeat="8000">true</autoscroll>

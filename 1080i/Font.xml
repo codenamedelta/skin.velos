@@ -40,6 +40,12 @@
 		</font>	
 		
 		<font>
+			<name>MediumSmall</name>
+			<filename>NCS.ttf</filename>
+			<size>34</size>
+		</font>	
+				
+		<font>
 			<name>Small</name>
 			<filename>NCS.ttf</filename>
 			<size>30</size>
